@@ -1,5 +1,6 @@
 # BLOG OF E0
-From 2018.
+--From 2018--
+From small beginnings comes great things.
 
-## My Thanks
-[HPSTR Jekyll Theme](https://mmistakes.github.io/hpstr-jekyll-theme/theme-setup/)
+## Thanks for the basic theme
+[HPSTR Jekyll Theme](https://github.com/mmistakes). Author:Michael Rose
