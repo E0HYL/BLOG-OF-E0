@@ -1,3 +1,13 @@
+---
+layout: page
+title: Begining of the blog
+image:
+  feature: abstract-5.jpg
+  credit: dargadgetz
+  creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
+comments: false
+modified: 2018-10-05
+---
 # BLOG
 
 © E0, From 2018. Powered by Jekyll using the HPSTR Theme.
