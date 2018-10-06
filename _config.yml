@@ -51,7 +51,7 @@ sass:
   sass_dir: _sass
   style: compressed
 
-# https://github.com/mojombo/jekyll/wiki/Permalinks
+# http://jekyllcn.com/docs/permalinks/
 permalink:   /:categories/:title/
 
 # Amount of post to show on home page
