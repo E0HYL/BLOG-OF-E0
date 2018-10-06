@@ -1,5 +1,5 @@
 # BLOG OF E0
-From 2018<br>
+© E0HYL, From 2018.<br>
 *From small beginnings comes great things.*
 
 ## Thanks for the basic theme
