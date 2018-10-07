@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Jekyll & Github Pages = Blog
+title: Jekyll + Github Pages = Blog
 description: "Let me introduce how the blog works for the first post."
 modified: 2018-10-7
 tags: [Skills, Blog]
@@ -78,7 +78,7 @@ git push -u origin master (-f)
 	An template language written in Ruby.
 	Syntax(CN DOC): https://liquid.bootcss.com/
 
-### 3. [Hilighter (for hekyll)](https://blog.csdn.net/qiujuer/article/details/50419279)
+### 3. [Hilighter (for jekyll)](https://blog.csdn.net/qiujuer/article/details/50419279)
     Rouge
 		List of supported languages and lexers:
 		https://github.com/jneen/rouge/wiki/List-of-supported-languages-and-lexers
