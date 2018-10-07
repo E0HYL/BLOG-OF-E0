@@ -88,7 +88,7 @@ git push -u origin master (-f)
 > Just for my own blog. So skip this part as you like.
 
 <figure>
-	<img src="/images/myblog.png" alt="">
+	<img src="{{site.url}}/images/myblog.png" alt="">
 </figure>
 
 ## Navigation Links
