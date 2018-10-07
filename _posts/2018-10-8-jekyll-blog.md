@@ -109,7 +109,7 @@ To add additional links in the drop down menu edit `_data/navigation.yml`. (Exte
 	
 `entry`: shown on the index page.`index.html`
 
-### Truncate
+### Truncate (Liquid)
 `index.html`: to abstract each post, add
 
 ```liquid
