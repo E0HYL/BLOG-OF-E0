@@ -113,5 +113,5 @@ To add additional links in the drop down menu edit `_data/navigation.yml`. (Exte
 `index.html`: to abstract each post, add
 
 ```liquid
-{{ post.content | truncatewords:150 }}
+{ { post.content | truncatewords:150 } }
 ```
