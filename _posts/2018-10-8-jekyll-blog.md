@@ -10,11 +10,15 @@ image:
   creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
 ---
 
+> Though written in English, links here that I attach are almost Chinese (for better understandings).
+
 ## Preparation
-Git | Github<br>
+[Git](https://www.yiibai.com/git) | Github<br>
 Ruby | Gem, Bundle...<br>
-Jekyll | Markdown, Liquid, Rouge, YAML...<br>
-*Optional: RVM, Disqus, Google Search Console...*
+Jekyll | Markdown, Liquid, Rouge, [YAML](https://www.ibm.com/developerworks/cn/xml/x-cn-yamlintro/index.html)...<br>
+*Optional: [RVM](https://ruby-china.org/wiki/rvm-guide), Disqus, Google Search Console...*
+
+> As follows, I'm trying to describe in the briefest way. It's also good to get more detailed understandings [here](https://www.zhihu.com/question/30018945).
 
 ## Setup
 
@@ -44,8 +48,8 @@ gem install jekyll
 * A template may help a lot, e.g., [Jekyll Themes](http://jekyllthemes.org/)
 
 	```shell
-	git clone [https://github.com/...] [folder]
-	cd [folder]
+	git clone <https://github.com/...> <folder>
+	cd <folder>
 	rm -rf .git
 	git init
 	```
@@ -53,7 +57,7 @@ gem install jekyll
 ### Update your contents*
 ```shell
 git add (-A)
-git commit -m [annotation]
+git commit -m <annotation>
 ```
 ### Test your blog locally
 ```shell
@@ -62,14 +66,14 @@ optinal: --watch, --drafts
 ```
 ### Publish your blog / posts*
 ```shell
-git remote add origin git@github.com:[...].git
+git remote add origin git@github.com:<...>.git
 git push -u origin master (-f)
 ```
 ---
 *\* A good editor may help a lot, e.g., VS Code :-)*
 
 
-## Other Notes
+## Other Tips
 ### 1. Markdown
 	A lightweight markup language.
 	Syntax(CN DOC): https://markdown-zh.readthedocs.io/en/latest/
@@ -79,13 +83,21 @@ git push -u origin master (-f)
 	Syntax(CN DOC): https://liquid.bootcss.com/
 
 ### 3. [Hilighter (for jekyll)](https://blog.csdn.net/qiujuer/article/details/50419279)
-    Rouge
+* Rouge
+
 		List of supported languages and lexers:
 		https://github.com/jneen/rouge/wiki/List-of-supported-languages-and-lexers
 
-## Cheat Sheet
+## Some Issues
+[解决Jekyll代码块无法正常显示Liquid代码问题](https://blog.csdn.net/JireRen/article/details/52197045)
+
+	{ %  raw  % } ... { %  endraw  % }: temporarily disables tag processing
+
+<br>
 
 > Just for my own blog. So skip this part as you like.
+
+## Cheat Sheet
 
 <figure>
 	<img src="{{site.url}}/images/myblog.png" alt="">
@@ -112,6 +124,8 @@ To add additional links in the drop down menu edit `_data/navigation.yml`. (Exte
 ### Truncate (Liquid)
 `index.html`: to abstract each post, add
 
-```liquid
-{ { post.content | truncatewords:150 } }
-```
+{% highlight liquid %}
+{% raw %}
+{{ post.content | truncatewords:150 }}
+{% endraw %}
+{% endhighlight %}
