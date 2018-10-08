@@ -2,7 +2,7 @@
 layout: post
 title: Jekyll + Github Pages = Blog
 description: "Let me introduce how the blog works for the first post."
-modified: 2018-10-7
+modified: 2018-10-8
 tags: [Skills, Blog]
 image:
   feature: abstract-1.jpg
@@ -89,11 +89,24 @@ git push -u origin <local branch>:<remote branch> (-f)
 		https://github.com/jneen/rouge/wiki/List-of-supported-languages-and-lexers
 
 ## Some Issues
-[解决Jekyll代码块无法正常显示Liquid代码问题](https://blog.csdn.net/JireRen/article/details/52197045)
+[Liquid code can't be displayed normally](https://blog.csdn.net/JireRen/article/details/52197045)
 
 * {% raw %}{% raw %}{% endraw %}{% raw %}\{% endraw %\}{% endraw %}: temporarily disables tag processing
 
-[.gitignore忽略文件不生效](https://www.jianshu.com/p/2b4222cc8734)
+[`.gitignore` file doesn't work](https://www.jianshu.com/p/2b4222cc8734)
+
+* Only ignore untracked files. Solution: delte all caches and commit then.
+```shell
+git rm -r --cached .
+git add .
+git commit -m 'update .gitignore'
+```
+
+["Page Build Failure" from Github](https://github.com/mmistakes/so-simple-theme/issues/250)
+
+* Your plugins won’t work if you’re deploying to GitHub Pages. To test locally, make sure you're using the GitHub Pages gem in your `Gemfile` and not Jekyll.
+	
+		gem "github-pages", group: :jekyll_plugins
 
 <br>
 
@@ -109,13 +122,12 @@ git push -u origin <local branch>:<remote branch> (-f)
 To add additional links in the drop down menu edit `_data/navigation.yml`. (External links will open in a new window.)
 
 ### Truncate (Liquid)
-`index.html`: to abstract each post, add
-
-{% highlight liquid %}
+`index.html`: To abstract each post, add
+```liquid
 {% raw %}
 {{ post.content | truncatewords:150 }}
 {% endraw %}
-{% endhighlight %}
+```
 
 ### Posts (YAML)
 
@@ -123,7 +135,7 @@ To add additional links in the drop down menu edit `_data/navigation.yml`. (Exte
 `_layouts/`<br>
 1. page: `404.md`, `about.md`<br>
 2. post-index: `index.html`, `tags/index.html`, `posts/index.html`<br>
-3. post: `[xx-xx-xx]-[title].md`
+3. post: `_posts/[xx-xx-xx]-[title].md`
 
 #### Image
 `feature`: inner background for the head.`_layouts/posts.html`<br>
