@@ -67,7 +67,7 @@ optinal: --watch, --drafts
 ### Publish your blog / posts*
 ```shell
 git remote add origin git@github.com:<...>.git
-git push -u origin master (-f)
+git push -u origin <local branch>:<remote branch> (-f)
 ```
 ---
 *\* A good editor may help a lot, e.g., VS Code :-)*
