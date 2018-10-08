@@ -106,6 +106,15 @@ git push -u origin <local branch>:<remote branch> (-f)
 ### Navigation Links
 To add additional links in the drop down menu edit `_data/navigation.yml`. (External links will open in a new window.)
 
+### Truncate (Liquid)
+`index.html`: to abstract each post, add
+
+{% highlight liquid %}
+{% raw %}
+{{ post.content | truncatewords:150 }}
+{% endraw %}
+{% endhighlight %}
+
 ### Posts (YAML)
 
 #### Layout
@@ -120,12 +129,3 @@ To add additional links in the drop down menu edit `_data/navigation.yml`. (Exte
 * `credit`, `credit-link`: Image source
 	
 `entry`: shown on the index page.`index.html`
-
-### Truncate (Liquid)
-`index.html`: to abstract each post, add
-
-{% highlight liquid %}
-{% raw %}
-{{ post.content | truncatewords:150 }}
-{% endraw %}
-{% endhighlight %}
