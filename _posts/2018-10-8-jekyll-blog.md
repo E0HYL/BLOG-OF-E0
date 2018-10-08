@@ -91,7 +91,9 @@ git push -u origin <local branch>:<remote branch> (-f)
 ## Some Issues
 [解决Jekyll代码块无法正常显示Liquid代码问题](https://blog.csdn.net/JireRen/article/details/52197045)
 
-	{ %  raw  % } ... { %  endraw  % }: temporarily disables tag processing
+* {% raw %}{% raw %}{% endraw %}{% raw %}\{% endraw %\}{% endraw %}: temporarily disables tag processing
+
+[.gitignore忽略文件不生效](https://www.jianshu.com/p/2b4222cc8734)
 
 <br>
 
