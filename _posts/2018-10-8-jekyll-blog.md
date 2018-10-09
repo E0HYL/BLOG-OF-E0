@@ -134,17 +134,6 @@ git commit -m 'update .gitignore'
 	<img src="{{site.url}}/images/myblog.png" alt="">
 </figure>
 
-### Navigation Links
-To add additional links in the drop down menu edit `_data/navigation.yml`. (External links will open in a new window.)
-
-### Truncate (Liquid)
-`index.html`: To abstract each post, add
-```liquid
-{% raw %}
-{{ post.content | truncatewords:150 }}
-{% endraw %}
-```
-
 ### Posts (YAML)
 
 #### Layout
@@ -159,3 +148,23 @@ To add additional links in the drop down menu edit `_data/navigation.yml`. (Exte
 * `credit`, `credit-link`: Image source
 	
 `entry`: shown on the index page.`index.html`
+
+### Navigation Links
+To add additional links in the drop down menu edit `_data/navigation.yml`. (External links will open in a new window.)
+
+### Truncate (Liquid)
+`index.html`: To abstract each post, add
+```liquid
+{% raw %}
+{{ post.content | truncatewords:150 }}
+{% endraw %}
+```
+
+### Support MathJax
+`_layouts/post.html`: Add script in <head>
+```javascript
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+```
+More usages [here](http://jzqt.github.io/2015/06/30/Markdown%E4%B8%AD%E5%86%99%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/).
