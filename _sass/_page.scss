@@ -598,3 +598,15 @@ header .entry-meta {
 	padding-bottom: 10px;
 	font-size: 10px;
 }
+
+.vocab {
+	text-align:center;
+	display:block;
+	color: rgba(85,85,85,0.8);
+	summary {
+		text-align:center;
+		display:block;
+		font-weight: 600;
+		color: black;
+	}
+}
