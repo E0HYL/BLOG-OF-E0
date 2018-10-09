@@ -42,7 +42,8 @@ future:      false  # publish future dated posts --  true, false (default)
 highlighter: rouge
 markdown:    kramdown
 encoding:    UTF-8
-# plugins:
+plugins:
+  - jemoji
   # - jekyll-sitemap
   # - jekyll-paginate
   # - jekyll-gist
