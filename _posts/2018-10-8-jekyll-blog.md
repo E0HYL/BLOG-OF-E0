@@ -104,9 +104,18 @@ git commit -m 'update .gitignore'
 
 ["Page Build Failure" from Github](https://github.com/mmistakes/so-simple-theme/issues/250)
 
-* Your plugins won’t work if you’re deploying to GitHub Pages. To test locally, make sure you're using the GitHub Pages gem in your `Gemfile` and not Jekyll.
+* Your plugins won’t work if you’re deploying to GitHub Pages.
+* To test locally, make sure you're using the GitHub Pages gem in your `Gemfile` and not Jekyll.
 	
 		gem "github-pages", group: :jekyll_plugins
+
+[Emoji on GitHub Pages](https://help.github.com/articles/emoji-on-github-pages/#testing-locally)
+
+* To test locally, edit `Gemfile`:
+
+		gem 'gemoji'
+
+* Example: it's raining :cat:s and :dog:s! See [EMOJI CHEAT SHEET](https://www.webpagefx.com/tools/emoji-cheat-sheet/) for more.
 
 <br>
 
