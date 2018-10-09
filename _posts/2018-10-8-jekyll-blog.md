@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Jekyll + Github Pages = Blog
-description: "Let me introduce how the blog works for the first post."
+description: "Let me introduce how the blog works for my first post."
 modified: 2018-10-8
 tags: [Skills, Blog]
 image:
