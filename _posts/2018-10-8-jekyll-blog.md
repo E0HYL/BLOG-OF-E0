@@ -92,18 +92,21 @@ git push -u origin <local branch>:<remote branch> (-f)
 [`.gitignore` file doesn't work](https://www.jianshu.com/p/2b4222cc8734)
 
 * Only ignore untracked files. Solution: delte all caches and commit then.
-```shell
-git rm -r --cached .
-git add .
-git commit -m 'update .gitignore'
-```
+
+	```shell
+	git rm -r --cached .
+	git add .
+	git commit -m 'update .gitignore'
+	```
 
 ["Page Build Failure" from Github](https://github.com/mmistakes/so-simple-theme/issues/250)
 
 * Your plugins won’t work if you’re deploying to GitHub Pages.
 * To test locally, make sure you're using the GitHub Pages gem in your `Gemfile` and not Jekyll.
 	
-		gem "github-pages", group: :jekyll_plugins
+	```
+	gem "github-pages", group: :jekyll_plugins
+	```
 
 [Emoji on GitHub Pages](https://help.github.com/articles/emoji-on-github-pages/#testing-locally)
 
@@ -115,10 +118,22 @@ git commit -m 'update .gitignore'
 	```
 
 * To test locally, (delete Gemfile.lock), edit `Gemfile`, (run 'bundle update'):
-
-		gem 'gemoji'
+	
+	```
+	gem 'gemoji'
+	```
 
 * Example: it's raining :cat:s and :dog:s! See [EMOJI CHEAT SHEET](https://www.webpagefx.com/tools/emoji-cheat-sheet/) for more.
+
+[Kramdown: Inser Markdown into HTML](https://ask.helplib.com/html/post_995628)
+
+* If an HTML tag has an [attribute markdown="1"](https://kramdown.gettalong.org/syntax.html#html-blocks), then the default mechanism for parsing syntax in this tag is used.
+	
+	```html
+	<div markdown="1">
+	My text with **markdown** syntax
+	</div>
+	```
 
 [Liquid code can't be displayed normally](https://blog.csdn.net/JireRen/article/details/52197045)
 
