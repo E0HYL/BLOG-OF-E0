@@ -7,3 +7,4 @@ gem "json"
 # gem "jekyll-paginate"
 # gem "jekyll-gist"
 gem "github-pages", group: :jekyll_plugins
+gem 'jemoji'
