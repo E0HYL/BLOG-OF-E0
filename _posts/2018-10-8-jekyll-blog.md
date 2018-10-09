@@ -89,10 +89,6 @@ git push -u origin <local branch>:<remote branch> (-f)
 		https://github.com/jneen/rouge/wiki/List-of-supported-languages-and-lexers
 
 ## Some Issues
-[Liquid code can't be displayed normally](https://blog.csdn.net/JireRen/article/details/52197045)
-
-* {% raw %}{% raw %}{% endraw %}{% raw %}\{% endraw %\}{% endraw %}: temporarily disables tag processing
-
 [`.gitignore` file doesn't work](https://www.jianshu.com/p/2b4222cc8734)
 
 * Only ignore untracked files. Solution: delte all caches and commit then.
@@ -111,11 +107,22 @@ git commit -m 'update .gitignore'
 
 [Emoji on GitHub Pages](https://help.github.com/articles/emoji-on-github-pages/#testing-locally)
 
-* To test locally, edit `Gemfile`:
+* Add the plugin in `_config.yml`:
+
+	```yaml
+	plugins:
+		- jemoji
+	```
+
+* To test locally, (delete Gemfile.lock), edit `Gemfile`, (run 'bundle update'):
 
 		gem 'gemoji'
 
 * Example: it's raining :cat:s and :dog:s! See [EMOJI CHEAT SHEET](https://www.webpagefx.com/tools/emoji-cheat-sheet/) for more.
+
+[Liquid code can't be displayed normally](https://blog.csdn.net/JireRen/article/details/52197045)
+
+* {% raw %}{% raw %}{% endraw %}{% raw %}\{% endraw %\}{% endraw %}: temporarily disables tag processing
 
 <br>
 
