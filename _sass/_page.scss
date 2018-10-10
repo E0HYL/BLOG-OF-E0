@@ -600,13 +600,33 @@ header .entry-meta {
 }
 
 .vocab {
-	text-align:center;
-	display:block;
-	color: rgba(85,85,85,0.8);
+	// h2 {
+	// 	text-align:center;
+	// 	display:block;
+	// 	color: rgba(85,85,85,0.8);
+	// }
 	summary {
-		text-align:center;
-		display:block;
-		font-weight: 600;
-		color: black;
+		font-weight: 510;
+		font-size: 18px;
+	}
+	details ::-webkit-details-marker {
+		color: rgb(190, 190, 190);  
+		display: block;
+	}
+	#instance {
+		font-style:italic;
+	}
+}
+
+.table {
+	display: table;
+	width: 100%;
+	.left,.right {
+		display: table-cell; //不能设置 margin
+		table-layout: fixed; //优点 1.加速table渲染。2.实现了布局优先
+		padding-left: 20px;
+	  }
+	.left {
+		width:50%;
 	}
 }
