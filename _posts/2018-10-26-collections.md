@@ -38,7 +38,7 @@ iPhone 有内建的 Podcast App (下方第三个图标)，串接 iTunes 目录�
 * 每集30-40分钟
 * 无论是隐私泄露，封闭平台，黑客攻击，虚假新闻还是网络欺凌，我们都有能力改变互联网的进程，让每个人都保持健康，奇妙和精彩。
 * [官网首页](https://irlpodcast.org/)中单集`Show Notes > Transcript`有台本可参阅。不怕听不懂了！还可以顺便学英语！:relaxed:
-<br>
+
 
 ### <cite>Sophos Podcasts</cite>
     Network Security Podcasts
@@ -47,7 +47,7 @@ iPhone 有内建的 Podcast App (下方第三个图标)，串接 iTunes 目录�
 * 每集20-30分钟
 * 纯正的英式发音和网络安全内容。[公司首页](https://www.sophos.com/zh-tw.aspx)
 * 貌似是很难连接上，虽然BUPT能直接上Google等，但这个还是需要VPN
-<br>
+
 
 ### <cite>Tech News Briefing - WSJ Podcasts</cite>
      WSJ = Wall Street Journal 华尔街日报
@@ -55,12 +55,12 @@ iPhone 有内建的 Podcast App (下方第三个图标)，串接 iTunes 目录�
 
 * 每集10分钟左右
 * 最新技术新闻：报道领先的公司，新产品，消费趋势和网络问题。[Home](https://www.wsj.com/podcasts/tech-news-briefing)
-<br>
+
 
 ### <cite>Merriam-Webster's Word Of The Day</cite>
 * 每天一个单词，约2-3分钟
 * `单集备注`中就能阅读大部分的内容
-<br>
+
 
 ### <cite>Others</cite>
 &emsp;以下两只是很多人推荐的经典节目，内容感觉不错，只是我可能还需要多修炼一下英语，先订阅着了:worried:
