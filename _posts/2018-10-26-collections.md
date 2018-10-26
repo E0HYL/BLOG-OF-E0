@@ -52,7 +52,6 @@ iPhone 有内建的 Podcast App (下方第三个图标)，串接 iTunes 目录�
 ### <cite>Tech News Briefing - WSJ Podcasts</cite>
      WSJ = Wall Street Journal 华尔街日报
      Host: Tanya Bustos
-<br>
 
 * 每集10分钟左右
 * 最新技术新闻：报道领先的公司，新产品，消费趋势和网络问题。[Home](https://www.wsj.com/podcasts/tech-news-briefing)
