@@ -78,9 +78,13 @@ iPhone 有内建的 Podcast App (下方第三个图标)，串接 iTunes 目录�
 ## 桥接上网问题
 * [桥接模式DHCP自动获取IP失败](https://blog.csdn.net/A807296772/article/details/77616130)
 
-## 调节屏幕大小
+## 屏幕自适应
 * https://blog.csdn.net/qq_30135181/article/details/78704917
 ```
 Debian源使用帮助（含例：中科大源）http://mirrors.ustc.edu.cn/help/debian.html
 ```
 * [安装VMWare Tools](https://blog.csdn.net/wy_bk/article/details/78303010)
+
+## 放大字体与图标
+* [Gnome Tweak Tool](https://steemit.com/utopian-io/@husnulkhatimah/how-to-install-gnome-tweak-tool-on-kali-linux-2017-2)
+* [kali在高清屏幕下如何放大字体与图标](https://blog.werner.wiki/kali-gnome-tweak-tool/)
