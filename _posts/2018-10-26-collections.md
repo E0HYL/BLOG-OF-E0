@@ -81,6 +81,6 @@ iPhone 有内建的 Podcast App (下方第三个图标)，串接 iTunes 目录�
 ## 调节屏幕大小
 * https://blog.csdn.net/qq_30135181/article/details/78704917
 ```
-Debian源使用帮助
-（含例：中科大源）http://mirrors.ustc.edu.cn/help/debian.html
+Debian源使用帮助（含例：中科大源）http://mirrors.ustc.edu.cn/help/debian.html
 ```
+* [安装VMWare Tools](https://blog.csdn.net/wy_bk/article/details/78303010)
