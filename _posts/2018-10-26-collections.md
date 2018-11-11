@@ -89,4 +89,4 @@ Debian源使用帮助（含例：中科大源）http://mirrors.ustc.edu.cn/help/
 * [Gnome Tweak Tool](https://steemit.com/utopian-io/@husnulkhatimah/how-to-install-gnome-tweak-tool-on-kali-linux-2017-2)
 * [kali在高清屏幕下如何放大字体与图标](https://blog.werner.wiki/kali-gnome-tweak-tool/)
 
-### [inux安全渗透]https://wizardforcel.gitbooks.io/daxueba-kali-linux-tutorial/content/0.html
+### [inux安全渗透](https://wizardforcel.gitbooks.io/daxueba-kali-linux-tutorial/content/0.html)
