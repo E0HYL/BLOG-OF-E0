@@ -73,13 +73,13 @@ iPhone 有内建的 Podcast App (下方第三个图标)，串接 iTunes 目录�
 <h1 id="2" style="color:rgb(116, 26, 43);">Kali-Vmware</h1>
 
 ## Vmare安装Kali
-* https://love.ranshy.com/vmware%E5%AE%89%E8%A3%85kali-linux%E7%B3%BB%E7%BB%9F/
+* [安装步骤参考指南](https://love.ranshy.com/vmware%E5%AE%89%E8%A3%85kali-linux%E7%B3%BB%E7%BB%9F/)
 
 ## 桥接上网问题
 * [桥接模式DHCP自动获取IP失败](https://blog.csdn.net/A807296772/article/details/77616130)
 
 ## 屏幕自适应
-* https://blog.csdn.net/qq_30135181/article/details/78704917
+* [使Open-vm-tools](https://blog.csdn.net/qq_30135181/article/details/78704917)
 ```
 Debian源使用帮助（含例：中科大源）http://mirrors.ustc.edu.cn/help/debian.html
 ```
