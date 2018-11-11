@@ -15,6 +15,7 @@ image:
 <summary style="font-size:25px;">Classification</summary>
 <div markdown="1">
 - [播客 Podcast](#1)
+- [Kali-Vmware](#2)
 </div>
 </details>
 
@@ -68,3 +69,17 @@ iPhone 有内建的 Podcast App (下方第三个图标)，串接 iTunes 目录�
 * `More or Less: Behind the Statistics`(BBC)
 
 &emsp;有空再探索一下优秀的中文播客（求推荐！
+
+<h1 id="2" style="color:rgb(116, 26, 43);">Kali-Vmware</h1>
+## Vmare安装Kali
+* https://love.ranshy.com/vmware%E5%AE%89%E8%A3%85kali-linux%E7%B3%BB%E7%BB%9F/
+
+## 桥接上网问题
+* [桥接模式DHCP自动获取IP失败](https://blog.csdn.net/A807296772/article/details/77616130)
+
+## 调节屏幕大小
+* https://blog.csdn.net/qq_30135181/article/details/78704917
+```
+Debian源使用帮助
+（含例：中科大源）http://mirrors.ustc.edu.cn/help/debian.html
+```
