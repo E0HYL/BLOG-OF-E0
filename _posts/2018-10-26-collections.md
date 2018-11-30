@@ -10,7 +10,7 @@ image:
   creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
 ---
 
-<details open><!-- 可选open -->
+<details open style="text-align:center;"><!-- 可选open -->
 <summary style="font-size:25px;">Classification</summary>
 <div markdown="1">
 - [播客 Podcast](#1)
@@ -18,7 +18,7 @@ image:
 </div>
 </details>
 
-<h1 id="1" style="color:rgb(116, 26, 43);">Podcast</h1>
+<h1 id="1" style="color:rgb(78, 78, 78);">Podcast</h1>
 >  存放在网络上，结合RSS feed订阅功能的“广播”。**可选收听姿势：**（[了解更多](https://medium.com/@StarRocket/for-those-podcast-lovers-we-recommend-these-8-apps-bf67d44c6919)）
 ```
 iTunes 应该是目前市面上拥有最完整 podcast 目录的地方
@@ -69,7 +69,7 @@ iPhone 有内建的 Podcast App (下方第三个图标)，串接 iTunes 目录�
 
 &emsp;有空再探索一下优秀的中文播客（求推荐！
 
-<h1 id="2" style="color:rgb(116, 26, 43);">Kali-Vmware</h1>
+<h1 id="2" style="color:rgb(78, 78, 78);">Kali-Vmware</h1>
 
 ### Vmware安装Kali
 * [安装步骤参考指南](https://love.ranshy.com/vmware%E5%AE%89%E8%A3%85kali-linux%E7%B3%BB%E7%BB%9F/)
