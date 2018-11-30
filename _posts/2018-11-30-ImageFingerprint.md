@@ -1,6 +1,6 @@
 ---
 layout: post
-title: A Treasure Chest
+title: Digital Image Processing
 description: "A bin for ImageFingerprint collections."
 modified: 2018-11-30
 tags: [DIP]
