@@ -94,8 +94,13 @@ blockquote {
 	font-style: italic;
 	border-left: 8px solid $border-color;
 	padding-left: 20px;
-	padding-right: 20px;
-	text-align: justify;
+}
+
+.largebq {
+	blockquote {
+		padding-right: 20px;
+		text-align: justify;
+	}
 }
 
 /* 
