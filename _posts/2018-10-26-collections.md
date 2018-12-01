@@ -24,9 +24,8 @@ image:
 **可选收听姿势：**（[了解更多](https://medium.com/@StarRocket/for-those-podcast-lovers-we-recommend-these-8-apps-bf67d44c6919)）
 > iTunes 应该是目前市面上拥有最完整 podcast 目录的地方<br/>
 iPhone 有内建的 Podcast App (下方第三个图标)，串接 iTunes 目录让使用者搜寻内容
-<figure>
-	<img src="{{site.url}}/images/podcast.png" alt="">
-</figure>
+
+<img src="{{site.url}}/images/podcast.png" alt="">
 
 ## My Subscription List
 试听了很多网上的推荐节目，结合自身“网络安全”专业及感兴趣的内容，和大家分享一下我的收听清单。
