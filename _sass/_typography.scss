@@ -94,10 +94,6 @@ blockquote {
 	font-style: italic;
 	border-left: 8px solid $border-color;
 	padding-left: 20px;
-
-	@media #{$medium} {
-		margin-left: -28px;
-	}
 }
 
 /* 
