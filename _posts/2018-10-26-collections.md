@@ -94,7 +94,7 @@ Debian源使用帮助（含例：中科大源）http://mirrors.ustc.edu.cn/help/
 ### 其他问题
 * 调用的matlab函数依赖于子文件夹？在py中import该子文件夹即可
 * 返回参数问题：[nargout参数指定输出参数的数量](https://ww2.mathworks.cn/help/matlab/matlab_external/call-matlab-functions-from-python.html)
-* 数据类型问题：
+* [数据类型问题](https://blog.csdn.net/qq_27262673/article/details/79635924)：
   * [从Python将数据传递到MATLAB](https://ww2.mathworks.cn/help/matlab/matlab_external/pass-data-to-matlab-from-python.html)
   * [处理从MATLAB返回到Python的数据](https://ww2.mathworks.cn/help/matlab/matlab_external/handle-data-returned-from-matlab-to-python.html)
 
