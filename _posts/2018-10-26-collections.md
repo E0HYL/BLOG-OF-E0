@@ -2,7 +2,7 @@
 layout: post
 title: A Treasure Chest
 description: "A bin for my various collections."
-modified: 2018-10-26
+modified: 2018-12-18
 tags: [Collection]
 image:
   feature: abstract-2.jpg
@@ -14,7 +14,8 @@ image:
 <summary style="font-size:25px;">Classification</summary>
 <div markdown="1">
 [播客 Podcast](#1)<br>
-[Kali-Vmware](#2)
+[Kali-Vmware](#2)<br>
+[Python调用Matlab](#3)
 </div>
 </details>
 
@@ -88,3 +89,13 @@ Debian源使用帮助（含例：中科大源）http://mirrors.ustc.edu.cn/help/
 * [kali在高清屏幕下如何放大字体与图标](https://blog.werner.wiki/kali-gnome-tweak-tool/)
 
 ### [inux安全渗透](https://wizardforcel.gitbooks.io/daxueba-kali-linux-tutorial/content/0.html)
+
+<h1 id="3" style="color:rgb(78, 78, 78);">Python调用Matlab</h1>
+### [基础教程](https://blog.csdn.net/Eric2016_Lv/article/details/83098703)
+* Matlab 2018b已支持python3.6（3.7不行）
+* 第2步大部分教程里没有，重要
+### Pycharm中import matlab.engine报错
+* 错误提示找不到matlab这个package
+* 命令行不报错，则将项目的project interpreter改成系统的
+### 其他问题
+* 调用的matlab函数依赖于子文件夹？在py中import该子文件夹即可
