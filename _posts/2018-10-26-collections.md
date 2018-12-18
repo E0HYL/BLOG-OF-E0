@@ -70,24 +70,19 @@ iPhone 有内建的 Podcast App (下方第三个图标)，串接 iTunes 目录�
 &emsp;有空再探索一下优秀的中文播客（求推荐！
 
 <h1 id="2" style="color:rgb(78, 78, 78);">Kali-Vmware</h1>
-
 ### Vmware安装Kali
 * [安装步骤参考指南](https://love.ranshy.com/vmware%E5%AE%89%E8%A3%85kali-linux%E7%B3%BB%E7%BB%9F/)
-
 ### 桥接上网问题
 * [桥接模式DHCP自动获取IP失败](https://blog.csdn.net/A807296772/article/details/77616130)
-
 ### 屏幕自适应
 * [使用Open-vm-tools](https://blog.csdn.net/qq_30135181/article/details/78704917)
 ```
 Debian源使用帮助（含例：中科大源）http://mirrors.ustc.edu.cn/help/debian.html
 ```
 * [安装VMWare Tools](https://blog.csdn.net/wy_bk/article/details/78303010)
-
 ### 放大字体与图标
 * [Gnome Tweak Tool](https://steemit.com/utopian-io/@husnulkhatimah/how-to-install-gnome-tweak-tool-on-kali-linux-2017-2)
 * [kali在高清屏幕下如何放大字体与图标](https://blog.werner.wiki/kali-gnome-tweak-tool/)
-
 ### [inux安全渗透](https://wizardforcel.gitbooks.io/daxueba-kali-linux-tutorial/content/0.html)
 
 <h1 id="3" style="color:rgb(78, 78, 78);">Python调用Matlab</h1>
