@@ -2,7 +2,7 @@
 layout: post
 title: A Treasure Chest
 description: "A bin for my various collections."
-modified: 2018-9-23
+modified: 2019-9-23
 tags: [Collection]
 image:
   feature: abstract-2.jpg
@@ -99,7 +99,7 @@ Debian源使用帮助（含例：中科大源）http://mirrors.ustc.edu.cn/help/
   * [从Python将数据传递到MATLAB](https://ww2.mathworks.cn/help/matlab/matlab_external/pass-data-to-matlab-from-python.html)
   * [处理从MATLAB返回到Python的数据](https://ww2.mathworks.cn/help/matlab/matlab_external/handle-data-returned-from-matlab-to-python.html)
 
-<h1 id="2" style="color:rgb(78, 78, 78);">Ubuntu18.04 下基于Anaconda3(Python3.X)安装OpenCV</h1>
+<h1 id="4" style="color:rgb(78, 78, 78);">Ubuntu18.04 下基于Anaconda3(Python3.X)安装OpenCV</h1>
 
 ### 1. 安装依赖项
 
