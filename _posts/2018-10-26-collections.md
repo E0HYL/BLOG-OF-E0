@@ -2,7 +2,7 @@
 layout: post
 title: A Treasure Chest
 description: "A bin for my various collections."
-modified: 2018-12-18
+modified: 2018-9-23
 tags: [Collection]
 image:
   feature: abstract-2.jpg
@@ -111,7 +111,9 @@ Debian源使用帮助（含例：中科大源）http://mirrors.ustc.edu.cn/help/
     sudo apt-get install libatlas-base-dev gfortran # 优化opencv功能
     sudo apt-get install ffmpeg
     sudo apt-get install libjasper-dev
+    
 ### 2. 从[官网](https://anaconda.org/menpo/opencv3/files)下载所需的包
+
 ### 3. conda命令执行
 
     conda install opencv3-3.1.0-py36_0.tar.bz2
