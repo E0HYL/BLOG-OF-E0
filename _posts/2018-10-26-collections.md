@@ -15,7 +15,8 @@ image:
 <div markdown="1">
 [播客 Podcast](#1)<br>
 [Kali-Vmware](#2)<br>
-[Python调用Matlab](#3)
+[Python调用Matlab](#3)<br>
+[Anaconda3安装OpenCV](#4)
 </div>
 </details>
 
@@ -98,3 +99,19 @@ Debian源使用帮助（含例：中科大源）http://mirrors.ustc.edu.cn/help/
   * [从Python将数据传递到MATLAB](https://ww2.mathworks.cn/help/matlab/matlab_external/pass-data-to-matlab-from-python.html)
   * [处理从MATLAB返回到Python的数据](https://ww2.mathworks.cn/help/matlab/matlab_external/handle-data-returned-from-matlab-to-python.html)
 
+<h1 id="2" style="color:rgb(78, 78, 78);">Ubuntu18.04 下基于Anaconda3(Python3.X)安装OpenCV</h1>
+
+### 1. 安装依赖项
+
+    sudo apt-get install build-essential
+    sudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
+    sudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libdc1394-22-dev # 处理图像所需的包
+    sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev liblapacke-dev
+    sudo apt-get install libxvidcore-dev libx264-dev # 处理视频所需的包
+    sudo apt-get install libatlas-base-dev gfortran # 优化opencv功能
+    sudo apt-get install ffmpeg
+    sudo apt-get install libjasper-dev
+### 2. 从[官网](https://anaconda.org/menpo/opencv3/files)下载所需的包
+### 3. conda命令执行
+
+    conda install opencv3-3.1.0-py36_0.tar.bz2
