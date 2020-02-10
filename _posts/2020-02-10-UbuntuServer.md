@@ -90,14 +90,18 @@ MobaXterm是Windows下的一个远程连接客户端，功能十分强大，它�
 校园网为路由器分配IP，路由器又为实验室的电脑分配IP。服务器B和服务器C在实验室内网中（IP为192.168.1.x）。<br>
 其中服务器B做过端口转发，可以通过校园网访问。但客户端访问服务器C则需要通过B来做跳板机。
 ### 配置[教程](https://blog.csdn.net/xuyuqingfeng953/article/details/96180642)
+```
 Session：SSH：Network Setting：Connect through SSH gateway
+```
 
 ## 场景2: 本地浏览器访问远程端口
 ### 需求介绍
 远端服务器无浏览器界面，但希望使用jupyter notebook、tensorboard等。
 ### 配置[教程](http://m.blog.sina.com.cn/s/blog_e11ac5850102xurp.html)
+```
 Tools：Network：MobaSSHTunnel
-
+```
+稍复杂一些，其后的详细参数配置可戳小标题里的链接。
 # Linux常用命令
 ## tar: tape archive
 ### 主要选项
