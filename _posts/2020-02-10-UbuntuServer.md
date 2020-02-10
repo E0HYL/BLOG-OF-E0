@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Ubuntu GPU Server的一些常用操作和知识
+title: Ubuntu GPU Server常用操作指南
 description: "Commom operations for Ubuntu server."
 modified: 2020-02-10
 tags: [Skills, Linux]
