@@ -161,8 +161,8 @@ file3
 
 ## 统计目录下 文件/目录 个数
 ```shell
-$ ll dir_name|grep ^-|wc -l
-$ ll dir_name|grep ^d|wc -l
+$ ll -R dir_name|grep ^-|wc -l
+$ ll -R dir_name|grep ^d|wc -l
 ```
 注：ll的输出信息中，目录以d开头，文件以-开头。若统计所有条目则无需中间一项。
 
@@ -257,6 +257,7 @@ linux系统下基于ssh登录进行安全的远程文件拷贝
 列出指定目录下的内容
 -a 显示隐藏文件
 -l 除文件名外，还有文件权限、所有者、大小、修改时间 （简写为**ll**）
+-R 将目录下所有的子目录的文件都列出来（递归）
 ### df: disk free
 显示文件系统的磁盘使用情况
 ### du: disk usage
