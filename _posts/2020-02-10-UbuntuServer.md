@@ -124,7 +124,8 @@ Tools：Network：MobaSSHTunnel
 > -j, --bzip2 **【.tar.bz, .tar.bz2】**  
 > -J, --xz **【.tar.xz】**  
 > -z, --gzip **【.tar.gz, .tgz】**  
-> -Z, --compress **【.tar.Z】**  
+> -Z, --compress **【.tar.Z】** 
+
 <img src="https://ars.els-cdn.com/content/image/fullsizerender.jpg>
 
 * 打包（压缩）
