@@ -10,7 +10,70 @@ image:
   credit: DarGadgetZ
   creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
 ---
+<!-- TOC -->
 
+- [SSH神器：MobaXterm](#ssh神器mobaxterm)
+    - [基本场景0: SSH](#基本场景0-ssh)
+    - [场景1: 通过跳板机的远程登录](#场景1-通过跳板机的远程登录)
+        - [需求介绍](#需求介绍)
+        - [配置教程](#配置教程)
+    - [场景2: 本地浏览器访问远程端口](#场景2-本地浏览器访问远程端口)
+        - [需求介绍](#需求介绍)
+        - [配置教程](#配置教程)
+- [Linux常用命令](#linux常用命令)
+    - [tar: tape archive](#tar-tape-archive)
+        - [主要选项](#主要选项)
+        - [辅助选项](#辅助选项)
+        - [压缩选项 (not support compress directly)](#压缩选项-not-support-compress-directly)
+        - [附：（其它）压缩 / 解压](#附其它压缩--解压)
+    - [统计目录下 文件/目录 个数](#统计目录下-文件目录-个数)
+    - [实时监测命令的运行结果](#实时监测命令的运行结果)
+    - [kill进程](#kill进程)
+    - [系统管理](#系统管理)
+        - [sudo: superuser do](#sudo-superuser-do)
+        - [su: switch user](#su-switch-user)
+        - [ps: process status](#ps-process-status)
+        - [nohup: no hang up](#nohup-no-hang-up)
+        - [screen](#screen)
+        - [reboot](#reboot)
+    - [文档编辑](#文档编辑)
+        - [grep: global regular expression print](#grep-global-regular-expression-print)
+        - [wc: word count](#wc-word-count)
+    - [文件管理](#文件管理)
+        - [chown: change owner](#chown-change-owner)
+        - [chgrp: change group](#chgrp-change-group)
+        - [chmod: change mode](#chmod-change-mode)
+        - [cat: concatenate](#cat-concatenate)
+        - [more / less](#more--less)
+        - [ln: link](#ln-link)
+        - [cp: copy](#cp-copy)
+        - [rm: remove](#rm-remove)
+        - [mv: move](#mv-move)
+        - [scp: secure copy](#scp-secure-copy)
+        - [locate](#locate)
+        - [whereis](#whereis)
+        - [which](#which)
+        - [split](#split)
+    - [磁盘管理](#磁盘管理)
+        - [cd: change directory](#cd-change-directory)
+        - [pwd: print work directory](#pwd-print-work-directory)
+        - [ls: list](#ls-list)
+        - [df: disk free](#df-disk-free)
+        - [du: disk usage](#du-disk-usage)
+        - [mkdir](#mkdir)
+    - [网络通讯](#网络通讯)
+        - [netstat](#netstat)
+        - [tcpdump](#tcpdump)
+        - [ifconfig](#ifconfig)
+    - [常用符号](#常用符号)
+    - [正则表达式](#正则表达式)
+        - [限定符](#限定符)
+        - [定位符](#定位符)
+        - [非打印字符](#非打印字符)
+        - [其它特殊字符](#其它特殊字符)
+        - [字符簇](#字符簇)
+
+<!-- /TOC -->
 # SSH神器：MobaXterm
 
 > Free X server for Windows with tabbed SSH terminal, telnet, RDP, VNC and X11-forwarding  
@@ -58,7 +121,7 @@ Tools：Network：MobaSSHTunnel
 > -J, --xz **【.tar.xz】**  
 > -z, --gzip **【.tar.gz, .tgz】**  
 > -Z, --compress **【.tar.Z】**  
-![](Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/%E7%85%A7%E7%89%87%202020%E5%B9%B42%E6%9C%889%E6%97%A5%20%E4%B8%8B%E5%8D%8822649.jpg)
+<img src="https://ars.els-cdn.com/content/image/fullsizerender.jpg>
 
 * 打包（压缩）
 ```shell
@@ -157,7 +220,8 @@ $ ps -ef|grep string|grep -v grep|awk ‘{print $2}’|xargs kill -9
 ### chmod: change mode
 `chmod 777 file_name`
 * 读r=4, 写w=2, 执行x=1【rwx : 7, rw- : 6, r-x : 5】
-* 三个数字分别对应User, Group, Other的权限		
+* 三个数字分别对应User, Group, Other的权限	
+
 ### cat: concatenate
 连接文件并打印到标准输出设备上，-n由1开始对输出行编号（-b空白行不编）
 <br>`cat file1 file2 > file3` （输入到file3中，若>>则为追加，不打印在控制台）
