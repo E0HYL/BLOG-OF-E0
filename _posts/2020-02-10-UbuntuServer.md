@@ -204,8 +204,8 @@ $ ps -ef|grep string|grep -v grep|awk ‘{print $2}’|xargs kill -9
 
 ## 文档编辑
 ### grep: global regular expression print
--v 显示不包含匹配文本的所有行
-查找文件里符合条件的字符串，输出为文件中包含该字符串的行
+-v 显示不包含匹配文本的所有行<br>
+查找文件里符合条件的字符串，输出为文件中包含该字符串的行<br>
 `grep string *file` 查找后缀有file的文件中包含string字符串的文件
 ### wc: word count
 计算文件字数，输出三个数字分别表示行数(-l)、单词数(-w)、字节数(-c, --chars)
