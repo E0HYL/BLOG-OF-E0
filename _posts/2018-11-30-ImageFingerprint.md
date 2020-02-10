@@ -6,7 +6,6 @@ modified: 2018-12-01
 tags: [Project]
 image:
   feature: abstract-3.jpg
-  entry: abstract-3.jpg
   credit: DarGadgetZ
   creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
 ---
