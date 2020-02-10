@@ -32,6 +32,7 @@ image:
     - [系统管理](#系统管理)
         - [sudo: superuser do](#sudo-superuser-do)
         - [su: switch user](#su-switch-user)
+    - [用户与用户组](#用户与用户组)
         - [ps: process status](#ps-process-status)
         - [nohup: no hang up](#nohup-no-hang-up)
         - [screen](#screen)
@@ -190,6 +191,17 @@ $ ps -ef|grep string|grep -v grep|awk ‘{print $2}’|xargs kill -9
 ## 系统管理
 ### sudo: superuser do
 ### su: switch user
+## 用户与用户组
+- 增加用户 `useradd -d /usr/username -m username`
+- 为用户增加密码 `passwd username`
+- 新建工作组 `groupadd groupname`
+- 将用户添加进工作组 `usermod -G groupname username`
+直接用`usermod -G groupA`会离开其他用户组，仅仅做为这个用户组 groupA 的成员。应该加上 -a 选项： 
+```
+usermod -a -G groupA user
+```
+- 删除用户 `userdel username`
+
 ### ps: process status
 常用参数：-aux -ef
 五种进程状态
