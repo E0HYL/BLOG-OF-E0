@@ -155,10 +155,9 @@ $ ps -ef|grep string|grep -v grep|awk ‘{print $2}’|xargs kill -9
 ### chgrp: change group
 改变文件用户组
 ### chmod: change mode
+`chmod 777 file_name`
 * 读r=4, 写w=2, 执行x=1【rwx : 7, rw- : 6, r-x : 5】
 * 三个数字分别对应User, Group, Other的权限		
-
-<br>`chmod 777 file_name`
 ### cat: concatenate
 连接文件并打印到标准输出设备上，-n由1开始对输出行编号（-b空白行不编）
 <br>`cat file1 file2 > file3` （输入到file3中，若>>则为追加，不打印在控制台）
@@ -261,7 +260,7 @@ $	文本的结尾
 ### 字符簇
 放在一个方括号（[ ]）里，连字符（-）可表示一个范围。方括号里的^符号表示“非”。
 ```
-[a-z]		所有小写字母
+[a-z]	所有小写字母
 [A-Z]	所有大写字母
 [a-zA-Z]	所有字母
 [0-9]	所有数字
