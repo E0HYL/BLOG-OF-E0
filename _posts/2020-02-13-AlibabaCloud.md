@@ -2,7 +2,7 @@
 layout: post
 title: 阿里云服务器SSH登录及云盘挂载
 description: "Instructions for Alibaba Cloud."
-modified: 2020-02-10
+modified: 2020-02-13
 tags: [Skills, Linux]
 image:
   feature: abstract-5.jpg
