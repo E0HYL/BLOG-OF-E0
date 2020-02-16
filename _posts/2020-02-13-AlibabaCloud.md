@@ -70,7 +70,7 @@ PasswordAuthentication yes 允许密码认证
 2. 将`/dev/vdc`挂载到`/data`目录中
 
    - 先创建目录`mkdir -p /data `
-   - 硬盘分区(依次输入`n` -> `p` -> `Enter` -> `Enter` -> `wq`)
+   - 硬盘分区`fdisk /dev/vdc`(依次输入`n` -> `p` -> `Enter` -> `Enter` -> `wq`)
 
 3. `fdisk -l` ：查看磁盘的设备，我这里是`/dev/vdb1`
 
@@ -87,4 +87,38 @@ PasswordAuthentication yes 允许密码认证
    ```
 
    <img src="{{site.url}}/images/mount.PNG" alt="">
+
+## 大于2 TiB的数据盘
+
+```
+apt-get install parted
+apt-get install e2fsprogs
+```
+
+1. 查看未挂载的盘，我这里是`/dev/vdc`
+
+2. `parted /dev/vdd`开始分区
+    - `mklabel gpt`:将默认的MBR分区格式转为GPT分区格式
+    - `mkpart primary 1 100%`:划分一个主分区，并设置分区的开始位置和结束位置
+    - `align-check optimal 1`:检查分区是否对齐。
+    - `print`:查看分区表
+    - `quit`:退出parted操作
+
+3. `partprobe`:使系统重读分区表
+
+4. `mkfs -t ext4 /dev/vdd1`:为`/dev/vdc1`分区创建一个ext4文件系统
+
+5. `mkdir /data_1`:创建一个名为`/data_1`的挂载点
+
+6. `mount /dev/vdc1 /data_1`:将分区/dev/vdc1挂载到/data_1
+
+7. `df -h`:查看目前磁盘空间和使用情况
+
+## （推荐）启动开机自动挂载分区
+
+1. `cp /etc/fstab /etc/fstab.bak`，备份etc/fstab
+
+2. `echo /dev/vdc1 /data_1 ext4 defaults 0 0 >> /etc/fstab`，向/etc/fstab里写入新分区信息
+
+3. `cat /etc/fstab`，查看/etc/fstab的信息。如果返回结果里出现了写入的新分区信息，说明写入成功
 
