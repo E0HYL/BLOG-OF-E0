@@ -73,47 +73,48 @@ image:
         - [非打印字符](#非打印字符)
         - [其它特殊字符](#其它特殊字符)
         - [字符簇](#字符簇)
+- [VSCode: 编辑远程文件](#vscode-编辑远程文件)
 
 <!-- /TOC -->
 
-# 1. SSH神器：MobaXterm
+# SSH神器：MobaXterm
 
 > Free X server for Windows with tabbed SSH terminal, telnet, RDP, VNC and X11-forwarding  
 MobaXterm是Windows下的一个远程连接客户端，功能十分强大，它不仅仅只支持ssh连接，它支持许多的远程连接方式，包括SSH，X11，RDP，VNC，FTP，MOSH
 
-## 1.1. 基本场景0: [SSH](https://zhuanlan.zhihu.com/p/56341917)
+## 基本场景0: [SSH](https://zhuanlan.zhihu.com/p/56341917)
 > 图形化的SSH隧道管理  
 > SSH登陆后左边会自动列出sftp文件传输窗口，可以随手进行文件上传和下载  
 > 免费的绿色免安装版本就可以满足日常工作的需求  
 
-## 1.2. 场景1: 通过跳板机的远程登录
+## 场景1: 通过跳板机的远程登录
 
-### 1.2.1. 需求介绍
+### 需求介绍
 客户端A使用校园网IP（10.开头）；<br>
 校园网为路由器分配IP，路由器又为实验室的电脑分配IP。服务器B和服务器C在实验室内网中（IP为192.168.1.x）。<br>
 其中服务器B做过端口转发，可以通过校园网访问。但客户端访问服务器C则需要通过B来做跳板机。
 
-### 1.2.2. 配置[教程](https://blog.csdn.net/xuyuqingfeng953/article/details/96180642)
+### 配置[教程](https://blog.csdn.net/xuyuqingfeng953/article/details/96180642)
 ```
 Session：SSH：Network Setting：Connect through SSH gateway
 ```
 
-## 1.3. 场景2: 本地浏览器访问远程端口
+## 场景2: 本地浏览器访问远程端口
 
-### 1.3.1. 需求介绍
+### 需求介绍
 远端服务器无浏览器界面，但希望使用jupyter notebook、tensorboard等。
 
-### 1.3.2. 配置[教程](http://m.blog.sina.com.cn/s/blog_e11ac5850102xurp.html)
+### 配置[教程](http://m.blog.sina.com.cn/s/blog_e11ac5850102xurp.html)
 ```
 Tools：Network：MobaSSHTunnel
 ```
 稍复杂一些，其后的详细参数配置可戳小标题里的链接。
 
-# 2. Linux常用命令
+# Linux常用命令
 
-## 2.1. tar: tape archive
+## tar: tape archive
 
-### 2.1.1. 主要选项
+### 主要选项
 > **-c, --create 打包**  
 > **-x, --extract 解压**  
 > -t,  --list 查看  
@@ -123,12 +124,12 @@ Tools：Network：MobaSSHTunnel
 > --delete 从归档中删除  
 > -d, --diff 比较归档和文件系统的差异  
 
-### 2.1.2. 辅助选项
+### 辅助选项
 > **-v, --verbose 详细列出处理的文件**   
 > **-f, --file=`ARCHIVE`**   
 > -C 解压到指定目录  
 
-### 2.1.3. 压缩选项 (not support compress directly)
+### 压缩选项 (not support compress directly)
 > -a, --auto-compress 根据归档后缀名决定  
 > -j, --bzip2 **【.tar.bz, .tar.bz2】**  
 > -J, --xz **【.tar.xz】**  
@@ -156,7 +157,7 @@ file1
 file3
 ```
 
-### 2.1.4. 附：（其它）压缩 / 解压
+### 附：（其它）压缩 / 解压
 * .gz
 `gzip file_name`
 `gunzip file_name.gz`
@@ -173,14 +174,14 @@ file3
 `rar a file_name.rar dir_name`
 `rar x file_name.rar`
 
-## 2.2. 统计目录下 文件/目录 个数
+## 统计目录下 文件/目录 个数
 ```shell
 $ ll -R dir_name|grep ^-|wc -l
 $ ll -R dir_name|grep ^d|wc -l
 ```
 注：ll的输出信息中，目录以d开头，文件以-开头。若统计所有条目则无需中间一项。
 
-## 2.3. 实时监测命令的运行结果
+## 实时监测命令的运行结果
 -n, --interval=	周期（秒）
 -d, --differences	高亮显示变动
 ```shell
@@ -188,7 +189,7 @@ $ watch -n 1 -d nvidia-smi
 ```
 注：nvidia-smi为CUDA命令，用于查看GPU使用情况
 
-## 2.4. kill进程
+## kill进程
 ```shell
 # 杀死指定用户的所有进程
 $ kill -u user
@@ -196,13 +197,13 @@ $ kill -u user
 $ ps -ef|grep string|grep -v grep|awk ‘{print $2}’|xargs kill -9
 ```
 
-## 2.5. 系统管理
+## 系统管理
 
-### 2.5.1. sudo: superuser do
+### sudo: superuser do
 
-### 2.5.2. su: switch user
+### su: switch user
 
-### 2.5.3. 用户与用户组
+### 用户与用户组
 - 增加用户 `useradd -d /usr/username -m username`
 - 为用户增加密码 `passwd username`
 - 新建工作组 `groupadd groupname`
@@ -213,7 +214,7 @@ $ ps -ef|grep string|grep -v grep|awk ‘{print $2}’|xargs kill -9
 	```
 - 删除用户 `userdel username`
 
-### 2.5.4. ps: process status
+### ps: process status
 常用参数：-aux -ef
 五种进程状态
 1. R：运行 runnable
@@ -222,112 +223,112 @@ $ ps -ef|grep string|grep -v grep|awk ‘{print $2}’|xargs kill -9
 4. Z: 僵死 a zombie process
 5. T: 停止 traced or stopped
 
-### 2.5.5. nohup: no hang up
+### nohup: no hang up
 常和 & 符号配合，使程序在后台永久执行【用**screen**更优】
 
-### 2.5.6. screen
+### screen
 `screen -ls`
 <br>`screen -r id `  **ctrl+a+d**：返回之前的shell
 
-### 2.5.7. reboot
+### reboot
 重启（需root）
 
-## 2.6. 文档编辑
+## 文档编辑
 
-### 2.6.1. grep: global regular expression print
+### grep: global regular expression print
 -v 显示不包含匹配文本的所有行<br>
 查找文件里符合条件的字符串，输出为文件中包含该字符串的行<br>
 `grep string *file` 查找后缀有file的文件中包含string字符串的文件
 
-### 2.6.2. wc: word count
+### wc: word count
 计算文件字数，输出三个数字分别表示行数(-l)、单词数(-w)、字节数(-c, --chars)
 
-## 2.7. 文件管理
+## 文件管理
 
-### 2.7.1. chown: change owner
+### chown: change owner
 改变文件所有者，-R指定目录以及其子目录下所有文件
 <br>`chown user[:group] file_name`
 <br>`chmod -R user[:group] *`（当前目录）
 
-### 2.7.2. chgrp: change group
+### chgrp: change group
 改变文件用户组
 
-### 2.7.3. chmod: change mode
+### chmod: change mode
 `chmod 777 file_name`
 * 读r=4, 写w=2, 执行x=1【rwx : 7, rw- : 6, r-x : 5】
 * 三个数字分别对应User, Group, Other的权限	
 
-### 2.7.4. cat: concatenate
+### cat: concatenate
 连接文件并打印到标准输出设备上，-n由1开始对输出行编号（-b空白行不编）
 <br>`cat file1 file2 > file3` （输入到file3中，若>>则为追加，不打印在控制台）
 
-### 2.7.5. more / less
+### more / less
 分页浏览文件（less可随意浏览）
 <br>`history | less` 查看命令使用历史并通过less分页显示（Q退出）
 
-### 2.7.6. ln: link
+### ln: link
 为某文件在另一个位置建立同步链接。需要在不同目录用到同一文件时，不必重复占用磁盘空间。-s 创建软链接（可跨文件系统，类似于快捷方式）
 <br>`ln -s file_name link_name`
 
-### 2.7.7. cp: copy
+### cp: copy
 复制目录时必须加**-r**
 
-### 2.7.8. rm: remove
+### rm: remove
 删除目录必须加-r，-f对只读文件也直接删除
 
-### 2.7.9. mv: move
+### mv: move
 `mv source dest`
 
-### 2.7.10. scp: secure copy
+### scp: secure copy
 linux系统下基于ssh登录进行安全的远程文件拷贝
 <br>`scp local_file remote_username@remote_ip:remote:folder`
 
-### 2.7.11. locate
+### locate
 用于查找符合条件的文档（文件或目录名中包含指定字符串）
 
-### 2.7.12. whereis
+### whereis
 只查找二进制文件、源代码文件或帮助文件。一般文件的定位用locate
 
-### 2.7.13. which
+### which
 在环境变量$PATH$设置的目录中查找文件
 
-### 2.7.14. split
+### split
 将大文件分割成较小的文件（默认间隔1000行，可用-<行数>指定）
 
-## 2.8. 磁盘管理
+## 磁盘管理
 
-### 2.8.1. cd: change directory
+### cd: change directory
 
-### 2.8.2. pwd: print work directory
+### pwd: print work directory
 打印当前工作目录的绝对路径 
 
-### 2.8.3. ls: list
+### ls: list
 列出指定目录下的内容
 -a 显示隐藏文件
 -l 除文件名外，还有文件权限、所有者、大小、修改时间 （简写为**ll**）
 -R 将目录下所有的子目录的文件都列出来（递归）
 
-### 2.8.4. df: disk free
+### df: disk free
 显示文件系统的磁盘使用情况
 
-### 2.8.5. du: disk usage
+### du: disk usage
 显示指定文件所占的磁盘空间
 
-### 2.8.6. mkdir
+### mkdir
 
-## 2.9. 网络通讯
+## 网络通讯
 
-### 2.9.1. netstat
+### netstat
 `netstat -apu` 显示UDP（-u）端口号的使用，若TCP则为-t
 <br>`netstat -l` 显示监听的套接字
 
-### 2.9.2. tcpdump
+### tcpdump
 显示TCP包信息
 
-### 2.9.3. ifconfig
+### ifconfig
 显示或设置网络设备
 
-## 2.10. 常用符号
+## 常用符号
 ```
 |	（管道，pipeline）上一条命令的输出，作为下一条命令的参数
 	`echo ‘yes’ | wc -l`
@@ -343,9 +344,9 @@ linux系统下基于ssh登录进行安全的远程文件拷贝
 ;	连续命令间的分隔
 ```
 
-## 2.11. 正则表达式
+## 正则表达式
 
-### 2.11.1. 限定符
+### 限定符
 ```
 *	>=0个匹配
 +	>=1个匹配
@@ -355,7 +356,7 @@ linux系统下基于ssh登录进行安全的远程文件拷贝
 {n, m}	匹配范围（m<=255）
 ```
 
-### 2.11.2. 定位符
+### 定位符
 ```
 ^	文本的开始
 $	文本的结尾
@@ -363,7 +364,7 @@ $	文本的结尾
 \B	非单词边界
 ```
 
-### 2.11.3. 非打印字符
+### 非打印字符
 ```
 \f	换页符
 \n	换行符
@@ -374,7 +375,7 @@ $	文本的结尾
 	注意Unicode正则表达式会匹配全角空格字符。
 ```
 
-### 2.11.4. 其它特殊字符
+### 其它特殊字符
 ```
 \	转义字符
 .	除换行符（\n）外的任何单字符
@@ -382,7 +383,7 @@ $	文本的结尾
 ( )	一个子表达式的开始和结束
 ```
 
-### 2.11.5. 字符簇
+### 字符簇
 放在一个方括号（[ ]）里，连字符（-）可表示一个范围。方括号里的^符号表示“非”。
 ```
 [a-z]	所有小写字母
@@ -396,3 +397,25 @@ $	文本的结尾
 ^\-?[0-9]+	所有整数
 ^[-]?[0-9]+(\.[0-9]+)?	所有浮点数
 ```
+
+# VSCode: 编辑远程文件
+
+- 安装Remote-SSH插件
+
+- 添加配置文件，通常位置为~/.ssh/config
+
+- config文件中配置SSH参数
+
+    ```
+    Host 连接的主机的名称，可自定
+    Hostname 远程主机的IP地址
+    User 用于登录远程主机的用户名
+    Port 用于登录远程主机的端口
+    IdentityFile 本地的私钥的路径
+    ForwardX11
+    ProxyCommand
+
+    详见官方文档：https://code.visualstudio.com/docs/remote/ssh
+    ```
+
+- 关闭连接：File - Close Folder
