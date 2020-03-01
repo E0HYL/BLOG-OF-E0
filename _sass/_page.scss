@@ -635,18 +635,16 @@ header .entry-meta {
    Social share
    ========================================================================== */
 
-   .social-share .icon-wechat {
+.social-share .icon-wechat {
 	position: relative;
 	border-color: #cecece;
 	color: #cecece;
-	background:#cecece;
-	*background:url(http://www.chinanews.com/fileftp/2019/06/2019-06-20/U435P4T47D44676F24534DT20190620143837.png) no-repeat center #cecece ;
 }
 
-.social-share .icon-wechat:hover {
-	background: #71d147;
-	*background:url(http://www.chinanews.com/fileftp/2019/06/2019-06-20/U435P4T47D44676F24534DT20190620143837.png) no-repeat center #71d147;
-}
+// .social-share .icon-wechat:hover {
+// 	background: #71d147;
+// 	*background:url(http://www.chinanews.com/fileftp/2019/06/2019-06-20/U435P4T47D44676F24534DT20190620143837.png) no-repeat center #71d147;
+// }
 
 .social-share .icon-wechat .wechat-qrcode {
 	position: absolute;
