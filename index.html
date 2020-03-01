@@ -34,7 +34,7 @@ image:
     {% endif %}
   </header>
   <div class="entry-content">
-    {{ post.excerpt | remove: '\[ ... \]' | remove: '\( ... \)' | markdownify | strip_html | strip_newlines | escape_once }}
+    {{ post.excerpt }}
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->
 {% endfor %}
