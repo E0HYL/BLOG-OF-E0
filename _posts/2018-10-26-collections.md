@@ -75,7 +75,7 @@ iPhone 有内建的 Podcast App (下方第三个图标)，串接 iTunes 目录�
 
 &emsp;有空再探索一下优秀的中文播客（求推荐！
 
-<h2 id="2" style="color:rgb(78, 78, 78);">Kali-Vmware</h1>
+<h1 id="2" style="color:rgb(78, 78, 78);">Kali-Vmware</h1>
 
 ### Vmware安装Kali
 * [安装步骤参考指南](https://love.ranshy.com/vmware%E5%AE%89%E8%A3%85kali-linux%E7%B3%BB%E7%BB%9F/)
@@ -92,7 +92,7 @@ Debian源使用帮助（含例：中科大源）http://mirrors.ustc.edu.cn/help/
 * [kali在高清屏幕下如何放大字体与图标](https://blog.werner.wiki/kali-gnome-tweak-tool/)
 ### [inux安全渗透](https://wizardforcel.gitbooks.io/daxueba-kali-linux-tutorial/content/0.html)
 
-<h2 id="3" style="color:rgb(78, 78, 78);">Python调用Matlab</h1>
+<h1 id="3" style="color:rgb(78, 78, 78);">Python调用Matlab</h1>
 
 ### [基础教程](https://blog.csdn.net/Eric2016_Lv/article/details/83098703)
 * Matlab 2018b已支持python3.6（3.7不行）
