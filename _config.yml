@@ -60,7 +60,7 @@ paginate: 5
 
 excerpt_separator: <!--more-->
 
-  kramdown:
+kramdown:
   input: GFM
   auto_ids: true
   footnote_nr: 1
