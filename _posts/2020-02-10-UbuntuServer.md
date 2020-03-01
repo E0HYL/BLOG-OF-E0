@@ -7,6 +7,8 @@ tags: [Skills]
 image:
   feature: abstract-4.jpg
 ---
+<details open><!-- 可选open -->
+<summary>Contents</summary>
 <!-- TOC -->
 
 - [SSH神器：MobaXterm](#ssh神器mobaxterm)
@@ -75,6 +77,8 @@ image:
 - [基于Anaconda3(Python3.X)安装OpenCV](#基于anaconda3python3x安装opencv)
 
 <!-- /TOC -->
+</div>
+</details>
 
 # SSH神器：MobaXterm
 

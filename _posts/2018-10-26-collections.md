@@ -8,8 +8,8 @@ image:
   feature: abstract-2.jpg
 ---
 
-<details open style="text-align:center;"><!-- 可选open -->
-<summary style="font-size:25px;">Classification</summary>
+<details open><!-- 可选open -->
+<summary>Contents</summary>
 <div markdown="1">
 [科学上网GLaDOS](#4)<br>
 [播客 Podcast](#1)<br>
@@ -23,6 +23,8 @@ image:
 - 邀请码：XHPEW-U932V-7GM32-KEMTG
 - 教育版有一年免费！edu邮箱绑定后点网站footer部分的`for education`
 - 超级良心的项目！速度快！客户端的界面简洁好看，LOGO也好可爱！
+
+<!--more-->
 
 <h1 id="1" style="color:rgb(78, 78, 78);">Podcast</h1>
 存放在网络上，结合RSS feed订阅功能的“广播”。

@@ -15,6 +15,7 @@ image:
 - [使用jar包运行Flowdroid](#使用jar包运行flowdroid)
 
 <!-- /TOC -->
+<!--more-->
 
 ## 用Maven构建Flowdroid
 

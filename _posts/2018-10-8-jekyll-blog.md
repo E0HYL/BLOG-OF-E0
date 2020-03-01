@@ -51,7 +51,9 @@ gem install jekyll
 	rm -rf .git
 	git init
 	```
-	
+
+<!-- more -->
+
 ### Update your contents*
 ```shell
 git add (-A)
