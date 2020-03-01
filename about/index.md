@@ -5,8 +5,9 @@ image:
   feature: abstract-5.jpg
 comments: false
 modified: 2018-10-05
+reading-time: false
 ---
-# BLOG
+# The Blog
 
 © E0, From 2018. From small beginnings comes great things.
 
@@ -20,7 +21,7 @@ modified: 2018-10-05
 
 ---
 
-# ABOUT ME
+# About Me
 
 Yiling He. Contact: heyilinge0@gmail.com
 
