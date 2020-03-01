@@ -12,14 +12,12 @@ image:
 ---
 <!-- TOC -->
 
-- [编译运行FlowDroid](#编译运行flowdroid)
-    - [用Maven构建Flowdroid](#用maven构建flowdroid)
-        - [主要问题和解决方法](#主要问题和解决方法)
-        - [Maven 手动添加 JAR 包到本地仓库](#maven-手动添加-jar-包到本地仓库)
-    - [使用jar包运行Flowdroid](#使用jar包运行flowdroid)
+- [用Maven构建Flowdroid](#用maven构建flowdroid)
+    - [主要问题和解决方法](#主要问题和解决方法)
+    - [Maven 手动添加 JAR 包到本地仓库](#maven-手动添加-jar-包到本地仓库)
+- [使用jar包运行Flowdroid](#使用jar包运行flowdroid)
 
 <!-- /TOC -->
-# 编译运行FlowDroid
 
 ## 用Maven构建Flowdroid
 
