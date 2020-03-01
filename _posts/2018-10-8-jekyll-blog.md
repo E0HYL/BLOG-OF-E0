@@ -179,11 +179,11 @@ To add additional links in the drop down menu edit `_data/navigation.yml`. (Exte
 - customized by setting a `excerpt_separator` variable in YAML front-matter or _config.yml.
 	```yml
 	---
-	excerpt_separator: <!--more-->
+	excerpt_separator: <!--read more-->
 	---
 
 	Excerpt
-	<!--more-->
+	<!--read more-->
 	Out-of-excerpt
 	```
 
