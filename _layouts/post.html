@@ -64,13 +64,11 @@
 </div><!-- /.footer-wrapper -->
 
 {% include scripts.html %}	        
-<script>window.jQuery || document.write('<script src="{{ site.url }}/assets/js/vendor/jquery.share.min.js"><\/script>')</script>
+<script src="{{ site.url }}/assets/js/vendor/jquery.share.min.js"></script>
 <script>
   // share options
-  $(function() {
-    $( '#share' ).share({
-      sites: ["wechat"]
-    });
+  $(document).ready(function() {
+    $( '#share' ).share({sites: ["wechat"]});
   });
 </script>
 </body>
