@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Ubuntu GPU Server常用操作指南
+title: 编译运行FlowDroid
 description: "How to use FlowDroid."
 modified: 2020-03-1
 tags: [Code, Android]
