@@ -11,6 +11,7 @@ image:
 ### The general structure and sequence of stages in the camera pipeline
 
 <img src="https://ars.els-cdn.com/content/image/1-s2.0-S1742287617303146-gr1.jpg">
+
 <!-- more -->
 
 *以下引自论文 [Blind source camera identification](https://ieeexplore.ieee.org/document/1418853)*
