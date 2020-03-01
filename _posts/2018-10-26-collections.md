@@ -18,7 +18,8 @@ image:
 </div>
 </details>
 
-<h2 id="4" style="color:rgb(78, 78, 78);">科学上网GLaDOS</h1>
+<h1 id="4" style="color:rgb(78, 78, 78);">科学上网GLaDOS</h1>
+
 - 项目地址：https://github.com/glados-network/GLaDOS
 - 邀请码：XHPEW-U932V-7GM32-KEMTG
 - 教育版有一年免费！edu邮箱绑定后点网站footer部分的`for education`
@@ -26,7 +27,8 @@ image:
 
 <!--more-->
 
-<h2 id="1" style="color:rgb(78, 78, 78);">Podcast</h1>
+<h1 id="1" style="color:rgb(78, 78, 78);">Podcast</h1>
+
 存放在网络上，结合RSS feed订阅功能的“广播”。
 **可选收听姿势：**（[了解更多](https://medium.com/@StarRocket/for-those-podcast-lovers-we-recommend-these-8-apps-bf67d44c6919)）
 > iTunes 应该是目前市面上拥有最完整 podcast 目录的地方<br/>
