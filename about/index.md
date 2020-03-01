@@ -1,10 +1,8 @@
 ---
 layout: page
-title: Begining of the blog
+title: E0's BLOG
 image:
   feature: abstract-5.jpg
-  credit: dargadgetz
-  creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
 comments: false
 modified: 2018-10-05
 ---
@@ -22,7 +20,7 @@ modified: 2018-10-05
 
 ---
 
-## ABOUT ME
+# ABOUT ME
 
 Yiling He. Contact: heyilinge0@gmail.com
 
