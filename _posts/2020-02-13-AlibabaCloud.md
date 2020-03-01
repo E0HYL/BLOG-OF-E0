@@ -20,6 +20,7 @@ image:
 - 注意两个密码不一样，忘记了就重置/修改吧，但改完后一定要重启！
 
 <img src="{{site.url}}/images/passwd.png" alt="">
+<!--more-->
 
 # 配置SSH密钥
 
@@ -36,7 +37,7 @@ PasswordAuthentication yes 允许密码认证
 
 2. 重启ssh服务：`/etc/init.d/ssh restart`
 3. 为开放的SSH端口添加入方向的规则（删除原有的端口22规则，好像买服务器时候可选SSH端口，但当时不是我买的= =）
-<!--more-->
+
 <img src="{{site.url}}/images/rule.PNG" alt="">
 
 <img src="{{site.url}}/images/rule1.PNGg" alt="">
