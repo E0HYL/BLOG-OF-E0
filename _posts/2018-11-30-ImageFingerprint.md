@@ -2,12 +2,10 @@
 layout: post
 title: More Than Digital Image Processing
 description: "A bin for ImageFingerprint collections."
-modified: 2018-12-01
-tags: [Project]
+modified: 2018-12-1
+tags: [Camera Fingerprint]
 image:
   feature: abstract-3.jpg
-  credit: DarGadgetZ
-  creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
 ---
 
 ### The general structure and sequence of stages in the camera pipeline

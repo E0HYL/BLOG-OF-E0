@@ -2,24 +2,27 @@
 layout: post
 title: A Treasure Chest
 description: "A bin for my various collections."
-modified: 2019-9-23
-tags: [Collection]
+modified: 2020-3-1
+tags: [Skills]
 image:
   feature: abstract-2.jpg
-  entry: abstract-2.jpg
-  credit: DarGadgetZ
-  creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
 ---
 
 <details open style="text-align:center;"><!-- 可选open -->
 <summary style="font-size:25px;">Classification</summary>
 <div markdown="1">
+[科学上网GLaDOS](#4)<br>
 [播客 Podcast](#1)<br>
 [Kali-Vmware](#2)<br>
-[Python调用Matlab](#3)<br>
-[Anaconda3安装OpenCV](#4)
+[Python调用Matlab](#3)
 </div>
 </details>
+
+<h1 id="4" style="color:rgb(78, 78, 78);">科学上网GLaDOS<h1>
+- 项目地址：https://github.com/glados-network/GLaDOS
+- 邀请码：XHPEW-U932V-7GM32-KEMTG
+- 教育版有一年免费！edu邮箱绑定后点网站footer部分的`for education`
+- 超级良心的项目！速度快！客户端的界面简洁好看，LOGO也好可爱！
 
 <h1 id="1" style="color:rgb(78, 78, 78);">Podcast</h1>
 存放在网络上，结合RSS feed订阅功能的“广播”。
@@ -100,21 +103,3 @@ Debian源使用帮助（含例：中科大源）http://mirrors.ustc.edu.cn/help/
   * [从Python将数据传递到MATLAB](https://ww2.mathworks.cn/help/matlab/matlab_external/pass-data-to-matlab-from-python.html)
   * [处理从MATLAB返回到Python的数据](https://ww2.mathworks.cn/help/matlab/matlab_external/handle-data-returned-from-matlab-to-python.html)
 
-<h1 id="4" style="color:rgb(78, 78, 78);">Ubuntu18.04 下基于Anaconda3(Python3.X)安装OpenCV</h1>
-
-### 1. 安装依赖项
-
-    sudo apt-get install build-essential
-    sudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
-    sudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libdc1394-22-dev # 处理图像所需的包
-    sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev liblapacke-dev
-    sudo apt-get install libxvidcore-dev libx264-dev # 处理视频所需的包
-    sudo apt-get install libatlas-base-dev gfortran # 优化opencv功能
-    sudo apt-get install ffmpeg
-    sudo apt-get install libjasper-dev
-    
-### 2. 从[官网](https://anaconda.org/menpo/opencv3/files)下载所需的包
-
-### 3. conda命令执行
-
-    conda install opencv3-3.1.0-py36_0.tar.bz2

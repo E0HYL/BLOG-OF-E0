@@ -2,13 +2,10 @@
 layout: post
 title: 编译运行FlowDroid
 description: "How to use FlowDroid."
-modified: 2020-03-1
-tags: [Code, Android]
+modified: 2020-3-1
+tags: [Android]
 image:
   feature: abstract-5.jpg
-  entry: abstract-5.jpg
-  credit: DarGadgetZ
-  creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
 ---
 <!-- TOC -->
 

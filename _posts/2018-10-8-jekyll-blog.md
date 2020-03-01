@@ -2,12 +2,10 @@
 layout: post
 title: Jekyll + Github Pages = Blog
 description: "Let me introduce how the blog works for my first post."
-modified: 2018-10-8
-tags: [Skills, Blog]
+modified: 2020-3-1
+tags: [Skills]
 image:
   feature: abstract-1.jpg
-  credit: DarGadgetZ
-  creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
 ---
 
 > Though written in English, links here I attach are almost Chinese (for better understandings).
@@ -167,13 +165,26 @@ git push -u origin <local branch>:<remote branch> (-f)
 ### Navigation Links
 To add additional links in the drop down menu edit `_data/navigation.yml`. (External links will open in a new window.)
 
-### Truncate (Liquid)
+### ~~Truncate (Liquid)~~ (use excerpts instead)
 `index.html`: To abstract each post, add
 ```liquid
 {% raw %}
 {{ post.content | truncatewords:150 }}
 {% endraw %}
 ```
+
+### Post excerpts
+- use `excerpt` variable on a post (default: the first paragraph of content).
+- customized by setting a `excerpt_separator` variable in YAML front-matter or _config.yml.
+	```yml
+	---
+	excerpt_separator: <!--more-->
+	---
+
+	Excerpt
+	<!--more-->
+	Out-of-excerpt
+	```
 
 ### Support MathJax
 `_layouts/post.html`: Add script in <head>

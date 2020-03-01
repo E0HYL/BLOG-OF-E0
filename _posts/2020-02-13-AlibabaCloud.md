@@ -2,12 +2,10 @@
 layout: post
 title: 阿里云服务器SSH登录及云盘挂载
 description: "Instructions for Alibaba Cloud."
-modified: 2020-02-13
-tags: [Skills, Linux]
+modified: 2020-2-13
+tags: [Skills]
 image:
   feature: abstract-5.jpg
-  credit: DarGadgetZ
-  creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
 ---
 # 网页远程登录
 

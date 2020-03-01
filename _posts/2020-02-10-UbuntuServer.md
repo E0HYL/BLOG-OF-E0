@@ -3,12 +3,9 @@ layout: post
 title: Ubuntu GPU Server常用操作指南
 description: "Commom operations for Ubuntu server."
 modified: 2020-02-10
-tags: [Skills, Linux]
+tags: [Skills]
 image:
   feature: abstract-4.jpg
-  entry: abstract-4.jpg
-  credit: DarGadgetZ
-  creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
 ---
 <!-- TOC -->
 
@@ -29,6 +26,7 @@ image:
     - [统计目录下 文件/目录 个数](#统计目录下-文件目录-个数)
     - [实时监测命令的运行结果](#实时监测命令的运行结果)
     - [kill进程](#kill进程)
+    - [环境变量](#环境变量)
     - [系统管理](#系统管理)
         - [sudo: superuser do](#sudo-superuser-do)
         - [su: switch user](#su-switch-user)
@@ -74,6 +72,7 @@ image:
         - [其它特殊字符](#其它特殊字符)
         - [字符簇](#字符簇)
 - [VSCode: 编辑远程文件](#vscode-编辑远程文件)
+- [基于Anaconda3(Python3.X)安装OpenCV](#基于anaconda3python3x安装opencv)
 
 <!-- /TOC -->
 
@@ -196,6 +195,13 @@ $ kill -u user
 # 批量杀死包含某字符串（string）的进程：awk中的脚本打印文本每行的第二列，即进程号；xargs将之前获得的进程号作为kill -9的参数并执行
 $ ps -ef|grep string|grep -v grep|awk ‘{print $2}’|xargs kill -9
 ```
+
+## 环境变量
+修改用户级别的环境变量`vim ~/.bashrc`（系统级别`vim /etc/profile`），写入：
+```bash
+export PATH="$PATH:/home/username/example"
+```
+用`source ~/.bashrc`命令以生效
 
 ## 系统管理
 
@@ -419,3 +425,21 @@ $	文本的结尾
     ```
 
 - 关闭连接：File - Close Folder
+
+# 基于Anaconda3(Python3.X)安装OpenCV
+
+1. 安装依赖项
+```shell
+    sudo apt-get install build-essential
+    sudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
+    sudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libdc1394-22-dev # 处理图像所需的包
+    sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev liblapacke-dev
+    sudo apt-get install libxvidcore-dev libx264-dev # 处理视频所需的包
+    sudo apt-get install libatlas-base-dev gfortran # 优化opencv功能
+    sudo apt-get install ffmpeg
+    sudo apt-get install libjasper-dev
+ ```
+
+2. 从[官网](https://anaconda.org/menpo/opencv3/files)下载所需的包
+
+3. conda命令执行`conda install opencv3-3.1.0-py36_0.tar.bz2`
