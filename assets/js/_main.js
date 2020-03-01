@@ -47,10 +47,3 @@ $(document).ready(function() {
     mainClass: 'mfp-fade'
   });
 });
-
-// share options
-$(function() {
-  $( '#share' ).share({
-    sites: ["wechat"]
-  });
-});
