@@ -18,7 +18,7 @@ image:
 </div>
 </details>
 
-<h1 id="4" style="color:rgb(78, 78, 78);">科学上网GLaDOS<h1>
+<h1 id="4" style="color:rgb(78, 78, 78);">科学上网GLaDOS</h1>
 - 项目地址：https://github.com/glados-network/GLaDOS
 - 邀请码：XHPEW-U932V-7GM32-KEMTG
 - 教育版有一年免费！edu邮箱绑定后点网站footer部分的`for education`
