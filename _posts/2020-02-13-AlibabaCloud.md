@@ -40,7 +40,7 @@ PasswordAuthentication yes 允许密码认证
 
 <img src="{{site.url}}/images/rule.PNG" alt="">
 
-<img src="{{site.url}}/images/rule1.PNGg" alt="">
+<img src="{{site.url}}/images/rule1.PNG" alt="">
 
 ### Client
 
