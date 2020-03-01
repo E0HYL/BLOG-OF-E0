@@ -7,7 +7,7 @@ tags: [Skills]
 image:
   feature: abstract-5.jpg
 ---
-# 网页远程登录
+## 网页远程登录
 
 1. VNC远程连接，输入**远程连接密码**
 
@@ -22,9 +22,9 @@ image:
 <img src="{{site.url}}/images/passwd.png" alt="">
 <!--more-->
 
-# 配置SSH密钥
+## 配置SSH密钥
 
-## Server
+### Server
 
 作为一个学网络安全的，还要做两件事：修改SSH端口，不用默认的22；禁止单纯的密码认证。
 
@@ -42,7 +42,7 @@ PasswordAuthentication yes 允许密码认证
 
 <img src="{{site.url}}/images/rule1.PNGg" alt="">
 
-## Client
+### Client
 
 假设`~/.ssh`下有公私钥对（id_rsa.pub，id_rsa）。没有的话先生成一下，Win下用git。
 
@@ -56,7 +56,7 @@ PasswordAuthentication yes 允许密码认证
    
    > 打开**Server**的.ssh文件夹下的**authorized_keys**文件，可以看到公钥的内容。所以其实也可以**直接把id_rsa.pub的内容复制进来**，添加新用户的key只要换行再粘贴就行。
 
-# 挂载云盘
+## 挂载云盘
 
 用`df -l`查看磁盘大小，不符合买之前提的要求。原来是因为云盘要自己挂载。
 
@@ -87,7 +87,7 @@ PasswordAuthentication yes 允许密码认证
 
    <img src="{{site.url}}/images/mount.PNG" alt="">
 
-## 大于2 TiB的数据盘
+### 大于2 TiB的数据盘
 
 ```
 apt-get install parted

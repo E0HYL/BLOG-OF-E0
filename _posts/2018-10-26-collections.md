@@ -18,7 +18,7 @@ image:
 </div>
 </details>
 
-<h1 id="4" style="color:rgb(78, 78, 78);">科学上网GLaDOS</h1>
+<h2 id="4" style="color:rgb(78, 78, 78);">科学上网GLaDOS</h1>
 - 项目地址：https://github.com/glados-network/GLaDOS
 - 邀请码：XHPEW-U932V-7GM32-KEMTG
 - 教育版有一年免费！edu邮箱绑定后点网站footer部分的`for education`
@@ -26,7 +26,7 @@ image:
 
 <!--more-->
 
-<h1 id="1" style="color:rgb(78, 78, 78);">Podcast</h1>
+<h2 id="1" style="color:rgb(78, 78, 78);">Podcast</h1>
 存放在网络上，结合RSS feed订阅功能的“广播”。
 **可选收听姿势：**（[了解更多](https://medium.com/@StarRocket/for-those-podcast-lovers-we-recommend-these-8-apps-bf67d44c6919)）
 > iTunes 应该是目前市面上拥有最完整 podcast 目录的地方<br/>
@@ -34,10 +34,10 @@ iPhone 有内建的 Podcast App (下方第三个图标)，串接 iTunes 目录�
 
 <img src="{{site.url}}/images/podcast.png" alt="">
 
-## My Subscription List
+### My Subscription List
 试听了很多网上的推荐节目，结合自身“网络安全”专业及感兴趣的内容，和大家分享一下我的收听清单。
 
-### <cite>IRL: Because Online Life Is Real Life</cite>
+#### <cite>IRL: Because Online Life Is Real Life</cite>
     An original podcast from Mozilla Corporation.
     Host Veronica Belmont shares real stories of life online and real talk about the future of the Web.
 
@@ -46,7 +46,7 @@ iPhone 有内建的 Podcast App (下方第三个图标)，串接 iTunes 目录�
 * [官网首页](https://irlpodcast.org/)中单集`Show Notes > Transcript`有台本可参阅。不怕听不懂了！还可以顺便学英语！:relaxed:
 
 
-### <cite>Sophos Podcasts</cite>
+#### <cite>Sophos Podcasts</cite>
     Network Security Podcasts
     专业 IT 安全与保护公司 Sophos，全球总部位于英国牛津近郊
 
@@ -55,7 +55,7 @@ iPhone 有内建的 Podcast App (下方第三个图标)，串接 iTunes 目录�
 * 貌似是很难连接上，虽然BUPT能直接上Google等，但这个还是需要VPN
 
 
-### <cite>Tech News Briefing - WSJ Podcasts</cite>
+#### <cite>Tech News Briefing - WSJ Podcasts</cite>
      WSJ = Wall Street Journal 华尔街日报
      Host: Tanya Bustos
 
@@ -63,19 +63,20 @@ iPhone 有内建的 Podcast App (下方第三个图标)，串接 iTunes 目录�
 * 最新技术新闻：报道领先的公司，新产品，消费趋势和网络问题。[Home](https://www.wsj.com/podcasts/tech-news-briefing)
 
 
-### <cite>Merriam-Webster's Word Of The Day</cite>
+#### <cite>Merriam-Webster's Word Of The Day</cite>
 * 每天一个单词，约2-3分钟
 * `单集备注`中就能阅读大部分的内容
 
 
-### <cite>Others</cite>
+#### <cite>Others</cite>
 &emsp;以下两只是很多人推荐的经典节目，内容感觉不错，只是我可能还需要多修炼一下英语，先订阅着了:worried:
 * `Hidden Brain`(NPR)
 * `More or Less: Behind the Statistics`(BBC)
 
 &emsp;有空再探索一下优秀的中文播客（求推荐！
 
-<h1 id="2" style="color:rgb(78, 78, 78);">Kali-Vmware</h1>
+<h2 id="2" style="color:rgb(78, 78, 78);">Kali-Vmware</h1>
+
 ### Vmware安装Kali
 * [安装步骤参考指南](https://love.ranshy.com/vmware%E5%AE%89%E8%A3%85kali-linux%E7%B3%BB%E7%BB%9F/)
 ### 桥接上网问题
@@ -91,7 +92,8 @@ Debian源使用帮助（含例：中科大源）http://mirrors.ustc.edu.cn/help/
 * [kali在高清屏幕下如何放大字体与图标](https://blog.werner.wiki/kali-gnome-tweak-tool/)
 ### [inux安全渗透](https://wizardforcel.gitbooks.io/daxueba-kali-linux-tutorial/content/0.html)
 
-<h1 id="3" style="color:rgb(78, 78, 78);">Python调用Matlab</h1>
+<h2 id="3" style="color:rgb(78, 78, 78);">Python调用Matlab</h1>
+
 ### [基础教程](https://blog.csdn.net/Eric2016_Lv/article/details/83098703)
 * Matlab 2018b已支持python3.6（3.7不行）
 * 第2步大部分教程里没有，重要；另注：matlab添加搜索路径的按钮位于Home>Environment>Set Path
