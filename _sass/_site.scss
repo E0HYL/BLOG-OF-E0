@@ -82,7 +82,7 @@ b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a 
 /* 
    Search
    ========================================================================== */
-   #search-input {
+#search-input {
     width: 90%;
     height: 35px;
     color: #333;
@@ -94,8 +94,9 @@ b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a 
     font-weight: bold;
     border-radius: 17px;
     outline: none;
-    box-sizing: border-box;
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+	box-sizing: border-box;
+	margin-top: 50px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgb(119, 140, 138);
 }
 #search-input:focus {
     outline: none;
