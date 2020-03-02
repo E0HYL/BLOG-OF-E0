@@ -24,7 +24,7 @@
       <h1>{{ site.title }}</h1>
       <h2>{{ page.title }}</h2>
       <div id="search-container">
-        <input type="text" id="search-input" list="results-container" placeholder="search..."  onchange="search_post();">
+        <input type="text" id="search-input" list="results-container" placeholder="search..."  onchange="search_post();" onclick="clearinput();">
         <datalist id="results-container"></datalist>
       </div>
     </div><!-- /.header-title-wrap -->
@@ -49,7 +49,7 @@
       resultsContainer: document.getElementById('results-container'),
       json: '{{ site.url }}/search.json',
       searchResultTemplate: '<option id={title} url="{{ site.url }}{url}">{title}</option>', // 文章列表模板
-      noResultsText: '没有搜索到文章', // 无搜索数据提示语
+      noResultsText: '<option>没有搜索到文章</option>', // 无搜索数据提示语
       limit: 20, // 返回最大文章数
       fuzzy: false // 是否模糊匹配
     })
@@ -62,6 +62,9 @@
           window.location.href = post_url;
         }
       }
+    }
+    function clearinput(){
+      $("#search-input").val("");
     }
 </script>
 </body>
