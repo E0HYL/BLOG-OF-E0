@@ -7,8 +7,14 @@ tags: [Skills]
 image:
   feature: abstract-1.jpg
 math: true
-toc: true
 ---
+<details open><!-- 可选open -->
+<summary>Contents</summary>
+<div markdown="1">
+* list
+{:toc}
+</div>
+</details>
 
 ## Preparation
 [Git](https://www.yiibai.com/git) | Github<br>
