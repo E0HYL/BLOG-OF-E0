@@ -9,7 +9,6 @@ image:
 math: true
 toc: true
 ---
-> Though written in English, links here I attach are almost Chinese (for better understandings).
 
 ## Preparation
 [Git](https://www.yiibai.com/git) | Github<br>
@@ -17,7 +16,7 @@ Ruby | Gem, Bundle...<br>
 Jekyll | Markdown, Liquid, Rouge, [YAML](https://www.ibm.com/developerworks/cn/xml/x-cn-yamlintro/index.html)...<br>
 *Optional: [RVM](https://ruby-china.org/wiki/rvm-guide), Disqus, Google Search Console...*
 
-> As follows, I'm trying to explain in the briefest way. It's also good to get more detailed understandings [here](https://www.zhihu.com/question/30018945).
+> As follows, I'm trying to explain in the briefest way. It's also good to get more detailed understandings [here](https://www.zhihu.com/question/30018945). Though written in English, links here I attach are almost Chinese (for better understandings).
 
 ## Setup
 
