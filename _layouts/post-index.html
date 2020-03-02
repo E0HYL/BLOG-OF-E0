@@ -24,8 +24,8 @@
       <h1>{{ site.title }}</h1>
       <h2>{{ page.title }}</h2>
       <div id="search-container">
-        <input type="text" id="search-input" placeholder="search...">
-        <ul id="results-container"></ul>
+        <input type="text" id="search-input" list="itemlist" placeholder="search...">
+        <datalist id="results-container itemlist"></ul>
       </div>
     </div><!-- /.header-title-wrap -->
   </div><!-- /.header-title -->
@@ -48,7 +48,7 @@
         searchInput: document.getElementById('search-input'),
         resultsContainer: document.getElementById('results-container'),
         json: '{{ site.url }}/search.json',
-        searchResultTemplate: '<li><a href="{{ site.url }}/{url}" title="{desc}">{title}</a></li>', // 文章列表模板
+        searchResultTemplate: '<option><a href="{{ site.url }}/{url}" title="{desc}">{title}</a></option>', // 文章列表模板
         noResultsText: '没有搜索到文章', // 无搜索数据提示语
         limit: 20, // 返回最大文章数
         fuzzy: false // 是否模糊匹配
