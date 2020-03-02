@@ -20,6 +20,10 @@
     </div><!-- /.entry-image -->
   {% endif %}
   <div class="header-title">
+    <div id="search-container">
+      <input type="text" id="search-input" placeholder="search...">
+      <ul id="results-container"></ul>
+    </div>
     <div class="header-title-wrap">
       <h1>{{ site.title }}</h1>
       <h2>{{ page.title }}</h2>
@@ -38,6 +42,17 @@
 </div><!-- /.footer-wrapper -->
 
 {% include scripts.html %}          
-
+<script src="{{ site.url }}/assets/js/simple-jekyll-search.min.js"></script>
+<script>
+    window.simpleJekyllSearch = new SimpleJekyllSearch({
+        searchInput: document.getElementById('search-input'),
+        resultsContainer: document.getElementById('results-container'),
+        json: '/search.json',
+        searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>', // 文章列表模板
+        noResultsText: '没有搜索到文章', // 无搜索数据提示语
+        limit: 20, // 返回最大文章数
+        fuzzy: false // 是否模糊匹配
+    })
+</script>
 </body>
 </html>
