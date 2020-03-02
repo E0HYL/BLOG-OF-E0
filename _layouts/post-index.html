@@ -24,7 +24,9 @@
       <h1>{{ site.title }}</h1>
       <h2>{{ page.title }}</h2>
       <div id="search-container">
-        <select type="text" id="search-input" placeholder="search..." onchange="window.location=this.value"></select>
+        <input type="text" id="search-input" list="results-container" placeholder="search...">
+        <button id="search-button" class="fa fa-search" onclick="search_post()"></button>
+        <datalist id="results-container"></datalist>
       </div>
     </div><!-- /.header-title-wrap -->
   </div><!-- /.header-title -->
@@ -44,14 +46,20 @@
 <script src="{{ site.url }}/assets/js/simple-jekyll-search.min.js"></script>
 <script>
     window.simpleJekyllSearch = new SimpleJekyllSearch({
-        searchInput: document.getElementById('search-input'),
-        resultsContainer: document.getElementById('search-container'),
-        json: '{{ site.url }}/search.json',
-        searchResultTemplate: '<option value="{{ site.url }}/{url}">{title}</option>', // 文章列表模板
-        noResultsText: '没有搜索到文章', // 无搜索数据提示语
-        limit: 20, // 返回最大文章数
-        fuzzy: false // 是否模糊匹配
+      searchInput: document.getElementById('search-input'),
+      resultsContainer: document.getElementById('results-container'),
+      json: '{{ site.url }}/search.json',
+      searchResultTemplate: '<option value="{{ site.url }}/{url}">{title}</option>', // 文章列表模板
+      noResultsText: '没有搜索到文章', // 无搜索数据提示语
+      limit: 20, // 返回最大文章数
+      fuzzy: false // 是否模糊匹配
     })
+    function search_post(){
+      var select_post = document.getElementById('search-input').value;
+      if (select_post) {
+        window.location.href = select_post;
+      }
+    }
 </script>
 </body>
 </html>
