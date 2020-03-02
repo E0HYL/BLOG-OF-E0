@@ -197,7 +197,7 @@ To add additional links in the drop down menu edit `_data/navigation.yml`. (Exte
 ### Support MathJax
 `_layouts/post.html`: Add script in <head>
 ```javascript
-<script type="text/javascript" async
+<script type="text/javascript" async>
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 ```
