@@ -105,6 +105,8 @@ b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a 
 }
 #results-container {
 	padding: unset;
+	position: fixed;
+	left: 50%;
 	li {
 		display: block;
 		color: whitesmoke;
