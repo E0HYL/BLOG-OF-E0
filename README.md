@@ -1,6 +1,6 @@
 # BLOG
 
-© E0, From 2018. Powered by Jekyll using the HPSTR Theme.
+© E0, From 2018. Powered by Jekyll.
 
 ## What to Record:
 
