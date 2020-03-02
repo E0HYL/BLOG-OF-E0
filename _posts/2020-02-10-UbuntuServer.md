@@ -3,7 +3,7 @@ layout: post
 title: Ubuntu GPU Server常用操作指南
 description: "Commom operations for Ubuntu server."
 modified: 2020-02-10
-tags: [Skills]
+tags: Skills
 image:
   feature: abstract-4.jpg
 ---

@@ -3,7 +3,7 @@ layout: post
 title: Jekyll + Github Pages = Blog
 description: "Let me introduce how the blog works for my first post."
 modified: 2020-3-1
-tags: [Skills]
+tags: Skills
 image:
   feature: abstract-1.jpg
 math: true

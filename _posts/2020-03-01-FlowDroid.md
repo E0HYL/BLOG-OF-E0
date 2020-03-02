@@ -3,7 +3,7 @@ layout: post
 title: 编译运行FlowDroid
 description: "How to use FlowDroid."
 modified: 2020-3-1
-tags: [Android]
+tags: Android
 image:
   feature: abstract-5.jpg
 ---

@@ -3,7 +3,7 @@ layout: post
 title: More Than Digital Image Processing
 description: "A bin for ImageFingerprint collections."
 modified: 2018-12-1
-tags: [Camera Fingerprint]
+tags: Camera Fingerprint
 image:
   feature: abstract-3.jpg
 ---
