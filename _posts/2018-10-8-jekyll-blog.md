@@ -6,6 +6,7 @@ modified: 2020-3-1
 tags: [Skills]
 image:
   feature: abstract-1.jpg
+math: true
 ---
 
 > Though written in English, links here I attach are almost Chinese (for better understandings).
@@ -189,10 +190,13 @@ To add additional links in the drop down menu edit `_data/navigation.yml`. (Exte
 	```
 
 ### Support MathJax
-`_layouts/post.html`: Add script in <head>
+`_layouts/page.html`: Add script in <head>
 ```javascript
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 ```
+Test here: 
+> 质能方程$$E = mc^2$$
+
 More usages [here](http://jzqt.github.io/2015/06/30/Markdown%E4%B8%AD%E5%86%99%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/).
