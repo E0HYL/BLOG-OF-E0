@@ -56,9 +56,9 @@
     function search_post(){
       var select_post = document.getElementById('search-input').value;
       if (select_post) {
-        var post_url = document.getElementById(select_post);
-        if (post_url) {
-          u = post_url.getAttribute('url');
+        var post_option = document.getElementById(select_post);
+        if (post_option) {
+          post_url = post_option.getAttribute('url');
           window.location.href = post_url;
         }
       }
