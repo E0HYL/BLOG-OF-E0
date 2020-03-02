@@ -1,6 +1,6 @@
 ---
 layout: post
-title: More Than Digital Image Processing
+title: 相机指纹
 description: "A bin for ImageFingerprint collections."
 modified: 2018-12-1
 tags: Camera Fingerprint
