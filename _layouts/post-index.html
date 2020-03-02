@@ -24,8 +24,7 @@
       <h1>{{ site.title }}</h1>
       <h2>{{ page.title }}</h2>
       <div id="search-container">
-        <input type="text" id="search-input" list="results-container" placeholder="search...">
-        <datalist id="results-container"></datalist>
+        <select type="text" id="search-input" placeholder="search..." onchange="window.location=this.value">
       </div>
     </div><!-- /.header-title-wrap -->
   </div><!-- /.header-title -->
@@ -46,9 +45,9 @@
 <script>
     window.simpleJekyllSearch = new SimpleJekyllSearch({
         searchInput: document.getElementById('search-input'),
-        resultsContainer: document.getElementById('results-container'),
+        resultsContainer: document.getElementById('search-container'),
         json: '{{ site.url }}/search.json',
-        searchResultTemplate: '<a href="{{ site.url }}/{url}"><option>{title}</option></a>', // 文章列表模板
+        searchResultTemplate: '<option value="{{ site.url }}/{url}">{title}</option>', // 文章列表模板
         noResultsText: '没有搜索到文章', // 无搜索数据提示语
         limit: 20, // 返回最大文章数
         fuzzy: false // 是否模糊匹配
