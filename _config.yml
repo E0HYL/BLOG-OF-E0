@@ -41,6 +41,7 @@ timezone:    Asia/Shanghai
 future:      false  # publish future dated posts --  true, false (default) 
 highlighter: rouge
 markdown:    kramdown
+toc_levels: 1..4
 encoding:    UTF-8
 plugins:
   - jemoji

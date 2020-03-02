@@ -11,6 +11,7 @@ math: true
 <details open><!-- 可选open -->
 <summary>Contents</summary>
 <div markdown="1">
+* list
 {:toc}
 </div>
 </details>
@@ -202,7 +203,8 @@ To add additional links in the drop down menu edit `_data/navigation.yml`. (Exte
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 ```
+
 Test here: 
-> 质能方程$$E = mc^2$$
+> 质能方程 $$E = mc^2$$
 
 More usages [here](http://jzqt.github.io/2015/06/30/Markdown%E4%B8%AD%E5%86%99%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/).
