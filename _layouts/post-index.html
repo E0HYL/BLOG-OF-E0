@@ -56,7 +56,7 @@
     function search_post(){
       var select_post = document.getElementById('search-input').value;
       var post_url = document.getElementById(select_post).getAttribute('url');
-      if (select_post) {
+      if (post_url) {
         window.location.href = post_url;
       }
     }
