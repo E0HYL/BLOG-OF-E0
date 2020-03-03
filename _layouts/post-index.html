@@ -67,6 +67,13 @@
     function clearinput(){
       $("#search-input").val("");
     }
+    $(document) (function(){
+      var index = $(".hentry");
+      if(index) {
+        var searchbar = document.getElementById("search-container");
+        searchbar.style.display=" ";
+      }
+    })
 </script>
 </body>
 </html>
