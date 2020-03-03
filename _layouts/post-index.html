@@ -23,11 +23,13 @@
     <div class="header-title-wrap">
       <h1>{{ site.title }}</h1>
       <h2>{{ page.title }}</h2>
-      <div id="search-container" style="display: none;">
+      {% if page.search %}
+      <div id="search-container">
         <li class="fa fa-search" style="position: absolute;padding: 10px;color: #ffffff70;"></li>
         <input type="text" id="search-input" list="results-container" placeholder="search..."  onchange="search_post();" onclick="clearinput();">
         <datalist id="results-container"></datalist>
       </div>
+      {% endif %}
     </div><!-- /.header-title-wrap -->
   </div><!-- /.header-title -->
 </div><!-- /.entry-header -->
@@ -67,13 +69,6 @@
     function clearinput(){
       $("#search-input").val("");
     }
-    $(document).ready(function(){
-      var index = $(".hentry");
-      if(index) {
-        var searchbar = document.getElementById("search-container");
-        searchbar.style.display="";
-      }
-    })
 </script>
 </body>
 </html>
