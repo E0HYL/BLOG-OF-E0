@@ -13,9 +13,13 @@
   ga('create', '{{ site.google_analytics }}', 'auto');  
   ga('require', 'linkid', 'linkid.js');
   ga('send', 'pageview');
-  
+</script>
+{% endif %}
+
+{% if page.comments != false %}{% include disqus_comments.html %}{% endif %}
+
+<script>
   $(document).ready(function() {
-    $( '#share' ).share({sites: ["wechat"]});
     $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {
             $('#back-top').addClass('show-totop');
@@ -29,6 +33,12 @@
     });
   });
 </script>
-{% endif %}
 
-{% if page.comments != false %}{% include disqus_comments.html %}{% endif %}
+{% if page.share != false %}
+<script src="{{ site.url }}/assets/js/vendor/jquery.share.min.js"></script>
+<script>
+    $(document).ready(function() {
+      $( '#share' ).share({sites: ["wechat"]});
+    })
+</script>
+{% endif %}

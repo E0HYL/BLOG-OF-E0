@@ -48,14 +48,6 @@
 
 {% include footer.html %}
 
-{% include scripts.html %}          
-{% if page.share != false %}
-<script src="{{ site.url }}/assets/js/vendor/jquery.share.min.js"></script>
-<script>
-    $(document).ready(function() {
-      $( '#share' ).share({sites: ["wechat"]});
-    })
-</script>
-{% endif %}
+{% include scripts.html %}
 </body>
 </html>
