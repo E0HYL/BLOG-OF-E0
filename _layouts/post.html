@@ -59,12 +59,7 @@
   </article>
 </div><!-- /#main -->
 
-{% include backtop.html %}
-<div class="footer-wrapper">
-  <footer role="contentinfo">
-    {% include footer.html %}
-  </footer>
-</div><!-- /.footer-wrapper -->
+{% include footer.html %}
 
 {% include scripts.html %}	        
 <script src="{{ site.url }}/assets/js/vendor/jquery.share.min.js"></script>
@@ -73,17 +68,6 @@
   // share options
   $(document).ready(function() {
     $( '#share' ).share({sites: ["wechat"]});
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 100) {
-            $('#back-top').addClass('show-totop');
-        } else {
-            $('#back-top').removeClass('show-totop');
-        }
-    });
-    $('#back-top').find('a').click(function () {
-        $('body,html').stop(false, false).animate({scrollTop: 0}, 150);
-        return false;
-    });
   });
 </script>
 </body>

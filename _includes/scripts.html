@@ -13,6 +13,21 @@
   ga('create', '{{ site.google_analytics }}', 'auto');  
   ga('require', 'linkid', 'linkid.js');
   ga('send', 'pageview');
+  
+  $(document).ready(function() {
+    $( '#share' ).share({sites: ["wechat"]});
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            $('#back-top').addClass('show-totop');
+        } else {
+            $('#back-top').removeClass('show-totop');
+        }
+    });
+    $('#back-top').find('a').click(function () {
+        $('body,html').stop(false, false).animate({scrollTop: 0}, 150);
+        return false;
+    });
+  });
 </script>
 {% endif %}
 
