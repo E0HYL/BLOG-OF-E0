@@ -8,7 +8,7 @@ words_per_minute: 40
 # url:
 url:              "https://e0hyl.github.io/BLOG-OF-E0"
 baseurl:          ""
-google_analytics: UA-159560980-1
+google_analytics: true
 
 # Owner/author information
 owner:
