@@ -53,6 +53,13 @@
 </div><!-- /.footer-wrapper -->
 
 {% include scripts.html %}          
-
+{% if page.share %}
+<script src="{{ site.url }}/assets/js/vendor/jquery.share.min.js"></script>
+<script>
+    $(document).ready(function() {
+      $( '#share' ).share({sites: ["wechat"]});
+    })
+</script>
+{% endif %}
 </body>
 </html>

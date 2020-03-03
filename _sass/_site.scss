@@ -135,3 +135,50 @@ input:focus::-moz-placeholder { /* Mozilla Firefox 19+ */
 input:focus:-ms-input-placeholder { /* Internet Explorer 10+ */ 
 	color: #80878d;
 } 
+
+/* back-top */
+#back-top {
+    position: fixed;
+	visibility: hidden;
+    margin: 0 20px 20px 0;
+    right: 0;
+    bottom: -100px;
+    overflow: hidden;
+    z-index: 99;
+}
+
+#back-top.show-totop {
+	visibility: visible;
+	bottom: 0;
+}
+
+#back-top.mobile-back-top {
+    -webkit-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    -o-transform: scale(0.7);
+    transform: scale(0.7);
+    margin: 0 2px 1px 0;
+}
+
+#back-top a {
+    position:relative;
+    cursor: pointer;
+    display: block;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    text-decoration: none;
+    color: #4e5252;
+}
+
+#back-top a:hover {
+    color:#ffffffff;
+    background: #00000066;
+}
+
+#back-top a:before {
+    content: '\f077';
+    font: 25px/50px FontAwesome;
+    font-size:larger;
+}
