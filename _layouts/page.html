@@ -53,7 +53,7 @@
 </div><!-- /.footer-wrapper -->
 
 {% include scripts.html %}          
-{% if page.share %}
+{% if page.share != false %}
 <script src="{{ site.url }}/assets/js/vendor/jquery.share.min.js"></script>
 <script>
     $(document).ready(function() {

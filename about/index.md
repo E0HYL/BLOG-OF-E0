@@ -4,7 +4,7 @@ title: E0's BLOG
 image:
   feature: abstract-5.jpg
 comments: false
-modified: 2018-10-05
+modified: 2020-3-1
 ---
 # The Blog
 
