@@ -8,7 +8,6 @@ words_per_minute: 40
 # url:
 url:              "https://e0hyl.github.io/BLOG-OF-E0"
 baseurl:          ""
-google_analytics: true
 
 # Owner/author information
 owner:
@@ -30,7 +29,7 @@ owner:
 background: 
 
 # Analytics and webmaster tools stuff goes here
-google_analytics:   
+google_analytics:   true
 google_verify:      
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
 bing_verify:         
