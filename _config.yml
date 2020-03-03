@@ -8,6 +8,7 @@ words_per_minute: 40
 # url:
 url:              "https://e0hyl.github.io/BLOG-OF-E0"
 baseurl:          ""
+google_analytics: true
 
 # Owner/author information
 owner:
@@ -24,8 +25,6 @@ owner:
   instagram:      
   flickr:         
   tumblr:         
-  # google plus id, include the '+', eg +mmistakes
-  google_plus:
 
 # Background image to be tiled on all pages
 background: 
