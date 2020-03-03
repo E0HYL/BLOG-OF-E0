@@ -88,17 +88,17 @@ b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a 
 
 #search-input {
     height: 35px;
-    color: #333;
-    background-color: rgba(227,231,236,.2);
+    color: #717171;
+    background-color: rgba(232,232,232,.2);
     line-height: 35px;
 	padding:0px 16px;
 	margin-bottom: 5px;
-    border: 1px solid #c0c0c0;
+    border: 1px solid #8d868e;
     font-size: 13px;
     border-radius: 15px;
     outline: none;
 	box-sizing: border-box;
-    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 1px #fafafa;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 5px #7c8a8b;
 }
 
 #search-input:focus {
@@ -107,3 +107,30 @@ b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a 
     background-color: #fff;
     box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px #007fff;
 }
+
+/* placeholder */
+::-webkit-input-placeholder { /* WebKit browsers */ 
+	color: #ffffff40; 
+} 
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */ 
+	color: #ffffff40; 
+} 
+::-moz-placeholder { /* Mozilla Firefox 19+ */ 
+	color: #ffffff40; 
+} 
+:-ms-input-placeholder { /* Internet Explorer 10+ */ 
+	color: #ffffff40; 
+} 
+// focus
+input:focus::-webkit-input-placeholder { /* WebKit browsers */ 
+	color: #80878d;
+} 
+input:focus:-moz-placeholder { /* Mozilla Firefox 4 to 18 */ 
+	color: #80878d;
+} 
+input:focus::-moz-placeholder { /* Mozilla Firefox 19+ */ 
+	color: #80878d;
+} 
+input:focus:-ms-input-placeholder { /* Internet Explorer 10+ */ 
+	color: #80878d;
+} 
