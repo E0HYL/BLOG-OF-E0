@@ -40,7 +40,8 @@
 
 {% include footer.html %}
 
-{% include scripts.html %}          
+{% include scripts.html %}
+{% if page.search %}        
 <script src="{{ site.url }}/assets/js/simple-jekyll-search.min.js"></script>
 <script>
     window.simpleJekyllSearch = new SimpleJekyllSearch({
@@ -66,5 +67,6 @@
       $("#search-input").val("");
     }
 </script>
+{% endif %}
 </body>
 </html>
