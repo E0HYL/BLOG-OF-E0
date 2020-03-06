@@ -4,7 +4,6 @@ title: A-Treasure-Chest
 description: "A bin for my various collections."
 modified: 2020-3-1
 tags: Skills
-toc: false
 image:
   feature: abstract-2.jpg
 ---

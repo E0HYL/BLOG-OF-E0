@@ -7,6 +7,15 @@ tags: Skills
 image:
   feature: abstract-4.jpg
 ---
+
+<details open><!-- 可选open -->
+<summary>Contents</summary>
+<div markdown="1">
+* list
+{:toc}
+</div>
+</details>
+
 <!--more-->
 
 # SSH神器：MobaXterm

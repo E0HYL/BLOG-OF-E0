@@ -3,7 +3,6 @@ layout: post
 title: 相机指纹
 description: "A bin for ImageFingerprint collections."
 modified: 2018-12-1
-toc: false
 tags: [Camera Fingerprint]
 image:
   feature: abstract-3.jpg
