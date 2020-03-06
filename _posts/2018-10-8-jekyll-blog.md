@@ -12,8 +12,32 @@ math: true
 <details open><!-- 可选open -->
 <summary>Contents</summary>
 <div markdown="1">
-* list
-{:toc}
+<!-- TOC -->
+
+- [Preparation](#preparation)
+- [Setup](#setup)
+    - [Github pages](#github-pages)
+    - [Jekyll (local)](#jekyll-local)
+- [Operations](#operations)
+    - [Construct your site (code)](#construct-your-site-code)
+    - [Update your contents](#update-your-contents)
+    - [Test your blog locally](#test-your-blog-locally)
+    - [Publish your blog / posts*](#publish-your-blog--posts)
+- [Other Tips](#other-tips)
+    - [Markdown](#markdown)
+    - [Liquid](#liquid)
+    - [Hilighter (for jekyll)](#hilighter-for-jekyll)
+- [Some Issues](#some-issues)
+- [Cheat Sheet](#cheat-sheet)
+    - [Posts (YAML)](#posts-yaml)
+        - [Layout](#layout)
+        - [Image](#image)
+    - [Navigation Links](#navigation-links)
+    - [~~Truncate (Liquid)~~ (use excerpts instead)](#truncate-liquid-use-excerpts-instead)
+    - [Post excerpts](#post-excerpts)
+    - [Support MathJax](#support-mathjax)
+
+<!-- /TOC -->
 </div>
 </details>
 	  
@@ -66,11 +90,13 @@ gem install jekyll
 git add (-A)
 git commit -m <annotation>
 ```
+
 ### Test your blog locally
 ```shell
 bundle exec jekyll serve
 optinal: --watch, --drafts
 ```
+
 ### Publish your blog / posts*
 ```shell
 git remote add origin git@github.com:<...>.git
@@ -81,15 +107,16 @@ git push -u origin <local branch>:<remote branch> (-f)
 
 
 ## Other Tips
-### 1. Markdown
+
+### Markdown
 	A lightweight markup language.
 	Syntax(CN DOC): https://markdown-zh.readthedocs.io/en/latest/
 
-### 2. Liquid
+### Liquid
 	An template language written in Ruby.
 	Syntax(CN DOC): https://liquid.bootcss.com/
 
-### 3. [Hilighter (for jekyll)](https://blog.csdn.net/qiujuer/article/details/50419279)
+### [Hilighter (for jekyll)](https://blog.csdn.net/qiujuer/article/details/50419279)
 * Rouge
 
 		List of supported languages and lexers:
