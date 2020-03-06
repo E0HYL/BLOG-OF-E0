@@ -62,8 +62,7 @@ image:
 
 面向对象的编程语言，如Java：contain aliasing and virtual dispatch constructs。安卓往往包含更深的aliasing（别名）relationships.
 
-<p style="text-align:center"><img src="../images/aliasing.png" style="zoom: 67%;" /></pp>
-
+<p style="text-align:center"><img src="../images/aliasing.png" style="zoom: 67%;" /></p>
 
 #### field-sensitive
 
