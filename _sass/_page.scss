@@ -717,4 +717,24 @@ header .entry-meta {
 	display: block;
 }
 
+// details of post
+details summary {
+    cursor: pointer;
+    padding: 10px;
+    box-shadow: whitesmoke;
+    background: whitesmoke;
+}
+details[open] summary {
+    font-size:larger;
+    cursor: pointer;
+    padding: 10px;
+    margin-bottom:5px;
+}
 
+details[open] {
+    border:1px double #7a7a7a42;
+}
+
+ul#markdown-toc {
+    margin:auto;
+}

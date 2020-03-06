@@ -2,20 +2,52 @@
 layout: post
 title: 编译运行FlowDroid
 description: "How to use FlowDroid."
-modified: 2020-3-1
+modified: 2020-3-6
 tags: Android
 image:
   feature: abstract-5.jpg
 ---
-<!-- TOC -->
 
-- [用Maven构建Flowdroid](#用maven构建flowdroid)
-    - [主要问题和解决方法](#主要问题和解决方法)
-    - [Maven 手动添加 JAR 包到本地仓库](#maven-手动添加-jar-包到本地仓库)
-- [使用jar包运行Flowdroid](#使用jar包运行flowdroid)
+## FlowDroid
 
-<!-- /TOC -->
+### 代码结构
+
+’14论文[主页](https://blogs.uni-paderborn.de/sse/tools/flowdroid/)-源码分为两部分：
+
+- soot-infoflow：通用的污点分析
+- soot-infoflow-android：建模安卓组件生命周期等
+
+依赖Soot和Heros：
+
+* [Soot](https://sable.github.io/soot)：起初是Java优化框架，现常被用于Java和安卓应用的分析、插桩、优化、可视化等（Call-graph construction, Def/use chain...）
+* [Heros](https://sable.github.io/heros) - IFDS框架：将函数间的数据流分析问题转化为图可达问题
+
 <!--more-->
+
+<p style="text-align:center"><img src="C:\Users\hyl\Desktop\BLOG-OF-E0\images\flowdroid.jpg" style="zoom: 40%;" /></p>
+
+### context-, flow-, field- and object-sensitive
+
+#### 数据流分析的分类（General）
+* 程序路径分析的精度
+	* 流不敏感分析（flow insensitive）：程序路径的物理位置从上往下
+	* 流敏感分析（**flow** sensitive）：考虑语句可能的执行顺序（常要利用CFG）
+	* 路径敏感分析（path sensitive）：不仅考虑语句的先后顺序，还对程序执行路径条件加以判断
+* 程序路径分析的深度
+	* 过程内分析（intra-procedure）：只针对函数内部的代码。`CFG`
+	* 过程间分析（inter-procedure）：考虑函数之间的数据流，即需跟踪分析目标数据在函数之间的传递过程。`Call Graph`, `ICFG`
+		* 上下文不敏感（context-insensitive）：将每个调用或返回看作一个’goto‘，忽略调用位置和函数参数取值等函数调用的相关信息
+		* 上下文敏感（**context**-sensitive）：对不同调用位置调用的同一函数加以区分
+
+#### object-sensitive
+
+面向对象的编程语言，如Java：contain aliasing and virtual dispatch constructs。安卓往往包含更深的aliasing（别名）relationships.
+
+<p style="text-align:center"><img src="C:\Users\hyl\Desktop\BLOG-OF-E0\images\aliasing.png" style="zoom: 67%;" /></pp>
+
+#### field-sensitive
+
+关乎敏感信息的来源。例：用户对象包含了用户名和密码两个字段，分析时只有后者应被视作private value。对于用户界面上返回该字段内容的API，还需要结合manifest和layout的XML文件中的附加信息。
 
 ## 用Maven构建Flowdroid
 
