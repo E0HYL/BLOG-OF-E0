@@ -24,7 +24,7 @@ image:
 
 <!--more-->
 
-<p style="text-align:center"><img src="C:\Users\hyl\Desktop\BLOG-OF-E0\images\flowdroid.jpg" style="zoom: 40%;" /></p>
+<p style="text-align:center"><img src="../images/flowdroid.jpg" style="zoom: 40%;" /></p>
 
 ### context-, flow-, field- and object-sensitive
 
@@ -43,7 +43,8 @@ image:
 
 面向对象的编程语言，如Java：contain aliasing and virtual dispatch constructs。安卓往往包含更深的aliasing（别名）relationships.
 
-<p style="text-align:center"><img src="C:\Users\hyl\Desktop\BLOG-OF-E0\images\aliasing.png" style="zoom: 67%;" /></pp>
+<p style="text-align:center"><img src="../images/aliasing.png" style="zoom: 67%;" /></pp>
+
 
 #### field-sensitive
 
