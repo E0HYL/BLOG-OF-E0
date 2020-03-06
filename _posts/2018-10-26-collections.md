@@ -11,10 +11,12 @@ image:
 <details open><!-- 可选open -->
 <summary>Contents</summary>
 <div markdown="1">
-[科学上网GLaDOS](#4)<br>
-[播客 Podcast](#1)<br>
-[Kali-Vmware](#2)<br>
-[Python调用Matlab](#3)
+
+- [科学上网GLaDOS](#4)
+- [播客 Podcast](#1)
+- [Kali-Vmware](#2)
+- [Python调用Matlab](#3)
+
 </div>
 </details>
 
