@@ -169,6 +169,6 @@ mvn install:install-file -Dfile=spring-context-support-3.1.0.RELEASE.jar -Dgroup
 
 ## 使用jar包运行Flowdroid
 
-若不需要修改源码，推荐此方式：只要在[Release页面](https://github.com/secure-software-engineering/FlowDroid/releases)下载`soot-infoflow-cmd-jar-with-dependencies.jar`即可。使用的示例可参考：https://github.com/hao-fu/MyFlowAnalysis
+若不需要修改源码，推荐此方式：只要在[Release页面](https://github.com/secure-software-engineering/FlowDroid/releases)下载`soot-infoflow-cmd-jar-with-dependencies.jar`即可。使用的示例可参考：https://github.com/E0HYL/CallGraph-Flowdroid
 
 > *在soot中，函数的signature就是由该函数的类名，函数名，参数类型，以及返回值类型组成的字符串*

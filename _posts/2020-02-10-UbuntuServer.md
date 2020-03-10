@@ -143,7 +143,7 @@ Tools：Network：MobaSSHTunnel
 > -z, --gzip **【.tar.gz, .tgz】**  
 > -Z, --compress **【.tar.Z】** 
 
-<img src="{{site.url}}/images/fullsizerender.jpg" alt="">
+<p style="text-align:center"><img src="{{site.url}}/images/fullsizerender.jpg" style="zoom:50%;"></p>
 
 * 打包（压缩）
 ```shell
