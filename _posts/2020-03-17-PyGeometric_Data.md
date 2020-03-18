@@ -13,6 +13,7 @@ image:
 <div markdown="1">
 <!-- TOC -->
 
+- [torchgeometric.data](#torchgeometricdata)
 - [以ENZYMES数据集示例Batch](#以enzymes数据集示例batch)
 - [自定义数据集](#自定义数据集)
     - [Creating “In Memory Datasets”](#creating-in-memory-datasets)
@@ -24,9 +25,8 @@ image:
 </details>
 
 > [*PyTorch Geometric* (PyG)](https://github.com/rusty1s/pytorch_geometric) is a geometric deep learning extension library for PyTorch.
-<br>
 
- ## [torch_geometric.data](https://pytorch-geometric.readthedocs.io/en/latest/modules/data.html#module-torch_geometric.data)
+## [torch_geometric.data](https://pytorch-geometric.readthedocs.io/en/latest/modules/data.html#module-torch_geometric.data)
 
 **共以下十个类：**
 
