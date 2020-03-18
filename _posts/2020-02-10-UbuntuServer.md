@@ -2,7 +2,7 @@
 layout: post
 title: Ubuntu-GPU-Server常用操作指南
 description: "Commom operations for Ubuntu server."
-modified: 2020-02-10
+modified: 2020-03-15
 tags: Skills
 image:
   feature: abstract-4.jpg
@@ -21,6 +21,7 @@ image:
     - [场景2: 本地浏览器访问远程端口](#场景2-本地浏览器访问远程端口)
         - [需求介绍](#需求介绍)
         - [配置教程](#配置教程)
+- [更新CUDA版本](#更新cuda版本)
 - [Linux常用命令](#linux常用命令)
     - [tar: tape archive](#tar-tape-archive)
         - [主要选项](#主要选项)
@@ -30,7 +31,8 @@ image:
     - [统计目录下 文件/目录 个数](#统计目录下-文件目录-个数)
     - [实时监测命令的运行结果](#实时监测命令的运行结果)
     - [kill进程](#kill进程)
-    - [环境变量](#环境变量)
+    - [修改环境变量](#修改环境变量)
+    - [查看系统版本](#查看系统版本)
     - [系统管理](#系统管理)
         - [sudo: superuser do](#sudo-superuser-do)
         - [su: switch user](#su-switch-user)
@@ -116,6 +118,36 @@ Session：SSH：Network Setting：Connect through SSH gateway
 Tools：Network：MobaSSHTunnel
 ```
 稍复杂一些，其后的详细参数配置可戳小标题里的链接。
+
+# 更新CUDA版本
+
+这里以卸载10.0，升级到10.1为例。
+
+```shell
+# uninstall
+$ cd /usr/local/cuda-8.0/bin
+$ sudo ./uninstall_cuda_10.0.pl
+```
+
+新版10.1驱动下载：[地址](https://developer.nvidia.com/cuda-10.1-download-archive-base)（根据自己的系统版本选择安装包）
+
+```shell 
+$ wget https://developer.nvidia.com/compute/cuda/10.1/Prod/local_installers/cuda_10.1.105_418.39_linux.run
+# exit X server first: sudo service lightdm stop
+$ sudo sh "/usr/cuda_10.1.105_418.39_linux.run"
+```
+
+安装时第一个驱动不用选，因为之前就有（[参考](https://zhuanlan.zhihu.com/p/72298520)）。不过要确保该版本显卡驱动支持CUDA的Toolkit，若出错，附单独的驱动安装方法：
+
+```shell
+# 添加ppa源
+$ sudo add-apt-repository ppa:graphics-drivers/ppa  
+$ sudo apt-get update 
+# 查看可安装的驱动版本
+$ ubuntu-drivers devices
+# install (430)
+$ sudo apt install nvidia-430
+```
 
 # Linux常用命令
 
@@ -204,12 +236,18 @@ $ kill -u user
 $ ps -ef|grep string|grep -v grep|awk ‘{print $2}’|xargs kill -9
 ```
 
-## 环境变量
+## 修改环境变量
 修改用户级别的环境变量`vim ~/.bashrc`（系统级别`vim /etc/profile`），写入：
 ```bash
 export PATH="$PATH:/home/username/example"
 ```
 用`source ~/.bashrc`命令以生效
+
+## 查看系统版本
+
+```shell
+$ cat /etc/issue
+```
 
 ## 系统管理
 
@@ -223,6 +261,7 @@ export PATH="$PATH:/home/username/example"
 - 新建工作组 `groupadd groupname`
 - 将用户添加进工作组 `usermod -G groupname username`<br>
 	直接用`usermod -G groupA`会离开其他用户组，仅仅做为这个用户组 groupA 的成员。应该加上 -a 选项： 
+	
 	```
 	usermod -a -G groupA user
 	```
@@ -446,7 +485,7 @@ $	文本的结尾
     sudo apt-get install libatlas-base-dev gfortran # 优化opencv功能
     sudo apt-get install ffmpeg
     sudo apt-get install libjasper-dev
- ```
+```
 
 2. 从[官网](https://anaconda.org/menpo/opencv3/files)下载所需的包
 
