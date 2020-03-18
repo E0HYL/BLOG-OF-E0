@@ -13,17 +13,18 @@ image:
 <div markdown="1">
 <!-- TOC -->
 
-- [Batch](#batch)
+- [以ENZYMES数据集示例Batch](#以enzymes数据集示例batch)
 - [自定义数据集](#自定义数据集)
     - [Creating “In Memory Datasets”](#creating-in-memory-datasets)
     - [Creating “Larger” Datasets](#creating-larger-datasets)
-- [NeighborSampler](#neighborsampler)
+- [NeighborSampler的使用](#neighborsampler的使用)
 
 <!-- /TOC -->
 </div>
 </details>
 
 > [*PyTorch Geometric* (PyG)](https://github.com/rusty1s/pytorch_geometric) is a geometric deep learning extension library for PyTorch.
+
 
  ## [torch_geometric.data](https://pytorch-geometric.readthedocs.io/en/latest/modules/data.html#module-torch_geometric.data)
 
@@ -51,7 +52,7 @@ image:
   - **NeighborSampler**: The neighbor sampler from the [“Inductive Representation Learning on Large Graphs”](https://arxiv.org/abs/1706.02216) paper which iterates over graph nodes in a mini-batch fashion and constructs sampled subgraphs of size `num_hops`.
   - **ClusterData**: Clusters/partitions a graph data object into multiple subgraphs, as motivated by the [“Cluster-GCN: An Efficient Algorithm for Training Deep and Large Graph Convolutional Networks”](https://arxiv.org/abs/1905.07953) paper.
 
-## Batch
+## 以ENZYMES数据集示例Batch
 
 > ENZYMES is a dataset of protein tertiary structures obtained from (Borgwardt et al., 2005) 
 > consisting of 600 enzymes from the BRENDA enzyme database (Schomburg et al., 2004). 
@@ -229,7 +230,7 @@ data_list = [Data(...), ..., Data(...)]
 loader = DataLoader(data_list, batch_size=32)
 ```
 
-## NeighborSampler
+## NeighborSampler的使用
 
 依然使用ENZYMES数据集：
 
