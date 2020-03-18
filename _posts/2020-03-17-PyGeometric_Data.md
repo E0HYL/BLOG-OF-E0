@@ -24,7 +24,7 @@ image:
 </details>
 
 > [*PyTorch Geometric* (PyG)](https://github.com/rusty1s/pytorch_geometric) is a geometric deep learning extension library for PyTorch.
-
+<br>
 
  ## [torch_geometric.data](https://pytorch-geometric.readthedocs.io/en/latest/modules/data.html#module-torch_geometric.data)
 
