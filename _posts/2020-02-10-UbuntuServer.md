@@ -22,6 +22,8 @@ image:
         - [需求介绍](#需求介绍)
         - [配置教程](#配置教程)
 - [更新CUDA版本](#更新cuda版本)
+- [VSCode: 编辑远程文件](#vscode-编辑远程文件)
+- [Anaconda3安装OpenCV](#anaconda3安装opencv)
 - [Linux常用命令](#linux常用命令)
     - [tar: tape archive](#tar-tape-archive)
         - [主要选项](#主要选项)
@@ -77,8 +79,6 @@ image:
         - [非打印字符](#非打印字符)
         - [其它特殊字符](#其它特殊字符)
         - [字符簇](#字符簇)
-- [VSCode: 编辑远程文件](#vscode-编辑远程文件)
-- [基于Anaconda3(Python3.X)安装OpenCV](#基于anaconda3python3x安装opencv)
 
 <!-- /TOC -->
 </div>
@@ -148,6 +148,46 @@ $ ubuntu-drivers devices
 # install (430)
 $ sudo apt install nvidia-430
 ```
+
+# VSCode: 编辑远程文件
+
+- 安装Remote-SSH插件
+
+- 添加配置文件，通常位置为~/.ssh/config
+
+- config文件中配置SSH参数
+
+    ```
+    Host 连接的主机的名称，可自定
+    Hostname 远程主机的IP地址
+    User 用于登录远程主机的用户名
+    Port 用于登录远程主机的端口
+    IdentityFile 本地的私钥的路径
+    ForwardX11
+    ProxyCommand
+
+    详见官方文档：https://code.visualstudio.com/docs/remote/ssh
+    ```
+
+- 关闭连接：File - Close Folder
+
+# Anaconda3安装OpenCV
+
+1. 安装依赖项
+```shell
+    sudo apt-get install build-essential
+    sudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
+    sudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libdc1394-22-dev # 处理图像所需的包
+    sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev liblapacke-dev
+    sudo apt-get install libxvidcore-dev libx264-dev # 处理视频所需的包
+    sudo apt-get install libatlas-base-dev gfortran # 优化opencv功能
+    sudo apt-get install ffmpeg
+    sudo apt-get install libjasper-dev
+```
+
+2. 从[官网](https://anaconda.org/menpo/opencv3/files)下载所需的包
+
+3. conda命令执行`conda install opencv3-3.1.0-py36_0.tar.bz2`
 
 # Linux常用命令
 
@@ -450,43 +490,3 @@ $	文本的结尾
 ^\-?[0-9]+	所有整数
 ^[-]?[0-9]+(\.[0-9]+)?	所有浮点数
 ```
-
-# VSCode: 编辑远程文件
-
-- 安装Remote-SSH插件
-
-- 添加配置文件，通常位置为~/.ssh/config
-
-- config文件中配置SSH参数
-
-    ```
-    Host 连接的主机的名称，可自定
-    Hostname 远程主机的IP地址
-    User 用于登录远程主机的用户名
-    Port 用于登录远程主机的端口
-    IdentityFile 本地的私钥的路径
-    ForwardX11
-    ProxyCommand
-
-    详见官方文档：https://code.visualstudio.com/docs/remote/ssh
-    ```
-
-- 关闭连接：File - Close Folder
-
-# 基于Anaconda3(Python3.X)安装OpenCV
-
-1. 安装依赖项
-```shell
-    sudo apt-get install build-essential
-    sudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
-    sudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libdc1394-22-dev # 处理图像所需的包
-    sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev liblapacke-dev
-    sudo apt-get install libxvidcore-dev libx264-dev # 处理视频所需的包
-    sudo apt-get install libatlas-base-dev gfortran # 优化opencv功能
-    sudo apt-get install ffmpeg
-    sudo apt-get install libjasper-dev
-```
-
-2. 从[官网](https://anaconda.org/menpo/opencv3/files)下载所需的包
-
-3. conda命令执行`conda install opencv3-3.1.0-py36_0.tar.bz2`
