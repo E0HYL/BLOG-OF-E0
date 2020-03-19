@@ -232,7 +232,7 @@ loader = DataLoader(data_list, batch_size=32)
 
 ## NeighborSampler的使用
 
-依然使用ENZYMES数据集：
+依然使用ENZYMES数据集为例：
 
 ```python
 print(dataset[0].num_nodes)
@@ -278,9 +278,8 @@ sub_b_id:
 tensor([6])
 ```
 
-- b_id: target点在大图中的序号
-
-- e_id: 边在大图中的序号
-- edge_index: 子图节点序号表示的边连接关系
-- n_id: 子图中所有点在大图中的序号
-- b_id: target点在子图中的序号
+- `b_id`: target节点在大图中的序号
+- `e_id`: 边在大图中的序号
+- `edge_index`: 子图节点序号表示的边连接关系
+- `n_id`: 子图中所有点在大图中的序号
+- `b_id`: target节点在子图中的序号
