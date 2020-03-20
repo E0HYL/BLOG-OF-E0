@@ -118,7 +118,7 @@ figcaption > code,
 td > code {
   margin: 0 2px;
 	padding: 0 5px;
-  @include font-rem(14);
+  @include font-rem(15);
 	line-height: 1.5;
 	font-weight: bold;
   border: 1px solid lighten(#000, 90);
