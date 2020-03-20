@@ -24,7 +24,10 @@ body {
 
 .entry-content {
 	@include font-size(18);
-
+	ul {
+		padding-inline-end: 40px;
+	}
+	
 	// Dotted line underlines for links
 	p > a,
 	li > a {
@@ -277,9 +280,6 @@ header .entry-meta {
 		background-color: #fff;
 		box-shadow: 0 0 0 0, 0 6px 12px rgba(#000,0.1);
 		border-radius: 3px;
-		ul {
-			padding-inline-end: 40px;
-		}
 
 		@media #{$medium} {
 			margin-left: 10px;
