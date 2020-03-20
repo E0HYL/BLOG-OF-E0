@@ -120,6 +120,7 @@ td > code {
 	padding: 0 5px;
   @include font-rem(14);
 	line-height: 1.5;
+	font-weight: bold;
   border: 1px solid lighten(#000, 90);
 	background-color: lighten(#000, 95);
 	border-radius: 3px;
