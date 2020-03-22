@@ -24,10 +24,12 @@ body {
 
 .entry-content {
 	@include font-size(18);
-	ul {
-		padding-inline-end: 40px;
+	@media #{$large} {
+		ul {
+			padding-inline-end: 20px;
+		}
 	}
-	
+
 	// Dotted line underlines for links
 	p > a,
 	li > a {
