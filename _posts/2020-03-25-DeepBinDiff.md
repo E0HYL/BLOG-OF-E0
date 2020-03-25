@@ -98,7 +98,7 @@ inter-procedural CFG：程序间控制流图
 
 4. 基本块的特征向量：块中所有指令的嵌入的加和
 
-   - `instruction = opcode + (n * operands)`  $$E(指令)=w*E(操作码)||\overline{E(操作数)}$$
+   - `instruction = opcode + (n * operands)`  $$E(指令)=w*E(操作码)\mid\mid\overline{E(操作数)}$$
 
    - 操作码的权重w由TF-IDF模型确定。加权的原因主要是减少编译优化带来的差异。
 
