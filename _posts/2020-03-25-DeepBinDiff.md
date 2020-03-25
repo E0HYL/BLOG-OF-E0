@@ -47,7 +47,7 @@ $$SIM(p_1,p_2)=\underset{m_1,m_2,...,m_k\in{M(p_1,p_2)}}{\max}\sum_{i=1}^ksim(m_
 
 <img src="../images/DeepBinDiff.PNG"  />
 
-**`Assumptions`** 对输入的二进制文件有以下设定：
+`Assumptions` 对输入的二进制文件有以下设定：
 
 - 经过strip（删除了符号表和调试信息），没有源代码和符号信息（如函数名）。`商用软件（COTS: Commercial off-the-shelf）通常经过strip，恶意软件也往往不包含符号信息`
 
@@ -98,7 +98,7 @@ inter-procedural CFG：程序间控制流图
 
 4. 基本块的特征向量：块中所有指令的嵌入的加和
 
-   - `instruction = opcode + (n * operands)` $$\Longrightarrow$$ $$E(指令)=w*E(操作码)||\overline{E(操作数)}$$
+   - `instruction = opcode + (n * operands)`  $$E(指令)=w*E(操作码)||\overline{E(操作数)}$$
 
    - 操作码的权重w由TF-IDF模型确定。加权的原因主要是减少编译优化带来的差异。
 
