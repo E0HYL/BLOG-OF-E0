@@ -8,31 +8,16 @@ math: true
 image:
   feature: abstract-9.jpg
 ---
-<details open><!-- 可选open -->
-<summary>Contents</summary>
-<div markdown="1">
 
-* 1. [Binary Diffing](#BinaryDiffing)
-	* 1.1. [问题定义](#)
-	* 1.2. [解决方法](#-1)
-* 2. [二进制文件预处理](#-1)
-	* 2.1. [生成程序的ICFG](#ICFG)
-	* 2.2. [生成基本块的特征向量](#-1)
-* 3. [基本块的嵌入表示](#-1)
-* 4. [代码差异比较](#-1)
+## Binary Diffing
 
-</div>
-</details>
-
-##  1. <a name='BinaryDiffing'></a>Binary Diffing
-
-###  1.1. <a name=''></a>问题定义
+### 问题定义
 
 对于给定的两个二进制程序 $$p_1=(B_1, E_1)$$ 以及 $$p_2=(B_2, E_2)$$ ，找到最优的代码块匹配，使得 $$p_1$$ 和 $$p_2$$ 之间的相似度尽可能大：
 
 $$SIM(p_1,p_2)=\underset{m_1,m_2,...,m_k\in{M(p_1,p_2)}}{\max}\sum_{i=1}^ksim(m_i)$$
 
-###  1.2. <a name='-1'></a>解决方法
+### 解决方法
 
 **DeepBinDiff** 将问题分解为两个子任务：
 
@@ -57,9 +42,9 @@ $$SIM(p_1,p_2)=\underset{m_1,m_2,...,m_k\in{M(p_1,p_2)}}{\max}\sum_{i=1}^ksim(m_
 
 - 两个二进制文件是在相同架构下的。目前只支持 x86。`后续工作可扩展到跨平台：利用中间语言（IR: Intermediate Representation）级别上的分析`
 
-##  2. <a name='-1'></a>二进制文件预处理
+## 二进制文件预处理
 
-###  2.1. <a name='ICFG'></a>生成程序的ICFG
+### 生成程序的ICFG
 
 `control dependency information`
 
@@ -70,7 +55,7 @@ inter-procedural CFG：程序间控制流图
 - 结合了函数调用图（call graph）和每个函数的控制流图（control-flow graph）
 - 提供了程序级别的上下文信息（program-wide contextual information），利于区分相似代码块在不同上下文位置的语义
 
-###  2.2. <a name='-1'></a>生成基本块的特征向量
+### 生成基本块的特征向量
 
 `semantic information`
 
@@ -102,7 +87,7 @@ inter-procedural CFG：程序间控制流图
 
      > 例：GCC v5.4实现`printf`方法时，O0用了3个`mov`指令，而O1只用了1个。因此在匹配时，`mov`指令相较`call`重要性偏小
 
-##  3. <a name='-1'></a>基本块的嵌入表示
+## 基本块的嵌入表示
 
 目标：相似的基本块具有较相近的嵌入。
 
@@ -116,7 +101,7 @@ inter-procedural CFG：程序间控制流图
 
 - 合并图的方法：提取基本块中的**字符串**和**外部库/系统调用**，为字符串和库函数创造虚拟节点；再通过虚拟节点将两张图合并。通过这种方法，相似节点至少拥有一个共同的邻居节点，且共享较相似的邻居。
 
-##  4. <a name='-1'></a>代码差异比较
+## 代码差异比较
 
 目标：找到使得两个输入的二进制文件相似度最高的匹配方案	`赋权图匹配问题`
 
