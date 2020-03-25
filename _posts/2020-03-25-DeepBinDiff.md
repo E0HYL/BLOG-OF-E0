@@ -6,7 +6,7 @@ modified: 2020-3-25
 tags: [GNN, Paper]
 math: true
 image:
-  feature: abstract-9.jpg
+  feature: abstract-10.jpg
 ---
 <details open><!-- 可选open -->
 <summary>Contents</summary>
