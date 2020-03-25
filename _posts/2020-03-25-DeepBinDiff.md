@@ -8,6 +8,23 @@ math: true
 image:
   feature: abstract-9.jpg
 ---
+<details open><!-- 可选open -->
+<summary>Contents</summary>
+<div markdown="1">
+<!-- TOC -->
+
+- [Binary Diffing](#binary-diffing)
+    - [问题定义](#%E9%97%AE%E9%A2%98%E5%AE%9A%E4%B9%89)
+    - [解决方法](#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95)
+- [二进制文件预处理](#%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%96%87%E4%BB%B6%E9%A2%84%E5%A4%84%E7%90%86)
+    - [生成程序的ICFG](#%E7%94%9F%E6%88%90%E7%A8%8B%E5%BA%8F%E7%9A%84icfg)
+    - [生成基本块的特征向量](#%E7%94%9F%E6%88%90%E5%9F%BA%E6%9C%AC%E5%9D%97%E7%9A%84%E7%89%B9%E5%BE%81%E5%90%91%E9%87%8F)
+- [基本块的嵌入表示](#%E5%9F%BA%E6%9C%AC%E5%9D%97%E7%9A%84%E5%B5%8C%E5%85%A5%E8%A1%A8%E7%A4%BA)
+- [代码差异比较](#%E4%BB%A3%E7%A0%81%E5%B7%AE%E5%BC%82%E6%AF%94%E8%BE%83)
+
+<!-- /TOC -->
+</div>
+</details>
 
 ## Binary Diffing
 
@@ -26,7 +43,7 @@ $$SIM(p_1,p_2)=\underset{m_1,m_2,...,m_k\in{M(p_1,p_2)}}{\max}\sum_{i=1}^ksim(m_
 2. 找到两个基本块集合间的最优匹配 $$M(p_1,p_2)$$
    - k跳贪婪匹配算法（k-hop greedy matching algorithm）
 
-![](../images/DeepBinDiff.PNG)
+<img src="../images/DeepBinDiff.PNG"  />
 
 <!--more-->
 
