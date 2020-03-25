@@ -45,6 +45,8 @@ $$SIM(p_1,p_2)=\underset{m_1,m_2,...,m_k\in{M(p_1,p_2)}}{\max}\sum_{i=1}^ksim(m_
 
 ![](../images/DeepBinDiff.PNG)
 
+<!--more-->
+
 **`Assumptions`** 对输入的二进制文件有以下设定：
 
 - 经过strip（删除了符号表和调试信息），没有源代码和符号信息（如函数名）。`商用软件（COTS: Commercial off-the-shelf）通常经过strip，恶意软件也往往不包含符号信息`
