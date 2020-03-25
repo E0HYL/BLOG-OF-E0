@@ -53,7 +53,7 @@ $$SIM(p_1,p_2)=\underset{m_1,m_2,...,m_k\in{M(p_1,p_2)}}{\max}\sum_{i=1}^ksim(m_
 
 - 未被打包，但可以是被不同编译器优化方法转换的。
 
-  <figure><img src="../images/c_compile.PNG" style="zoom:60%;" /></a>
+  <figure><img src="../images/c_compile.PNG" style="zoom:60%;" />
   <figcaption>图 gcc编译C程序过程</figcaption></figure>
 
   > .java $$\overset{compile}\Longrightarrow$$ .class / .dex $$\overset{pack}\Longrightarrow$$ .jar / .apk
