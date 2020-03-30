@@ -113,7 +113,7 @@ inter-procedural CFG：程序间控制流图
 
 - TADW：对DeepWalk算法的改进，能够将节点特征包含到表示学习过程中。（[论文](https://www.ijcai.org/Proceedings/15/Papers/299.pdf)证明了DeepWalk实质是一个矩阵分解的过程，基于在分解过程中加入对文本特征信息的考虑，提出了新的矩阵分解形式）
 
-  <img src="../images/graph_merge_reason.PNG" style="zoom:70%;" />
+  <p style="text-align:center;"><img src="../images/graph_merge_reason.PNG" style="zoom:80%;" /></p>
 
 - 合并图的原因：在两张图上分别运行TADW算法效率低，且可能在相似性检测中错失一些重要指标。
 
