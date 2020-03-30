@@ -43,9 +43,9 @@ $$SIM(p_1,p_2)=\underset{m_1,m_2,...,m_k\in{M(p_1,p_2)}}{\max}\sum_{i=1}^ksim(m_
 2. 找到两个基本块集合间的最优匹配 $$M(p_1,p_2)$$
    - k跳贪婪匹配算法（k-hop greedy matching algorithm）
 
-<!--more-->
+<img src="{{ site.url }}/images/DeepBinDiff.PNG"  />
 
-<img src="../images/DeepBinDiff.PNG"  />
+<!--more-->
 
 `Assumptions` 对输入的二进制文件有以下设定：
 
