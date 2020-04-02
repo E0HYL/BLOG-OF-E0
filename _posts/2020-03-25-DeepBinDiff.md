@@ -77,7 +77,7 @@ inter-procedural CFG：程序间控制流图
 
 `semantic information`
 
-<img src="../images/DeepBinDiff.PNG"  />
+<img src="../images/BasicBlockVector.PNG"  />
 
 首先根据 `Word2Vec` 算法训练一个 token embedding 模型，生成标识（操作码 / 操作数）的嵌入。
 
