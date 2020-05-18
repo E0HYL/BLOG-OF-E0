@@ -2,7 +2,7 @@
 layout: post
 title: 阿里云服务器SSH登录及云盘挂载
 description: "Instructions for Alibaba Cloud."
-modified: 2020-2-13
+modified: 2020-4-7
 tags: Skills
 image:
   feature: abstract-5.jpg
@@ -33,7 +33,7 @@ image:
 
 ```yaml
 Port 自定义端口号
-PasswordAuthentication yes 允许密码认证
+PasswordAuthentication no 不允许密码认证
 ```
 
 2. 重启ssh服务：`/etc/init.d/ssh restart`
@@ -119,6 +119,8 @@ apt-get install e2fsprogs
 1. `cp /etc/fstab /etc/fstab.bak`，备份etc/fstab
 
 2. `echo /dev/vdc1 /data_1 ext4 defaults 0 0 >> /etc/fstab`，向/etc/fstab里写入新分区信息
+   
+   注：`df -T`可以查看文件系统的类型。
 
 3. `cat /etc/fstab`，查看/etc/fstab的信息。如果返回结果里出现了写入的新分区信息，说明写入成功
 
