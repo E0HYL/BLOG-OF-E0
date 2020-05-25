@@ -1,22 +1,20 @@
-# BLOG
-
-© E0, From 2018. Powered by Jekyll.
+© E0, From 2018. From small beginnings comes great things.
 
 ## What to Record:
 
-* My major: Information Security
+* Papers [NDSS, CCS, Oakland S&P, etc.]
 
-		Papers [NDSS, CCS, Oakland S&P]
-		Skills [Coding, Tools, etc.]
-		Latest Information [Image, AI, IoT]
-	  
-* Sugar added to the cup of life :-P
+* Skills [Coding, Tools, etc.]
 
-		Self-made Food [Bakery, Meal]
-		Travelling & Photography & Reading & ...
+* Latest Information [AI, Android, Security, etc.]
 
----
+## About Me
 
-## Getting Started
+Yiling He. <br>
+Contact: heyilinge0@gmail.com
 
-From small beginnings comes great things.
+* 2019-: School of Cyberspace and Technology, Zhejiang University.
+
+* 2015-2019: School of Cyberspace Security, Beijing University of Posts and Telecommunications.
+
+Team: [more](
