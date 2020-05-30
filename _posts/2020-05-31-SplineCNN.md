@@ -33,11 +33,11 @@ image:
 </div>
 </details>
 
-# SplineCNN: Fast Geometric Deep Learning with Continuous B-Spline Kernels
+# [SplineCNN: Fast Geometric Deep Learning with Continuous B-Spline Kernels](http://openaccess.thecvf.com/content_cvpr_2018/papers/Fey_SplineCNN_Fast_Geometric_CVPR_2018_paper.pdf)
 
-<img src="{{ site.url }}/images/SplineCNN/image-20200530235104179.png" alt="image-20200530235104179" style="zoom:80%;" />
+CVPR 2018
 
-(CVPR 2018) http://openaccess.thecvf.com/content_cvpr_2018/papers/Fey_SplineCNN_Fast_Geometric_CVPR_2018_paper.pdf
+<figure><img src="{{ site.url }}/images/SplineCNN/image-20200530235104179.png" alt="image-20200530235104179" style="zoom:80%;" /></figure>
 
 ## SplineCNN
 
@@ -64,7 +64,7 @@ image:
 - Graphs: U表示的特征可以是边的权重、节点的度等
 - Discrete Manifolds: U可以包含局部的关系信息，如源节点每条边所对应的目标节点的相对极坐标、球坐标或笛卡尔坐标
 
-<img src="{{ site.url }}/images/SplineCNN/image-20200531022627984.png" alt="image-20200531022627984" style="zoom: 50%;" />
+<figure><img src="{{ site.url }}/images/SplineCNN/image-20200531022627984.png" alt="image-20200531022627984" style="zoom: 50%;" /></figure>
 
 以下定义了以一个可训练的**连续**的核函数，加权聚合邻居节点的特征的卷积操作，将每个$$u(i,j)$$映射到一个标量，用作特征聚合时的权重。
 
@@ -80,7 +80,7 @@ $$g_l(u)=\sum_{p\in{P}}w_{p,l}\cdot{B_p(u)}$$
 
 $$(f*g)(i)=\frac{1}{\vert{N(i)\vert}}\sum_{l=1}^{M_{in}}\sum_{j\in{N(i)}}f_l(j)\cdot{g_l(u(i,j))}$$
 
-<img src="{{ site.url }}/images/SplineCNN/image-20200531025437150.png" alt="image-20200531025437150" style="zoom:80%;" />
+<figure><img src="{{ site.url }}/images/SplineCNN/image-20200531025437150.png" alt="image-20200531025437150" style="zoom:80%;" /></figure>
 
 #### 局部支持性
 
@@ -90,7 +90,7 @@ $$(f*g)(i)=\frac{1}{\vert{N(i)\vert}}\sum_{l=1}^{M_{in}}\sum_{j\in{N(i)}}f_l(j)\
 
 $$(f_l*g_l)(i)=\sum_{j\in{N(i)},p\in{P(u(i,j))}}f_l(j)\cdot{w_{p,l}}\cdot{B_p(u(i,j))}$$
 
-<img src="{{ site.url }}/images/SplineCNN/image-20200531031327751.png" alt="image-20200531031327751" style="zoom: 50%;" />
+<figure><img src="{{ site.url }}/images/SplineCNN/image-20200531031327751.png" alt="image-20200531031327751" style="zoom: 50%;" /></figure>
 
 #### Closed B-样条
 
@@ -106,7 +106,7 @@ $$(f_l*g_l)(i)=\sum_{j\in{N(i)},p\in{P(u(i,j))}}f_l(j)\cdot{w_{p,l}}\cdot{B_p(u(
 
 ### GPU算法
 
-<img src="{{ site.url }}/images/SplineCNN/image-20200531031647805.png" alt="image-20200531031647805" style="zoom:50%;" />
+<figure><img src="{{ site.url }}/images/SplineCNN/image-20200531031647805.png" alt="image-20200531031647805" style="zoom:50%;" /></figure>
 
 ## 实验结果
 
@@ -114,7 +114,7 @@ $$(f_l*g_l)(i)=\sum_{j\in{N(i)},p\in{P(u(i,j))}}f_l(j)\cdot{w_{p,l}}\cdot{B_p(u(
 
 > **[MNIST]** 60,000 training and 10,000 test images containing grayscale, handwritten digits from 10 different classes
 
-<img src="{{ site.url }}/images/SplineCNN/image-20200530221215478.png" alt="image-20200530221215478" style="zoom: 50%;" />
+<figure><img src="{{ site.url }}/images/SplineCNN/image-20200530221215478.png" alt="image-20200530221215478" style="zoom: 50%;" /></figure>
 
 1. equal grid graphs ($$28\times28$$ nodes)
 
@@ -142,7 +142,7 @@ $$(f_l*g_l)(i)=\sum_{j\in{N(i)},p\in{P(u(i,j))}}f_l(j)\cdot{w_{p,l}}\cdot{B_p(u(
 
 - Different configurations
 
-  <img src="{{ site.url }}/images/SplineCNN/image-20200530223656876.png" alt="image-20200530223656876" style="zoom: 50%;" />
+  <figure><img src="{{ site.url }}/images/SplineCNN/image-20200530223656876.png" alt="image-20200530223656876" style="zoom: 50%;" /></figure>
 
   - 横坐标：阶数m（线性，二次，立方）；图例：两种不同的伪坐标
   - 使用阶数较小的B样条基函数和笛卡尔坐标时的表现略优于其他设置
@@ -153,7 +153,7 @@ $$(f_l*g_l)(i)=\sum_{j\in{N(i)},p\in{P(u(i,j))}}f_l(j)\cdot{w_{p,l}}\cdot{B_p(u(
 >
 > Each publication (document) in the dataset is described by a 0/1-valued word vector indicating the absence/presence of the corresponding word from the dictionary (1433 unique words). 
 
-<img src="{{ site.url }}/images/SplineCNN/image-20200530203726994.png" alt="image-20200530203726994" style="zoom: 60%;" />
+<figure><img src="{{ site.url }}/images/SplineCNN/image-20200530203726994.png" alt="image-20200530203726994" style="zoom: 60%;" /></figure>
 
 - no Euclidean relations
 - pseudo-coordinates: globally normalized degree of the target nodes $$u(i, j)=\frac{deg(j)}{max_{v\in{V}}deg(v)}$$
@@ -165,7 +165,7 @@ $$(f_l*g_l)(i)=\sum_{j\in{N(i)},p\in{P(u(i,j))}}f_l(j)\cdot{w_{p,l}}\cdot{B_p(u(
 >
 > [Princeton benchmark protocol] Correspondence quality: counting the percentage of derived correspondences that lie within a geodesic radius r around the correct node.
 
-<img src="{{ site.url }}/images/SplineCNN/image-20200530232031289.png" alt="image-20200530232031289"/>
+<figure><img src="{{ site.url }}/images/SplineCNN/image-20200530232031289.png" alt="image-20200530232031289"/></figure>
 
 - three-dimensional meshes
 
