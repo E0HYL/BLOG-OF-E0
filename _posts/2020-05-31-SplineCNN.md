@@ -43,21 +43,21 @@ image:
 
 ### 符号说明
 
-**Input graphs.**有向图$G=(V,E,U)$，其中$V={1,...,N}$表示节点集合，$E\subseteq{V\times{V}}$表示边集合，$U\in{[0,1]^{N\times{N}\times{d}}}$由每条有向边的$d$维伪坐标$u(i,j)\in{[0,1]^d}$组成；对于一个节点$i\in{V}$，它的邻居节点集合表示为$N(i)$。
+**Input graphs.**有向图$$G=(V,E,U)$$，其中$$V={1,...,N}$$表示节点集合，$$E\subseteq{V\times{V}}$$表示边集合，$$U\in{[0,1]^{N\times{N}\times{d}}}$$由每条有向边的$$d$$维伪坐标$$u(i,j)\in{[0,1]^d}$$组成；对于一个节点$$i\in{V}$$，它的邻居节点集合表示为$$N(i)$$。
 
 注：伪坐标 ([pseudo-coordinates](https://math.stackexchange.com/questions/3248132/what-is-pseudo-coordinates)) U的定义是重点，与[MoNet](http://openaccess.thecvf.com/content_cvpr_2017/papers/Monti_Geometric_Deep_Learning_CVPR_2017_paper.pdf)论文类似。
 
 >U can be interpreted as an adjacency matrix with d-dimensional, normalized entries u(i, j) if (i, j) ∈ E and 0 otherwise
 
-**Input node features.** 定义映射$f:V\rightarrow{R^{M_{in}}}$，其中$f(i)\in{R^{M_{in}}}$表示每个节点$i\in{V}$的$M_{in}$维输入特征的向量。对于$1\leq{l}\leq{M_{in}}$，$f(i)$中每个特征值的集合${\{f_l(i)\vert{i\in{V}}\}}$被称为输入的特征图 (feature map)。
+**Input node features.** 定义映射$$f:V\rightarrow{R^{M_{in}}}$$，其中$$f(i)\in{R^{M_{in}}}$$表示每个节点$$i\in{V}$$的$$M_{in}$$维输入特征的向量。对于$$1\leq{l}\leq{M_{in}}$$，$$f(i)$$中每个特征值的集合$${\{f_l(i)\vert{i\in{V}}\}}$$被称为输入的特征图 (feature map)。
 
-**B-spline basis function.** $((N^m_{1,i})_{1\leq{i}\leq{k_1}},...,(N^m_{d,i})_{1\leq{i}\leq{k_d}})$表示d组$m$阶的开(open)B-样条基函数，节点(knots)向量等距分布，即样条均匀(uniform)，其中$k=(k_1,...,k_d)$定义了$d$维的核大小。
+**B-spline basis function.** $$((N^m_{1,i})_{1\leq{i}\leq{k_1}},...,(N^m_{d,i})_{1\leq{i}\leq{k_d}})$$表示d组$$m$$阶的开(open)B-样条基函数，节点(knots)向量等距分布，即样条均匀(uniform)，其中$$k=(k_1,...,k_d)$$定义了$$d$$维的核大小。
 
 <!--more-->
 
 ### 核心思想
 
-特征为$f(i)$的节点之间可以是不规则的几何结构，空间关系可以用伪坐标$U$来局部定义。在局部聚合邻居特征的时候：$U$决定了特征该如何*(how)*聚合，$f(i)$决定了聚合的内容*(what)*。
+特征为$$f(i)$$的节点之间可以是不规则的几何结构，空间关系可以用伪坐标$$U$$来局部定义。在局部聚合邻居特征的时候：$$U$$决定了特征该如何*(how)*聚合，$$f(i)$$决定了聚合的内容*(what)*。
 
 常见的几何深度学习任务都可以用此模型表示：
 
@@ -66,41 +66,41 @@ image:
 
 <img src="{{ site.url }}/images/SplineCNN/image-20200531022627984.png" alt="image-20200531022627984" style="zoom: 50%;" />
 
-以下定义了以一个可训练的**连续**的核函数，加权聚合邻居节点的特征的卷积操作，将每个$u(i,j)$映射到一个标量，用作特征聚合时的权重。
+以下定义了以一个可训练的**连续**的核函数，加权聚合邻居节点的特征的卷积操作，将每个$$u(i,j)$$映射到一个标量，用作特征聚合时的权重。
 
 ### 卷积运算
 
-- 连续的卷积核函数$g_l:[a_1,b_1]\times{...}\times{[a_d,b_d]}\rightarrow{R}$
+- 连续的卷积核函数$$g_l:[a_1,b_1]\times{...}\times{[a_d,b_d]}\rightarrow{R}$$
 
-$g_l(u)=\sum_{p\in{P}}w_{p,l}\cdot{B_p(u)}$
+$$g_l(u)=\sum_{p\in{P}}w_{p,l}\cdot{B_p(u)}$$
 
-​		其中$B_p$是p中所有B-样条基函数的叉乘，即$B_p(u)=\prod_{i=1}^dN_{i,p_i}^m{u_i}$，而$w_{p,l}$对于每个$P=((N_{1,i}^m)_i\times{...}\times{(N_{d,i}^m)_i})$中的元素$p$以及特征图中的$M_{in}$个值都是可训练的参数，因此可训练的参数总数为$M_{in}\cdot{K}=M_{in}\cdot{\prod^d_{i=1}}k_i$。
+​		其中$$B_p$$是p中所有B-样条基函数的叉乘，即$$B_p(u)=\prod_{i=1}^dN_{i,p_i}^m{u_i}$$，而$$w_{p,l}$$对于每个$$P=((N_{1,i}^m)_i\times{...}\times{(N_{d,i}^m)_i})$$中的元素$$p$$以及特征图中的$$M_{in}$$个值都是可训练的参数，因此可训练的参数总数为$$M_{in}\cdot{K}=M_{in}\cdot{\prod^d_{i=1}}k_i$$。
 
-- 给定核函数集$g=(g_1,...,g_{M_{in}})$和输入节点特征$f$后，节点$i$在空间上的卷积运算可定义为
+- 给定核函数集$$g=(g_1,...,g_{M_{in}})$$和输入节点特征$$f$$后，节点$$i$$在空间上的卷积运算可定义为
 
-$(f*g)(i)=\frac{1}{\vert{N(i)\vert}}\sum_{l=1}^{M_{in}}\sum_{j\in{N(i)}}f_l(j)\cdot{g_l(u(i,j))}$
+$$(f*g)(i)=\frac{1}{\vert{N(i)\vert}}\sum_{l=1}^{M_{in}}\sum_{j\in{N(i)}}f_l(j)\cdot{g_l(u(i,j))}$$
 
 <img src="{{ site.url }}/images/SplineCNN/image-20200531025437150.png" alt="image-20200531025437150" style="zoom:80%;" />
 
 #### 局部支持性
 
-由于B-样条基函数的局部支持性，$B_P\neq0$只对K个$p\in{P}$中的$s:=(m+1)^d$个成立。因此对于每个邻居节点$j$而言，只依赖于$M_{in}\times{K}$中的$M_{in}\times{s}$个参数。
+由于B-样条基函数的局部支持性，$$B_P\neq0$$只对K个$$p\in{P}$$中的$$s:=(m+1)^d$$个成立。因此对于每个邻居节点$$j$$而言，只依赖于$$M_{in}\times{K}$$中的$$M_{in}\times{s}$$个参数。
 
-一般的，常量s,d,m都是较小的值；另外，给定了m和d之后，对于每对节点$(i,j)\in{E}$，满足$B_p\neq0$的向量$p\in{P}$可以在常量时间内被找到，记作$P(u(i,j))$，因此之前定义的卷积操作中的每一层还可以写作
+一般的，常量s,d,m都是较小的值；另外，给定了m和d之后，对于每对节点$$(i,j)\in{E}$$，满足$$B_p\neq0$$的向量$$p\in{P}$$可以在常量时间内被找到，记作$$P(u(i,j))$$，因此之前定义的卷积操作中的每一层还可以写作
 
-$(f_l*g_l)(i)=\sum_{j\in{N(i)},p\in{P(u(i,j))}}f_l(j)\cdot{w_{p,l}}\cdot{B_p(u(i,j))}$
+$$(f_l*g_l)(i)=\sum_{j\in{N(i)},p\in{P(u(i,j))}}f_l(j)\cdot{w_{p,l}}\cdot{B_p(u(i,j))}$$
 
 <img src="{{ site.url }}/images/SplineCNN/image-20200531031327751.png" alt="image-20200531031327751" style="zoom: 50%;" />
 
 #### Closed B-样条
 
-根据$u$中的坐标轴类型，有时需要选取闭合的B样条估计。例如$u$包含极坐标中的角度属性，此时在角度维度使用闭合的B样条估计，可以很自然的使角度为0时和角度为$2\pi$时或者更高阶数的情况下权重相同。
+根据$$u$$中的坐标轴类型，有时需要选取闭合的B样条估计。例如$$u$$包含极坐标中的角度属性，此时在角度维度使用闭合的B样条估计，可以很自然的使角度为0时和角度为$$2\pi$$时或者更高阶数的情况下权重相同。
 
-要做到这一点，只要通过将某些$w_{p,l}$置为周期的，以使核函数$d$维中的某些子集维为closed即可。
+要做到这一点，只要通过将某些$$w_{p,l}$$置为周期的，以使核函数$$d$$维中的某些子集维为closed即可。
 
 #### 根节点处理
 
-之前定义的卷积操作聚合了节点$i$的邻居节点$N(i)$的特征，但没有考虑它自身。如果使用笛卡尔坐标的话，可以很简单的把$i$包含到$N(i)$中；但对于伪坐标是极坐标/球坐标的情况，半径等于0未被定义。
+之前定义的卷积操作聚合了节点$$i$$的邻居节点$$N(i)$$的特征，但没有考虑它自身。如果使用笛卡尔坐标的话，可以很简单的把$$i$$包含到$$N(i)$$中；但对于伪坐标是极坐标/球坐标的情况，半径等于0未被定义。
 
 此时可以为根节点的每个特征引入一个新的可训练的权重，再把它和相应特征的乘积加到结果中去即可。
 
@@ -116,9 +116,9 @@ $(f_l*g_l)(i)=\sum_{j\in{N(i)},p\in{P(u(i,j))}}f_l(j)\cdot{w_{p,l}}\cdot{B_p(u(i
 
 <img src="{{ site.url }}/images/SplineCNN/image-20200530221215478.png" alt="image-20200530221215478" style="zoom: 50%;" />
 
-1. equal grid graphs ($28\times28$ nodes)
+1. equal grid graphs ($$28\times28$$ nodes)
 
-   - LeNet5-like network architecture: $SConv((5, 5), 1, 32)\rightarrow{MaxP(4)}\rightarrow{SConv((5, 5), 32, 64)}\rightarrow{MaxP(4)}\rightarrow{FC(512)}\rightarrow{FC(10)}$
+   - LeNet5-like network architecture: $$SConv((5, 5), 1, 32)\rightarrow{MaxP(4)}\rightarrow{SConv((5, 5), 32, 64)}\rightarrow{MaxP(4)}\rightarrow{FC(512)}\rightarrow{FC(10)}$$
    - mirror the LeNet5 architecture with its 5 × 5 filters: neighborhoods of size 5 × 5 from the grid graph
    - reach equivalence to the traditional convolution operator in CNNs: m=1
 
@@ -126,12 +126,12 @@ $(f_l*g_l)(i)=\sum_{j\in{N(i)},p\in{P(u(i,j))}}f_l(j)\cdot{w_{p,l}}\cdot{B_p(u(i
 
    >**[MoNet]** F. Monti, D. Boscaini, J. Masci, E. Rodola, J. Svoboda, and M. M. Bronstein. Geometric deep learning on graphs and manifolds using mixture model CNNs. In Proceedings IEEE Conference on Computer Vision and Pattern Recognition (CVPR), pages 5425–5434, 2017.
 
-   ​	$w_j(u) = exp(−\frac1 2 (u − µ_j )^⊤Σ_j^{−1} (u − µ_j ))$
+   ​	$$w_j(u) = exp(−\frac1 2 (u − µ_j )^⊤Σ_j^{−1} (u − µ_j ))$$
 
-   ​	$Σ_j$ and $µ_j$ are learnable d × d and d × 1 covariance matrix and mean vector of a Gaussian kernel
+   ​	$$Σ_j$$ and $$µ_j$$ are learnable d × d and d × 1 covariance matrix and mean vector of a Gaussian kernel
 
-   - architecture: $SConv((k_1,k_2), 1, 32)\rightarrow{MaxP(4)}\rightarrow{SConv((k_1, k_2), 32, 64)}\rightarrow{MaxP(4)}\rightarrow{AvgP}\rightarrow{FC(128)}\rightarrow{FC(10)}$
-   - Cartesian coordinates: $k_1=k_2=4+m$; Polar coordinates: $k_1=1+m, k_2=8$
+   - architecture: $$SConv((k_1,k_2), 1, 32)\rightarrow{MaxP(4)}\rightarrow{SConv((k_1, k_2), 32, 64)}\rightarrow{MaxP(4)}\rightarrow{AvgP}\rightarrow{FC(128)}\rightarrow{FC(10)}$$
+   - Cartesian coordinates: $$k_1=k_2=4+m$$; Polar coordinates: $$k_1=1+m, k_2=8$$
 
    <figure><img src="{{ site.url }}/images/SplineCNN/image-20200530214154844.png" alt="image-20200530214154844" style="zoom:40%;" /><figcaption>superpixel dataset</figcaption></figure>
 
@@ -156,8 +156,8 @@ $(f_l*g_l)(i)=\sum_{j\in{N(i)},p\in{P(u(i,j))}}f_l(j)\cdot{w_{p,l}}\cdot{B_p(u(i
 <img src="{{ site.url }}/images/SplineCNN/image-20200530203726994.png" alt="image-20200530203726994" style="zoom: 60%;" />
 
 - no Euclidean relations
-- pseudo-coordinates: globally normalized degree of the target nodes $u(i, j)=\frac{deg(j)}{max_{v\in{V}}deg(v)}$
-- architecture: $SConv((2), 1433, 16)\rightarrow{SConv((2), 16, 7)}, m=1$
+- pseudo-coordinates: globally normalized degree of the target nodes $$u(i, j)=\frac{deg(j)}{max_{v\in{V}}deg(v)}$$
+- architecture: $$SConv((2), 1433, 16)\rightarrow{SConv((2), 16, 7)}, m=1$$
 
 ### D配准 (shape correspondence)
 
@@ -169,11 +169,11 @@ $(f_l*g_l)(i)=\sum_{j\in{N(i)},p\in{P(u(i,j))}}f_l(j)\cdot{w_{p,l}}\cdot{B_p(u(i
 
 - three-dimensional meshes
 
-- architecture: $SConv((k_1, k_2, k_3), 1, 32)\rightarrow{SConv((k_1, k_2, k_3), 32, 64)}\rightarrow{SConv((k_1, k_2, k_3), 64, 64)}\rightarrow{Lin(256)}\rightarrow{Lin(6890)}$
+- architecture: $$SConv((k_1, k_2, k_3), 1, 32)\rightarrow{SConv((k_1, k_2, k_3), 32, 64)}\rightarrow{SConv((k_1, k_2, k_3), 64, 64)}\rightarrow{Lin(256)}\rightarrow{Lin(6890)}$$
 
-  其中$Lin(o)$表示输出 $o$ 维特征的$1\times1$卷积层
+  其中$$Lin(o)$$表示输出 $$o$$ 维特征的$$1\times1$$卷积层
 
-- **end-to-end**: without handcrafted feature descriptors, input features are trivially given by $1∈R^{N×1}$（每个节点的特征都简单地被初始化为1）
+- **end-to-end**: without handcrafted feature descriptors, input features are trivially given by $$1∈R^{N×1}$$（每个节点的特征都简单地被初始化为1）
 
 #### Discussion
 
