@@ -26,7 +26,7 @@ image:
         - [图像（图）分类](#%E5%9B%BE%E5%83%8F%E5%9B%BE%E5%88%86%E7%B1%BB)
             - [Discussion](#discussion)
         - [图节点分类](#%E5%9B%BE%E8%8A%82%E7%82%B9%E5%88%86%E7%B1%BB)
-        - [(shape correspondence) 3-D配准](#shape-correspondence-3-d%E9%85%8D%E5%87%86)
+        - [(shape correspondence) 3D配准](#shape-correspondence-3d%E9%85%8D%E5%87%86)
             - [Discussion](#discussion)
 
 <!-- /TOC -->
@@ -157,7 +157,7 @@ $$(f_l*g_l)(i)=\sum_{j\in{N(i)},p\in{P(u(i,j))}}f_l(j)\cdot{w_{p,l}}\cdot{B_p(u(
 - pseudo-coordinates: globally normalized degree of the target nodes $$u(i, j)=\frac{deg(j)}{max_{v\in{V}}deg(v)}$$
 - architecture: $$SConv((2), 1433, 16)\rightarrow{SConv((2), 16, 7)}, m=1$$
 
-### (shape correspondence) 3-D配准
+### (shape correspondence) 3D配准
 
 > **[FAUST]** 100 scanned human shapes in 10 different poses, resulting in a total of 100 non-watertight meshes with 6890 nodes each
 >
