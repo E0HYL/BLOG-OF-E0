@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 从B样条基函数到曲线到曲面
-description: "有关B样条的一些知识整理"
+title: CVPR-2018-SplineCNN
+description: "SplineCNN论文笔记：基于B样条基函数的聚合深度学习方法"
 modified: 2020-5-31
-tags: [GNN, Papers]
+tags: [GNN, Geometric, Papers]
 math: true
 image:
   feature: abstract-2.jpg
