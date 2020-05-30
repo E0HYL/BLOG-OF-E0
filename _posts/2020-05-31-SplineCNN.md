@@ -118,7 +118,7 @@ $$(f_l*g_l)(i)=\sum_{j\in{N(i)},p\in{P(u(i,j))}}f_l(j)\cdot{w_{p,l}}\cdot{B_p(u(
 
 1. equal grid graphs ($$28\times28$$ nodes)
 
-   - LeNet5-like network architecture: $$SConv((5, 5), 1, 32)\rightarrow{MaxP(4)}\rightarrow{SConv((5, 5), 32, 64)}\rightarrow{MaxP(4)}\rightarrow{FC(512)}\rightarrow{FC(10)}$$
+   - LeNet5-like network architecture: $$SConv((5, 5), 1, 32)\rightarrow{MaxP(4)}\rightarrow{SConv((5, 5), 32, 64)} \\ \rightarrow{MaxP(4)}\rightarrow{FC(512)}\rightarrow{FC(10)}$$
    - mirror the LeNet5 architecture with its 5 × 5 filters: neighborhoods of size 5 × 5 from the grid graph
    - reach equivalence to the traditional convolution operator in CNNs: m=1
 
@@ -130,7 +130,7 @@ $$(f_l*g_l)(i)=\sum_{j\in{N(i)},p\in{P(u(i,j))}}f_l(j)\cdot{w_{p,l}}\cdot{B_p(u(
 
    ​	$$Σ_j$$ and $$µ_j$$ are learnable d × d and d × 1 covariance matrix and mean vector of a Gaussian kernel
 
-   - architecture: $$SConv((k_1,k_2), 1, 32)\rightarrow{MaxP(4)}\rightarrow{SConv((k_1, k_2), 32, 64)}\rightarrow{MaxP(4)}\rightarrow{AvgP}\rightarrow{FC(128)}\rightarrow{FC(10)}$$
+   - architecture: $$SConv((k_1,k_2), 1, 32)\rightarrow{MaxP(4)}\rightarrow{SConv((k_1, k_2), 32, 64)} \\ \rightarrow{MaxP(4)}\rightarrow{AvgP}\rightarrow{FC(128)}\rightarrow{FC(10)}$$
    - Cartesian coordinates: $$k_1=k_2=4+m$$; Polar coordinates: $$k_1=1+m, k_2=8$$
 
    <figure><img src="{{ site.url }}/images/SplineCNN/image-20200530214154844.png" alt="image-20200530214154844" style="zoom:40%;" /><figcaption>superpixel dataset</figcaption></figure>
@@ -169,7 +169,7 @@ $$(f_l*g_l)(i)=\sum_{j\in{N(i)},p\in{P(u(i,j))}}f_l(j)\cdot{w_{p,l}}\cdot{B_p(u(
 
 - three-dimensional meshes
 
-- architecture: $$SConv((k_1, k_2, k_3), 1, 32)\rightarrow{SConv((k_1, k_2, k_3), 32, 64)}\rightarrow{SConv((k_1, k_2, k_3), 64, 64)}\rightarrow{Lin(256)}\rightarrow{Lin(6890)}$$
+- architecture: $$SConv((k_1, k_2, k_3), 1, 32)\rightarrow{SConv((k_1, k_2, k_3), 32, 64)} \\ \rightarrow{SConv((k_1, k_2, k_3), 64, 64)}\rightarrow{Lin(256)}\rightarrow{Lin(6890)}$$
 
   其中$$Lin(o)$$表示输出 $$o$$ 维特征的$$1\times1$$卷积层
 
