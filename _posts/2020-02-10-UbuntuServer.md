@@ -336,7 +336,7 @@ Normal模式下：
 
 - 查找字符串：按`/`，默认大小写敏感；正则匹配使用`?pattern`
 
-  ```json
+  ```
   n：查找下一个匹配
   N：查找上一个匹配
   2n：查找下面第二个匹配
@@ -344,7 +344,7 @@ Normal模式下：
 
 - 移动光标
 
-  ```json
+  ```
   0：到行首
   ^：到行首第一个字符，如果前面有空格的话
   $：到行尾
@@ -356,7 +356,7 @@ Normal模式下：
 
 - 复制y，粘贴p，剪切x，删除d
 
-  ```json
+  ```
   yy：复制一行
   8yy：向下复制8行
   yw：复制光标开始的一个单词
@@ -369,11 +369,11 @@ Normal模式下：
 
 - 经典版（翻译）
 
-<img src="https://www.runoob.com/wp-content/uploads/2015/10/vi-vim-cheat-sheet-sch1.gif" alt="img" style="zoom: 67%;" />
+<figure><img src="https://www.runoob.com/wp-content/uploads/2015/10/vi-vim-cheat-sheet-sch1.gif" alt="img" style="zoom: 67%;" /></figure>
 
 - 进阶版
 
-<img src="http://michael.peopleofhonoronly.com/vim/vim_cheat_sheet_for_programmers_print.png" alt="img"  />
+<figure><img src="http://michael.peopleofhonoronly.com/vim/vim_cheat_sheet_for_programmers_print.png" alt="img"  /></figure>
 
 ## 文件管理
 
