@@ -2,7 +2,7 @@
 layout: post
 title: Ubuntu-GPU-Server常用操作指南
 description: "Commom operations for Ubuntu server."
-modified: 2020-03-15
+modified: 2020-06-16
 tags: Skills
 image:
   feature: abstract-4.jpg
@@ -13,40 +13,32 @@ image:
 <div markdown="1">
 <!-- TOC -->
 
-- [SSH神器：MobaXterm](#ssh神器mobaxterm)
-    - [基本场景0: SSH](#基本场景0-ssh)
-    - [场景1: 通过跳板机的远程登录](#场景1-通过跳板机的远程登录)
-        - [需求介绍](#需求介绍)
-        - [配置教程](#配置教程)
-    - [场景2: 本地浏览器访问远程端口](#场景2-本地浏览器访问远程端口)
-        - [需求介绍](#需求介绍)
-        - [配置教程](#配置教程)
-- [更新CUDA版本](#更新cuda版本)
-- [VSCode: 编辑远程文件](#vscode-编辑远程文件)
-- [Anaconda3安装OpenCV](#anaconda3安装opencv)
-- [Linux常用命令](#linux常用命令)
-    - [tar: tape archive](#tar-tape-archive)
-        - [主要选项](#主要选项)
-        - [辅助选项](#辅助选项)
-        - [压缩选项 (not support compress directly)](#压缩选项-not-support-compress-directly)
-        - [附：（其它）压缩 / 解压](#附其它压缩--解压)
-    - [统计目录下 文件/目录 个数](#统计目录下-文件目录-个数)
-    - [实时监测命令的运行结果](#实时监测命令的运行结果)
-    - [kill进程](#kill进程)
-    - [修改环境变量](#修改环境变量)
-    - [查看系统版本](#查看系统版本)
-    - [系统管理](#系统管理)
+- [SSH神器：MobaXterm](#ssh%E7%A5%9E%E5%99%A8mobaxterm)
+    - [基本场景0: SSH](#%E5%9F%BA%E6%9C%AC%E5%9C%BA%E6%99%AF0-ssh)
+    - [场景1: 通过跳板机的远程登录](#%E5%9C%BA%E6%99%AF1-%E9%80%9A%E8%BF%87%E8%B7%B3%E6%9D%BF%E6%9C%BA%E7%9A%84%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%BD%95)
+        - [需求介绍](#%E9%9C%80%E6%B1%82%E4%BB%8B%E7%BB%8D)
+        - [配置教程](#%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B)
+    - [场景2: 本地浏览器访问远程端口](#%E5%9C%BA%E6%99%AF2-%E6%9C%AC%E5%9C%B0%E6%B5%8F%E8%A7%88%E5%99%A8%E8%AE%BF%E9%97%AE%E8%BF%9C%E7%A8%8B%E7%AB%AF%E5%8F%A3)
+        - [需求介绍](#%E9%9C%80%E6%B1%82%E4%BB%8B%E7%BB%8D)
+        - [配置教程](#%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B)
+- [更新CUDA版本](#%E6%9B%B4%E6%96%B0cuda%E7%89%88%E6%9C%AC)
+- [-z 压缩为.tar.gz文件](#-z-%E5%8E%8B%E7%BC%A9%E4%B8%BAtargz%E6%96%87%E4%BB%B6)
+- [-C 指定输出路径](#-c-%E6%8C%87%E5%AE%9A%E8%BE%93%E5%87%BA%E8%B7%AF%E5%BE%84)
+- [杀死指定用户的所有进程](#%E6%9D%80%E6%AD%BB%E6%8C%87%E5%AE%9A%E7%94%A8%E6%88%B7%E7%9A%84%E6%89%80%E6%9C%89%E8%BF%9B%E7%A8%8B)
+- [批量杀死包含某字符串（string）的进程：awk中的脚本打印文本每行的第二列，即进程号；xargs将之前获得的进程号作为kill -9的参数并执行](#%E6%89%B9%E9%87%8F%E6%9D%80%E6%AD%BB%E5%8C%85%E5%90%AB%E6%9F%90%E5%AD%97%E7%AC%A6%E4%B8%B2string%E7%9A%84%E8%BF%9B%E7%A8%8Bawk%E4%B8%AD%E7%9A%84%E8%84%9A%E6%9C%AC%E6%89%93%E5%8D%B0%E6%96%87%E6%9C%AC%E6%AF%8F%E8%A1%8C%E7%9A%84%E7%AC%AC%E4%BA%8C%E5%88%97%E5%8D%B3%E8%BF%9B%E7%A8%8B%E5%8F%B7xargs%E5%B0%86%E4%B9%8B%E5%89%8D%E8%8E%B7%E5%BE%97%E7%9A%84%E8%BF%9B%E7%A8%8B%E5%8F%B7%E4%BD%9C%E4%B8%BAkill--9%E7%9A%84%E5%8F%82%E6%95%B0%E5%B9%B6%E6%89%A7%E8%A1%8C)
+    - [系统管理](#%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86)
         - [sudo: superuser do](#sudo-superuser-do)
         - [su: switch user](#su-switch-user)
-        - [用户与用户组](#用户与用户组)
+        - [用户与用户组](#%E7%94%A8%E6%88%B7%E4%B8%8E%E7%94%A8%E6%88%B7%E7%BB%84)
         - [ps: process status](#ps-process-status)
         - [nohup: no hang up](#nohup-no-hang-up)
         - [screen](#screen)
         - [reboot](#reboot)
-    - [文档编辑](#文档编辑)
+    - [文档编辑](#%E6%96%87%E6%A1%A3%E7%BC%96%E8%BE%91)
         - [grep: global regular expression print](#grep-global-regular-expression-print)
         - [wc: word count](#wc-word-count)
-    - [文件管理](#文件管理)
+        - [Vim编辑器](#vim%E7%BC%96%E8%BE%91%E5%99%A8)
+    - [文件管理](#%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86)
         - [chown: change owner](#chown-change-owner)
         - [chgrp: change group](#chgrp-change-group)
         - [chmod: change mode](#chmod-change-mode)
@@ -61,24 +53,18 @@ image:
         - [whereis](#whereis)
         - [which](#which)
         - [split](#split)
-    - [磁盘管理](#磁盘管理)
+    - [磁盘管理](#%E7%A3%81%E7%9B%98%E7%AE%A1%E7%90%86)
         - [cd: change directory](#cd-change-directory)
         - [pwd: print work directory](#pwd-print-work-directory)
         - [ls: list](#ls-list)
         - [df: disk free](#df-disk-free)
         - [du: disk usage](#du-disk-usage)
         - [mkdir](#mkdir)
-    - [网络通讯](#网络通讯)
+    - [网络通讯](#%E7%BD%91%E7%BB%9C%E9%80%9A%E8%AE%AF)
         - [netstat](#netstat)
         - [tcpdump](#tcpdump)
         - [ifconfig](#ifconfig)
-    - [常用符号](#常用符号)
-    - [正则表达式](#正则表达式)
-        - [限定符](#限定符)
-        - [定位符](#定位符)
-        - [非打印字符](#非打印字符)
-        - [其它特殊字符](#其它特殊字符)
-        - [字符簇](#字符簇)
+    - [常用符号](#%E5%B8%B8%E7%94%A8%E7%AC%A6%E5%8F%B7)
 
 <!-- /TOC -->
 </div>
@@ -220,12 +206,14 @@ $ sudo apt install nvidia-430
 * 打包（压缩）
 ```shell
 $ tar -cvf /source_path/collection.tar file1, file2
+
 # -z 压缩为.tar.gz文件
 $ tar -zcvf collection.tar.gz
 ```
 * 解压
 ```sh
 $ tar -xvf collection.tar
+
 # -C 指定输出路径
 $ tar -zxvf collection.tar.gz -C /destination_path/
 ```
@@ -270,8 +258,10 @@ $ watch -n 1 -d nvidia-smi
 
 ## kill进程
 ```shell
+
 # 杀死指定用户的所有进程
 $ kill -u user
+
 # 批量杀死包含某字符串（string）的进程：awk中的脚本打印文本每行的第二列，即进程号；xargs将之前获得的进程号作为kill -9的参数并执行
 $ ps -ef|grep string|grep -v grep|awk ‘{print $2}’|xargs kill -9
 ```
