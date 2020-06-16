@@ -116,13 +116,29 @@ Debian源使用帮助（含例：中科大源）http://mirrors.ustc.edu.cn/help/
 
 - 教程: https://about.gitlab.com/install/?version=ce#ubuntu
 
+- gitlab限制上传大小文件
+
+  解决git push的`error: pack-objects died of signal 13`，可能的原因有两个：
+
+  - 客户端：加大 `http.postBuffer` 的值
+
+    ```shell
+    $ git config http.postBuffer 52428800 # 单位是字节， 52428800 = 1024 * 1024 * 50 即 50 M
+    ```
+
+  - 服务端：可能原因有gitlab本身，或gitlab使用的nginx；解决方法[参考](https://cloud.tencent.com/developer/article/1395956)
+
+  
+
 - 增加存储：修改/etc/gitlab/gitlab.rb文件（[官方教程](https://docs.gitlab.com/omnibus/settings/configuration.html#storing-git-data-in-an-alternative-directory)）
 
+  解决git push的`error: unpack failed: error No space left on device`
+  
   ```
   git_data_dirs({
     "default" => { "path" => "/var/opt/gitlab/git-data" },  //默认存储目录
     "alternative" => { "path" => " /storage" }     //备用存储目录
-  })
+})
   ```
-
+  
   > 默认情况下仓库数据存储在 /var/opt/gitlab/git-data目录下，仓库存放在子目录 repositories里。
