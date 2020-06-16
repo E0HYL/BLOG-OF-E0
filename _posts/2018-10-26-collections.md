@@ -16,7 +16,7 @@ image:
 - [播客 Podcast](#1)
 - [Kali-Vmware](#2)
 - [Python调用Matlab](#3)
-- [Linux服务器搭建Gitlab](#4)
+- [Linux服务器搭建Gitlab](#5)
 
 </div>
 </details>
@@ -112,13 +112,13 @@ Debian源使用帮助（含例：中科大源）http://mirrors.ustc.edu.cn/help/
   * [从Python将数据传递到MATLAB](https://ww2.mathworks.cn/help/matlab/matlab_external/pass-data-to-matlab-from-python.html)
   * [处理从MATLAB返回到Python的数据](https://ww2.mathworks.cn/help/matlab/matlab_external/handle-data-returned-from-matlab-to-python.html)
 
-<h1 id="4" style="color:rgb(78, 78, 78);">Linux服务器搭建Gitlab</h1>
+<h1 id="5" style="color:rgb(78, 78, 78);">Linux服务器搭建Gitlab</h1>
 
 - 教程: https://about.gitlab.com/install/?version=ce#ubuntu
 
 - 增加存储：修改/etc/gitlab/gitlab.rb文件（[官方教程](https://docs.gitlab.com/omnibus/settings/configuration.html#storing-git-data-in-an-alternative-directory)）
 
-  ```json
+  ```
   git_data_dirs({
     "default" => { "path" => "/var/opt/gitlab/git-data" },  //默认存储目录
     "alternative" => { "path" => " /storage" }     //备用存储目录
