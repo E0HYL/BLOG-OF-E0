@@ -95,7 +95,7 @@ Debian源使用帮助（含例：中科大源）http://mirrors.ustc.edu.cn/help/
 ### 放大字体与图标
 * [Gnome Tweak Tool](https://steemit.com/utopian-io/@husnulkhatimah/how-to-install-gnome-tweak-tool-on-kali-linux-2017-2)
 * [kali在高清屏幕下如何放大字体与图标](https://blog.werner.wiki/kali-gnome-tweak-tool/)
-### [inux安全渗透](https://wizardforcel.gitbooks.io/daxueba-kali-linux-tutorial/content/0.html)
+### [Linux安全渗透](https://wizardforcel.gitbooks.io/daxueba-kali-linux-tutorial/content/0.html)
 
 <h1 id="3" style="color:rgb(78, 78, 78);">Python调用Matlab</h1>
 
@@ -142,3 +142,11 @@ Debian源使用帮助（含例：中科大源）http://mirrors.ustc.edu.cn/help/
   ```
   
   > 默认情况下仓库数据存储在 /var/opt/gitlab/git-data目录下，仓库存放在子目录 repositories里。
+
+- 解决`.git`文件过大
+
+  ```shell
+  $ git reflog expire --expire=now --all && git gc --prune=now --aggressive
+  ```
+
+  

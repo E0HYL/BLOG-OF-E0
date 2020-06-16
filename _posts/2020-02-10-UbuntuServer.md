@@ -177,6 +177,12 @@ $ sudo apt install nvidia-430
 
 # Linux常用命令
 
+## 执行`.sh`文件
+
+ .sh文件就是文本文件，如果要执行，需要先使用`chmod a+x filename.sh`来给可执行权限；
+
+然后在其所在目录下执行`sudo ./filename.sh`
+
 ## tar: tape archive
 
 ### 主要选项
@@ -205,17 +211,13 @@ $ sudo apt install nvidia-430
 
 * 打包（压缩）
 ```shell
-$ tar -cvf /source_path/collection.tar file1, file2
-
-# -z 压缩为.tar.gz文件
-$ tar -zcvf collection.tar.gz
+$ tar -cvf /source_path/collection.tar file1, file2 
+$ tar -zcvf collection.tar.gz # -z 压缩为.tar.gz文件
 ```
 * 解压
 ```sh
 $ tar -xvf collection.tar
-
-# -C 指定输出路径
-$ tar -zxvf collection.tar.gz -C /destination_path/
+$ tar -zxvf collection.tar.gz -C /destination_path/ # -C 指定输出路径
 ```
 * 更新（假设修改了file1，新创建了file3）
 ```shell
