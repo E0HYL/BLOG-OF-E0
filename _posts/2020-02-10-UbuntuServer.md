@@ -336,12 +336,63 @@ $ cat /etc/issue
 ### wc: word count
 计算文件字数，输出三个数字分别表示行数(-l)、单词数(-w)、字节数(-c, --chars)
 
+### [Vim](https://www.openvim.com/)编辑器
+
+三种模式：Insert, Normal, (Visual便于选取文本)
+
+Normal模式下：
+
+> 命令前添加数字表示多遍重复操作；`f`表示行内正向查找，`F`反向
+
+- 查找字符串：按`/`，默认大小写敏感；正则匹配使用`?pattern`
+
+  ```json
+  n：查找下一个匹配
+  N：查找上一个匹配
+  2n：查找下面第二个匹配
+  ```
+
+- 移动光标
+
+  ```json
+  0：到行首
+  ^：到行首第一个字符，如果前面有空格的话
+  $：到行尾
+  gg：快速到文件头
+  G：快速到文件尾
+  20j：向下移动 20 行
+  50G：跳转到第 50 行
+  ```
+
+- 复制y，粘贴p，剪切x，删除d
+
+  ```json
+  yy：复制一行
+  8yy：向下复制8行
+  yw：复制光标开始的一个单词
+  y$：复制光标到行尾
+  yfA：复制光标到第一个大写A中间的内容
+  y2fA：复制光标到第二个大写A中间的内容
+  ```
+
+[Vim快捷键键位图](https://cloud.tencent.com/developer/article/1369567)
+
+- 经典版（翻译）
+
+<img src="https://www.runoob.com/wp-content/uploads/2015/10/vi-vim-cheat-sheet-sch1.gif" alt="img" style="zoom: 67%;" />
+
+- 进阶版
+
+<img src="http://michael.peopleofhonoronly.com/vim/vim_cheat_sheet_for_programmers_print.png" alt="img"  />
+
 ## 文件管理
 
 ### chown: change owner
 改变文件所有者，-R指定目录以及其子目录下所有文件
-<br>`chown user[:group] file_name`
-<br>`chmod -R user[:group] *`（当前目录）
+
+`chown user[:group] file_name`
+
+`chmod -R user[:group] *`（当前目录）
 
 ### chgrp: change group
 改变文件用户组
@@ -353,15 +404,18 @@ $ cat /etc/issue
 
 ### cat: concatenate
 连接文件并打印到标准输出设备上，-n由1开始对输出行编号（-b空白行不编）
-<br>`cat file1 file2 > file3` （输入到file3中，若>>则为追加，不打印在控制台）
+
+`cat file1 file2 > file3` （输入到file3中，若>>则为追加，不打印在控制台）
 
 ### more / less
 分页浏览文件（less可随意浏览）
-<br>`history | less` 查看命令使用历史并通过less分页显示（Q退出）
+
+`history | less` 查看命令使用历史并通过less分页显示（Q退出）
 
 ### ln: link
 为某文件在另一个位置建立同步链接。需要在不同目录用到同一文件时，不必重复占用磁盘空间。-s 创建软链接（可跨文件系统，类似于快捷方式）
-<br>`ln -s file_name link_name`
+
+`ln -s file_name link_name`
 
 ### cp: copy
 复制目录时必须加**-r**
@@ -374,7 +428,8 @@ $ cat /etc/issue
 
 ### scp: secure copy
 linux系统下基于ssh登录进行安全的远程文件拷贝
-<br>`scp local_file remote_username@remote_ip:remote:folder`
+
+`scp local_file remote_username@remote_ip:remote:folder`
 
 ### locate
 用于查找符合条件的文档（文件或目录名中包含指定字符串）
