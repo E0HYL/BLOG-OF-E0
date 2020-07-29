@@ -27,11 +27,11 @@ image:
 
 <a id="toc_anchor" name="#01-Pytorch实现GNNExplainer"></a>
 
-## 0.1. Pytorch实现GNNExplainer
+## Pytorch实现GNNExplainer
 
 <a id="toc_anchor" name="#011-论文代码"></a>
 
-### 0.1.1. 论文代码
+### 论文代码
 
 首先分析一下作者的[源码](https://github.com/RexYing/gnn-model-explainer)。
 
@@ -43,9 +43,11 @@ image:
 
 下面分析一下其中的`forward`和`loss`函数。
 
+<!--more-->
+
 <a id="toc_anchor" name="#0111-前向传播"></a>
 
-#### 0.1.1.1. 前向传播
+#### 前向传播
 
 这里首先是把待学习的参数`mask`和`feat_mask`分别乘原邻接矩阵和特征向量，得到变换后的`masked_adj`和`x`。前者通过调用`_masked_adj`函数完成，后者的实现如下：
 
@@ -78,7 +80,7 @@ else:
 
 <a id="toc_anchor" name="#0112-损失函数"></a>
 
-#### 0.1.1.2. 损失函数
+#### 损失函数
 
 五项损失的加权，除了对应于论文中损失函数公式的`pred_loss`，其余各项损失的作用参考论文4.2节的*Integrating additional constraints into explanations*，它们的权重定义在`coeffs`中：
 
@@ -191,7 +193,7 @@ feat_mask_ent_loss = self.coeffs["feat_ent"] * torch.mean(feat_mask_ent)
 
 <a id="toc_anchor" name="#012-PyG实现"></a>
 
-### 0.1.2. PyG实现
+### PyG实现
 
 为了兼容GNNExplainer，在[torch_geometric/nn/conv/message_passing.py](torch_geometric/nn/conv/message_passing.py)中给`MessagePassing`类增加了`__explain__`和`__edge_mask__`属性，并直接在*message passing*过程中注入`edge_mask`，此时无法将其和*aggregate*融合在（为节约时间和内存而设计的）`message_and_aggregate`函数中完成：
 
@@ -214,7 +216,7 @@ if self.__explain__:
 
 <a id="toc_anchor" name="#0121-节点分类解释"></a>
 
-#### 0.1.2.1. 节点分类解释
+#### 节点分类解释
 
 在[PyG 1.5](https://pytorch-geometric.readthedocs.io/en/latest/modules/nn.html?highlight=gnnexplainer#torch_geometric.nn.models.GNNExplainer)的版本中已实现，不过对比源码之后发现一些小的不同，这里记录一下：
 
@@ -281,11 +283,11 @@ plt.show()
 
 结果如下图所示，节点10即待解释的节点，其计算图包含了两跳节点，因为模型使用了两个GCN卷积层，参考[源码](https://pytorch-geometric.readthedocs.io/en/latest/_modules/torch_geometric/nn/models/gnn_explainer.html#GNNExplainer)中的`__num_hops__`函数。其中节点的颜色表示其类别，黑色边连接起来的计算图对预测节点10的标签来说是重要的，即论文中的$$G_S$$。
 
-<figure><img src="../images/2020-06-22-GNNExplainer/image-20200622135439294.png" alt="image-20200622135439294"  /></figure>
+<figure><img src="{{ site.url }}/images/2020-06-22-GNNExplainer/image-20200622135439294.png" alt="image-20200622135439294"  /></figure>
 
 <a id="toc_anchor" name="#0122-图分类解释"></a>
 
-#### 0.1.2.2. 图分类解释
+#### 图分类解释
 
 PyG中尚未实现，但根据论文的4.4节，只要把损失函数中节点计算图的邻接矩阵$$A_c$$替换成待解释图上全部节点的邻接矩阵即可，代码中主要不同点有：
 
@@ -649,5 +651,5 @@ for data in data_loader:
     break
 ```
 
-<figure><img src="../images/2020-06-22-GNNExplainer/graphclassification.png"  /></figure>
+<figure><img src="{{ site.url }}/images/2020-06-22-GNNExplainer/graphclassification.png"  /></figure>
 

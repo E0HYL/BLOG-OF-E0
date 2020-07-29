@@ -91,7 +91,7 @@ image:
 
 <a id="toc_anchor" name="#1-SSH神器：MobaXterm"></a>
 
-# 1. SSH神器：MobaXterm
+# SSH神器：MobaXterm
 
 > Free X server for Windows with tabbed SSH terminal, telnet, RDP, VNC and X11-forwarding 
 >
@@ -99,7 +99,7 @@ image:
 
 <a id="toc_anchor" name="#11-基本场景0:[SSH](https://zhuanlan.zhihu.com/p/56341917)"></a>
 
-## 1.1. 基本场景0: [SSH](https://zhuanlan.zhihu.com/p/56341917)
+## 基本场景0: [SSH](https://zhuanlan.zhihu.com/p/56341917)
 
 > 图形化的SSH隧道管理 
 >
@@ -109,11 +109,11 @@ image:
 
 <a id="toc_anchor" name="#12-场景1:通过跳板机的远程登录"></a>
 
-## 1.2. 场景1: 通过跳板机的远程登录
+## 场景1: 通过跳板机的远程登录
 
 <a id="toc_anchor" name="#121-需求介绍"></a>
 
-### 1.2.1. 需求介绍
+### 需求介绍
 
 客户端A使用校园网IP（10.开头）；
 
@@ -123,7 +123,7 @@ image:
 
 <a id="toc_anchor" name="#122-配置[教程](https://blog.csdn.net/xuyuqingfeng953/article/details/96180642)"></a>
 
-### 1.2.2. 配置[教程](https://blog.csdn.net/xuyuqingfeng953/article/details/96180642)
+### 配置[教程](https://blog.csdn.net/xuyuqingfeng953/article/details/96180642)
 
 ```
 Session：SSH：Network Setting：Connect through SSH gateway
@@ -131,16 +131,16 @@ Session：SSH：Network Setting：Connect through SSH gateway
 
 <a id="toc_anchor" name="#13-场景2:本地浏览器访问远程端口"></a>
 
-## 1.3. 场景2: 本地浏览器访问远程端口
+## 场景2: 本地浏览器访问远程端口
 
 <a id="toc_anchor" name="#131-需求介绍"></a>
 
-### 1.3.1. 需求介绍
+### 需求介绍
 远端服务器无浏览器界面，但希望使用jupyter notebook、tensorboard等。
 
 <a id="toc_anchor" name="#132-配置[教程](http://m.blog.sina.com.cn/s/blog_e11ac5850102xurp.html)"></a>
 
-### 1.3.2. 配置[教程](http://m.blog.sina.com.cn/s/blog_e11ac5850102xurp.html)
+### 配置[教程](http://m.blog.sina.com.cn/s/blog_e11ac5850102xurp.html)
 
 ```
 Tools：Network：MobaSSHTunnel
@@ -149,7 +149,7 @@ Tools：Network：MobaSSHTunnel
 
 <a id="toc_anchor" name="#2-更新CUDA版本"></a>
 
-# 2. 更新CUDA版本
+# 更新CUDA版本
 
 这里以卸载10.0，升级到10.1为例。
 
@@ -176,7 +176,7 @@ $ sudo apt install nvidia-430 # install (430)
 
 <a id="toc_anchor" name="#3-VSCode:编辑远程文件"></a>
 
-# 3. VSCode: 编辑远程文件
+# VSCode: 编辑远程文件
 
 - 安装Remote-SSH插件
 
@@ -200,7 +200,7 @@ $ sudo apt install nvidia-430 # install (430)
 
 <a id="toc_anchor" name="#4-Anaconda3安装OpenCV"></a>
 
-# 4. Anaconda3安装OpenCV
+# Anaconda3安装OpenCV
 
 1. 安装依赖项
 
@@ -221,11 +221,11 @@ $ sudo apt install nvidia-430 # install (430)
 
 <a id="toc_anchor" name="#5-Linux常用命令"></a>
 
-# 5. Linux常用命令
+# Linux常用命令
 
 <a id="toc_anchor" name="#51-执行`.sh`文件"></a>
 
-## 5.1. 执行`.sh`文件
+## 执行`.sh`文件
 
 `.sh`文件就是文本文件，如果要执行，需要先使用`chmod a+x filename.sh`来给可执行权限；
 
@@ -233,11 +233,11 @@ $ sudo apt install nvidia-430 # install (430)
 
 <a id="toc_anchor" name="#52-tar:tapearchive"></a>
 
-## 5.2. tar: tape archive
+## tar: tape archive
 
 <a id="toc_anchor" name="#521-主要选项"></a>
 
-### 5.2.1. 主要选项
+### 主要选项
 
 > -c, --create 打包
 >
@@ -257,7 +257,7 @@ $ sudo apt install nvidia-430 # install (430)
 
 <a id="toc_anchor" name="#522-辅助选项"></a>
 
-### 5.2.2. 辅助选项
+### 辅助选项
 
 > -v, --verbose 详细列出处理的文件
 >
@@ -267,7 +267,7 @@ $ sudo apt install nvidia-430 # install (430)
 
 <a id="toc_anchor" name="#523-压缩选项(notsupportcompressdirectly)"></a>
 
-### 5.2.3. 压缩选项 (not support compress directly)
+### 压缩选项 (not support compress directly)
 
 > -a, --auto-compress 根据归档后缀名决定
 >
@@ -305,7 +305,7 @@ file3
 
 <a id="toc_anchor" name="#524-附：（其它）压缩/解压"></a>
 
-### 5.2.4. 附：（其它）压缩 / 解压
+### 附：（其它）压缩 / 解压
 
 * .gz
 
@@ -339,7 +339,7 @@ file3
 
 <a id="toc_anchor" name="#53-统计目录下文件/目录个数"></a>
 
-## 5.3. 统计目录下 文件/目录 个数
+## 统计目录下 文件/目录 个数
 
 ```shell
 $ ll -R dir_name|grep ^-|wc -l
@@ -350,7 +350,7 @@ $ ll -R dir_name|grep ^d|wc -l
 
 <a id="toc_anchor" name="#54-实时监测命令的运行结果"></a>
 
-## 5.4. 实时监测命令的运行结果
+## 实时监测命令的运行结果
 
 -n, --interval=	周期（秒）
 
@@ -364,7 +364,7 @@ $ watch -n 1 -d nvidia-smi
 
 <a id="toc_anchor" name="#55-kill进程"></a>
 
-## 5.5. kill进程
+## kill进程
 
 ```shell
 $ kill -u user # 杀死指定用户的所有进程
@@ -373,7 +373,7 @@ $ ps -ef|grep string|grep -v grep|awk ‘{print $2}’|xargs kill -9 # 批量杀
 
 <a id="toc_anchor" name="#56-修改环境变量"></a>
 
-## 5.6. 修改环境变量
+## 修改环境变量
 
 修改用户级别的环境变量`vim ~/.bashrc`（系统级别`vim /etc/profile`），写入：
 
@@ -385,7 +385,7 @@ export PATH="$PATH:/home/username/example"
 
 <a id="toc_anchor" name="#57-查看系统版本"></a>
 
-## 5.7. 查看系统版本
+## 查看系统版本
 
 ```shell
 $ cat /etc/issue
@@ -393,19 +393,19 @@ $ cat /etc/issue
 
 <a id="toc_anchor" name="#58-系统管理"></a>
 
-## 5.8. 系统管理
+## 系统管理
 
 <a id="toc_anchor" name="#581-sudo:superuserdo"></a>
 
-### 5.8.1. sudo: superuser do
+### sudo: superuser do
 
 <a id="toc_anchor" name="#582-su:switchuser"></a>
 
-### 5.8.2. su: switch user
+### su: switch user
 
 <a id="toc_anchor" name="#583-用户与用户组"></a>
 
-### 5.8.3. 用户与用户组
+### 用户与用户组
 
 - 增加用户 `useradd -d /usr/username -m username`
 
@@ -425,7 +425,7 @@ $ cat /etc/issue
 
 <a id="toc_anchor" name="#584-ps:processstatus"></a>
 
-### 5.8.4. ps: process status
+### ps: process status
 
 常用参数：-aux -ef
 
@@ -443,13 +443,13 @@ $ cat /etc/issue
 
 <a id="toc_anchor" name="#585-nohup:nohangup"></a>
 
-### 5.8.5. nohup: no hang up
+### nohup: no hang up
 
 常和 & 符号配合，使程序在后台永久执行【用**screen**更优】
 
 <a id="toc_anchor" name="#586-screen"></a>
 
-### 5.8.6. screen
+### screen
 
 `screen -ls`
 
@@ -459,17 +459,17 @@ $ cat /etc/issue
 
 <a id="toc_anchor" name="#587-reboot"></a>
 
-### 5.8.7. reboot
+### reboot
 
 重启（需root）
 
 <a id="toc_anchor" name="#59-文档编辑"></a>
 
-## 5.9. 文档编辑
+## 文档编辑
 
 <a id="toc_anchor" name="#591-grep:globalregularexpressionprint"></a>
 
-### 5.9.1. grep: global regular expression print
+### grep: global regular expression print
 
 -v 显示不包含匹配文本的所有行
 
@@ -479,13 +479,13 @@ $ cat /etc/issue
 
 <a id="toc_anchor" name="#592-wc:wordcount"></a>
 
-### 5.9.2. wc: word count
+### wc: word count
 
 计算文件字数，输出三个数字分别表示行数(-l)、单词数(-w)、字节数(-c, --chars)
 
 <a id="toc_anchor" name="#593-[Vim](https://www.openvim.com/)编辑器"></a>
 
-### 5.9.3. [Vim](https://www.openvim.com/)编辑器
+### [Vim](https://www.openvim.com/)编辑器
 
 三种模式：Insert, Normal, (Visual便于选取文本)
 
@@ -536,11 +536,11 @@ Normal模式下：
 
 <a id="toc_anchor" name="#510-文件管理"></a>
 
-## 5.10. 文件管理
+## 文件管理
 
 <a id="toc_anchor" name="#5101-chown:changeowner"></a>
 
-### 5.10.1. chown: change owner
+### chown: change owner
 
 改变文件所有者，-R指定目录以及其子目录下所有文件
 
@@ -550,13 +550,13 @@ Normal模式下：
 
 <a id="toc_anchor" name="#5102-chgrp:changegroup"></a>
 
-### 5.10.2. chgrp: change group
+### chgrp: change group
 
 改变文件用户组
 
 <a id="toc_anchor" name="#5103-chmod:changemode"></a>
 
-### 5.10.3. chmod: change mode
+### chmod: change mode
 
 `chmod 777 file_name`
 * 读r=4, 写w=2, 执行x=1【rwx : 7, rw- : 6, r-x : 5】
@@ -564,7 +564,7 @@ Normal模式下：
 
 <a id="toc_anchor" name="#5104-cat:concatenate"></a>
 
-### 5.10.4. cat: concatenate
+### cat: concatenate
 
 连接文件并打印到标准输出设备上，-n由1开始对输出行编号（-b空白行不编）
 
@@ -572,7 +572,7 @@ Normal模式下：
 
 <a id="toc_anchor" name="#5105-more/less"></a>
 
-### 5.10.5. more / less
+### more / less
 
 分页浏览文件（less可随意浏览）
 
@@ -580,7 +580,7 @@ Normal模式下：
 
 <a id="toc_anchor" name="#5106-ln:link"></a>
 
-### 5.10.6. ln: link
+### ln: link
 
 为某文件在另一个位置建立同步链接。需要在不同目录用到同一文件时，不必重复占用磁盘空间。-s 创建软链接（可跨文件系统，类似于快捷方式）
 
@@ -588,25 +588,25 @@ Normal模式下：
 
 <a id="toc_anchor" name="#5107-cp:copy"></a>
 
-### 5.10.7. cp: copy
+### cp: copy
 
 复制目录时必须加**-r**
 
 <a id="toc_anchor" name="#5108-rm:remove"></a>
 
-### 5.10.8. rm: remove
+### rm: remove
 
 删除目录必须加-r，-f对只读文件也直接删除
 
 <a id="toc_anchor" name="#5109-mv:move"></a>
 
-### 5.10.9. mv: move
+### mv: move
 
 `mv source dest`
 
 <a id="toc_anchor" name="#51010-scp:securecopy"></a>
 
-### 5.10.10. scp: secure copy
+### scp: secure copy
 
 linux系统下基于ssh登录进行安全的远程文件拷贝
 
@@ -614,7 +614,7 @@ linux系统下基于ssh登录进行安全的远程文件拷贝
 
 <a id="toc_anchor" name="#51011-wget&curl"></a>
 
-### 5.10.11. wget & curl
+### wget & curl
 
 1. 下载文件
 
@@ -652,45 +652,45 @@ $ wget --mirror -p --convert-links -P /var/www/html http://man.linuxde.net/
 
 <a id="toc_anchor" name="#51012-locate"></a>
 
-### 5.10.12. locate
+### locate
 
 用于查找符合条件的文档（文件或目录名中包含指定字符串）
 
 <a id="toc_anchor" name="#51013-whereis"></a>
 
-### 5.10.13. whereis
+### whereis
 
 只查找二进制文件、源代码文件或帮助文件。一般文件的定位用locate
 
 <a id="toc_anchor" name="#51014-which"></a>
 
-### 5.10.14. which
+### which
 
 在环境变量$PATH$设置的目录中查找文件
 
 <a id="toc_anchor" name="#51015-split"></a>
 
-### 5.10.15. split
+### split
 
 将大文件分割成较小的文件（默认间隔1000行，可用-<行数>指定）
 
 <a id="toc_anchor" name="#511-磁盘管理"></a>
 
-## 5.11. 磁盘管理
+## 磁盘管理
 
 <a id="toc_anchor" name="#5111-cd:changedirectory"></a>
 
-### 5.11.1. cd: change directory
+### cd: change directory
 
 <a id="toc_anchor" name="#5112-pwd:printworkdirectory"></a>
 
-### 5.11.2. pwd: print work directory
+### pwd: print work directory
 
 打印当前工作目录的绝对路径 
 
 <a id="toc_anchor" name="#5113-ls:list"></a>
 
-### 5.11.3. ls: list
+### ls: list
 
 列出指定目录下的内容
 
@@ -702,27 +702,27 @@ $ wget --mirror -p --convert-links -P /var/www/html http://man.linuxde.net/
 
 <a id="toc_anchor" name="#5114-df:diskfree"></a>
 
-### 5.11.4. df: disk free
+### df: disk free
 
 显示文件系统的磁盘使用情况
 
 <a id="toc_anchor" name="#5115-du:diskusage"></a>
 
-### 5.11.5. du: disk usage
+### du: disk usage
 
 显示指定文件所占的磁盘空间
 
 <a id="toc_anchor" name="#5116-mkdir"></a>
 
-### 5.11.6. mkdir
+### mkdir
 
 <a id="toc_anchor" name="#512-网络通讯"></a>
 
-## 5.12. 网络通讯
+## 网络通讯
 
 <a id="toc_anchor" name="#5121-netstat"></a>
 
-### 5.12.1. netstat
+### netstat
 
 `netstat -apu` 显示UDP（-u）端口号的使用，若TCP则为-t
 
@@ -730,19 +730,19 @@ $ wget --mirror -p --convert-links -P /var/www/html http://man.linuxde.net/
 
 <a id="toc_anchor" name="#5122-tcpdump"></a>
 
-### 5.12.2. tcpdump
+### tcpdump
 
 显示TCP包信息
 
 <a id="toc_anchor" name="#5123-ifconfig"></a>
 
-### 5.12.3. ifconfig
+### ifconfig
 
 显示或设置网络设备
 
 <a id="toc_anchor" name="#513-常用符号"></a>
 
-## 5.13. 常用符号
+## 常用符号
 
 ```
 |	（管道，pipeline）上一条命令的输出，作为下一条命令的参数
@@ -761,11 +761,11 @@ $ wget --mirror -p --convert-links -P /var/www/html http://man.linuxde.net/
 
 <a id="toc_anchor" name="#514-正则表达式"></a>
 
-## 5.14. 正则表达式
+## 正则表达式
 
 <a id="toc_anchor" name="#5141-限定符"></a>
 
-### 5.14.1. 限定符
+### 限定符
 
 ```
 *	>=0个匹配
@@ -778,7 +778,7 @@ $ wget --mirror -p --convert-links -P /var/www/html http://man.linuxde.net/
 
 <a id="toc_anchor" name="#5142-定位符"></a>
 
-### 5.14.2. 定位符
+### 定位符
 
 ```
 ^	文本的开始
@@ -789,7 +789,7 @@ $	文本的结尾
 
 <a id="toc_anchor" name="#5143-非打印字符"></a>
 
-### 5.14.3. 非打印字符
+### 非打印字符
 
 ```
 \f	换页符
@@ -803,7 +803,7 @@ $	文本的结尾
 
 <a id="toc_anchor" name="#5144-其它特殊字符"></a>
 
-### 5.14.4. 其它特殊字符
+### 其它特殊字符
 
 ```
 \	转义字符
@@ -814,7 +814,7 @@ $	文本的结尾
 
 <a id="toc_anchor" name="#5145-字符簇"></a>
 
-### 5.14.5. 字符簇
+### 字符簇
 
 放在一个方括号（[ ]）里，连字符（-）可表示一个范围。方括号里的^符号表示“非”。
 ```

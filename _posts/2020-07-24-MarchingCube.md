@@ -24,11 +24,11 @@ image:
 
 <a id="toc_anchor" name="#01-MarchingCube(移动立方体)"></a>
 
-## 0.1. Marching Cube (移动立方体)
+## Marching Cube (移动立方体)
 
 <a id="toc_anchor" name="#011-[如何理解](http://www.cs.carleton.edu/cs_comps/0405/shape/marching_cubes.html)"></a>
 
-### 0.1.1. [如何理解](http://www.cs.carleton.edu/cs_comps/0405/shape/marching_cubes.html)
+### [如何理解](http://www.cs.carleton.edu/cs_comps/0405/shape/marching_cubes.html)
 
 简单的 2D “移动正方形”
 
@@ -37,11 +37,13 @@ image:
 3. 一角在内一角在外的边上，一定存在目标表面和小正方形的交点（紫）
 4. 把所有小正方形上的紫点连接起来，可以获得原有表面的近似
 
-![image-20200724001221349](../images/2020-07-24-MarchingCube/image-20200724001221349.png)
+<img src="{{ site.url }}/images/2020-07-24-MarchingCube/image-20200724001221349.png" alt="image-20200724001221349"  />
+
+<!--more-->
 
 <a id="toc_anchor" name="#012-[算法步骤](https://blog.csdn.net/jjl199299/article/details/52036886)"></a>
 
-### 0.1.2. [算法步骤](https://blog.csdn.net/jjl199299/article/details/52036886)
+### [算法步骤](https://blog.csdn.net/jjl199299/article/details/52036886)
 
 1. 将三维空间分割为小立方体（体素）。
 
@@ -49,7 +51,7 @@ image:
 
    根据对称关系构建一个256种（每个顶点有内/外两种状态）相交关系的索引表，该表指明等值面与体素的哪条边相交。15种基本情形，其他241种情形可以通过这15种基本情形的旋转、映射等方式实现：
 
-   ![image-20200725134847453](../images/2020-07-24-MarchingCube/image-20200725134847453.png)
+   <img src="{{ site.url }}/images/2020-07-24-MarchingCube/image-20200725134847453.png" alt="image-20200725134847453"  />
 
    遍历三维图像的所有体素，对每个体素执行2~4：
 
@@ -61,7 +63,7 @@ image:
 
 <a id="toc_anchor" name="#02-[C++实现](https://github.com/E0HYL/TorchMarchingCubes)"></a>
 
-## 0.2. [C++ 实现](https://github.com/E0HYL/TorchMarchingCubes)
+## [C++ 实现](https://github.com/E0HYL/TorchMarchingCubes)
 
 1. 主要数据结构：点，面片，体素
 
