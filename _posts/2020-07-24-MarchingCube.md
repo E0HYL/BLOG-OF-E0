@@ -13,20 +13,16 @@ image:
 <div markdown="1">
 <!-- TOC -->
 
-   - [Marching Cube (移动立方体)](#01-MarchingCube(移动立方体))
-      - [[如何理解](http://www.cs.carleton.edu/cs_comps/0405/shape/marching_cubes.html)](#011-[如何理解](http://www.cs.carleton.edu/cs_comps/0405/shape/marching_cubes.html))
-      - [[算法步骤](https://blog.csdn.net/jjl199299/article/details/52036886)](#012-[算法步骤](https://blog.csdn.net/jjl199299/article/details/52036886))
-   - [[C++ 实现](https://github.com/E0HYL/TorchMarchingCubes)](#02-[C++实现](https://github.com/E0HYL/TorchMarchingCubes))
+- [Marching Cube 移动立方体](#marching-cube-%E7%A7%BB%E5%8A%A8%E7%AB%8B%E6%96%B9%E4%BD%93)
+    - [如何理解](#%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3)
+    - [算法步骤](#%E7%AE%97%E6%B3%95%E6%AD%A5%E9%AA%A4)
+- [C++ 实现](#c-%E5%AE%9E%E7%8E%B0)
 
 <!-- /TOC -->
 </div>
 </details>
 
-<a id="toc_anchor" name="#01-MarchingCube(移动立方体)"></a>
-
 ## Marching Cube (移动立方体)
-
-<a id="toc_anchor" name="#011-[如何理解](http://www.cs.carleton.edu/cs_comps/0405/shape/marching_cubes.html)"></a>
 
 ### [如何理解](http://www.cs.carleton.edu/cs_comps/0405/shape/marching_cubes.html)
 
@@ -40,8 +36,6 @@ image:
 <img src="{{ site.url }}/images/2020-07-24-MarchingCube/image-20200724001221349.png" alt="image-20200724001221349"  />
 
 <!--more-->
-
-<a id="toc_anchor" name="#012-[算法步骤](https://blog.csdn.net/jjl199299/article/details/52036886)"></a>
 
 ### [算法步骤](https://blog.csdn.net/jjl199299/article/details/52036886)
 
@@ -60,8 +54,6 @@ image:
 3. 把这8个顶点构成的01串组成一个8位的索引值，用索引值在边索引表里查找对应的相交关系，并用插值算法求出与立方体每条边的交点。
 
 4. 用交点构成三角形面片或者是多边形面片。
-
-<a id="toc_anchor" name="#02-[C++实现](https://github.com/E0HYL/TorchMarchingCubes)"></a>
 
 ## [C++ 实现](https://github.com/E0HYL/TorchMarchingCubes)
 

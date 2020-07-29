@@ -6,36 +6,32 @@ modified: 2020-7-27
 tags: [Geometric, Paper, Visualization]
 math: true
 image:
-  feature: abstract-4.jpg
+  feature: abstract-5.jpg
 ---
 <details open><!-- 可选open -->
 <summary>Contents</summary>
 <div markdown="1">
 <!-- TOC -->
 
-   - [泊松重建 (Possion Reconstruction)](#01-泊松重建(PossionReconstruction))
-      - [三维指示函数拟合](#011-三维指示函数拟合)
-         - [隐函数拟合](#0111-隐函数拟合)
-         - [求解方法](#0112-求解方法)
-      - [等值面提取](#012-等值面提取)
-               - [【附：相关数学知识】](#01201-【附：相关数学知识】)
-                  - [泊松方程定义与求解（图像场景）](#012011-泊松方程定义与求解（图像场景）)
-                  - [[矢量分析：梯度、散度、旋度](https://zhuanlan.zhihu.com/p/22654688)](#012012-[矢量分析：梯度、散度、旋度](https://zhuanlan.zhihu.com/p/22654688))
-                  - [[向量的点乘（内积）、叉乘（外积）](https://www.cnblogs.com/gxcdream/p/7597865.html)](#012013-[向量的点乘（内积）、叉乘（外积）](https://www.cnblogs.com/gxcdream/p/7597865.html))
+- [泊松重建 Possion Reconstruction](#%E6%B3%8A%E6%9D%BE%E9%87%8D%E5%BB%BA-possion-reconstruction)
+    - [三维指示函数拟合](#%E4%B8%89%E7%BB%B4%E6%8C%87%E7%A4%BA%E5%87%BD%E6%95%B0%E6%8B%9F%E5%90%88)
+        - [隐函数拟合](#%E9%9A%90%E5%87%BD%E6%95%B0%E6%8B%9F%E5%90%88)
+        - [求解方法](#%E6%B1%82%E8%A7%A3%E6%96%B9%E6%B3%95)
+    - [等值面提取](#%E7%AD%89%E5%80%BC%E9%9D%A2%E6%8F%90%E5%8F%96)
+- [【附：相关数学知识】](#%E9%99%84%E7%9B%B8%E5%85%B3%E6%95%B0%E5%AD%A6%E7%9F%A5%E8%AF%86)
+    - [泊松方程定义与求解（图像场景）](#%E6%B3%8A%E6%9D%BE%E6%96%B9%E7%A8%8B%E5%AE%9A%E4%B9%89%E4%B8%8E%E6%B1%82%E8%A7%A3%E5%9B%BE%E5%83%8F%E5%9C%BA%E6%99%AF)
+    - [矢量分析：梯度、散度、旋度](#%E7%9F%A2%E9%87%8F%E5%88%86%E6%9E%90%E6%A2%AF%E5%BA%A6%E6%95%A3%E5%BA%A6%E6%97%8B%E5%BA%A6)
+    - [向量的点乘（内积）、叉乘（外积）](#%E5%90%91%E9%87%8F%E7%9A%84%E7%82%B9%E4%B9%98%E5%86%85%E7%A7%AF%E5%8F%89%E4%B9%98%E5%A4%96%E7%A7%AF)
 
 <!-- /TOC -->
 </div>
 </details>
-
-<a id="toc_anchor" name="#01-泊松重建(PossionReconstruction)"></a>
 
 ## 泊松重建 (Possion Reconstruction)
 
 [论文](http://hhoppe.com/poissonrecon.pdf)	[代码](https://github.com/mkazhdan/PoissonRecon)
 
 > Reconstructing 3D surfaces from point samples
-
-<a id="toc_anchor" name="#011-三维指示函数拟合"></a>
 
 ### 三维指示函数拟合
 
@@ -47,8 +43,6 @@ image:
 
 <!--more-->
 
-<a id="toc_anchor" name="#0111-隐函数拟合"></a>
-
 #### 隐函数拟合
 
 <img src="{{ site.url }}/images/2020-07-27-PossionRecon/image-20200727091834595.png" alt="image-20200727091834595" style="zoom:80%;" />
@@ -58,8 +52,6 @@ image:
 > Key insight: The gradient of the indicator function is a vector field that is zero almost everywhere (since the indicator function is constant almost everywhere), except at points near the surface, where it is equal to the inward surface normal. 
 >
 > Thus, the oriented point samples can be viewed as samples of the gradient of the model’s indicator function.
-
-<a id="toc_anchor" name="#0112-求解方法"></a>
 
 #### 求解方法
 
@@ -81,8 +73,6 @@ image:
 
    即$$\chi$$的拉普拉斯算子(梯度的散度)等于向量场的散度。
 
-<a id="toc_anchor" name="#012-等值面提取"></a>
-
 ### 等值面提取
 
 2.1 计算等值面值（isovalue）
@@ -93,13 +83,9 @@ evaluating $$\widetilde\chi$$ at the sample positions and use the average of the
 
 2.2 通过定义在八叉树上的Marching Cubes方法提取等值面
 
-<a id="toc_anchor" name="#01201-【附：相关数学知识】"></a>
+## 【附：相关数学知识】
 
-##### 【附：相关数学知识】
-
-<a id="toc_anchor" name="#012011-泊松方程定义与求解（图像场景）"></a>
-
-###### 泊松方程定义与求解（图像场景）
+### 泊松方程定义与求解（图像场景）
 
 <img src="{{ site.url }}/images/2020-07-27-PossionRecon/image-20200727093446421.png" alt="image-20200727093446421" style="zoom:80%;" />
 
@@ -111,9 +97,7 @@ evaluating $$\widetilde\chi$$ at the sample positions and use the average of the
 
 [泊松图像融合](https://zhuanlan.zhihu.com/p/68349210)
 
-<a id="toc_anchor" name="#012012-[矢量分析：梯度、散度、旋度](https://zhuanlan.zhihu.com/p/22654688)"></a>
-
-###### [矢量分析：梯度、散度、旋度](https://zhuanlan.zhihu.com/p/22654688)
+### [矢量分析：梯度、散度、旋度](https://zhuanlan.zhihu.com/p/22654688)
 
 向量场**A**，数量场u：
 
@@ -131,9 +115,7 @@ evaluating $$\widetilde\chi$$ at the sample positions and use the average of the
 
 <img src="{{ site.url }}/images/2020-07-27-PossionRecon/image-20200727090434092.png" alt="image-20200727090434092" style="zoom:80%;" />
 
-<a id="toc_anchor" name="#012013-[向量的点乘（内积）、叉乘（外积）](https://www.cnblogs.com/gxcdream/p/7597865.html)"></a>
-
-###### [向量的点乘（内积）、叉乘（外积）](https://www.cnblogs.com/gxcdream/p/7597865.html)
+### [向量的点乘（内积）、叉乘（外积）](https://www.cnblogs.com/gxcdream/p/7597865.html)
 
 <img src="{{ site.url }}/images/2020-07-27-PossionRecon/image-20200727090716101.png" alt="image-20200727090716101" style="zoom:75%;" />
 

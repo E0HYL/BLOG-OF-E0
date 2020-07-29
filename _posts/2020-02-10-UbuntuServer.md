@@ -13,75 +13,75 @@ image:
 <div markdown="1">
 <!-- TOC -->
 
-- [SSH神器：MobaXterm](#1-SSH神器：MobaXterm)
-    - [基本场景0: [SSH](https://zhuanlan.zhihu.com/p/56341917)](#11-基本场景0:[SSH](https://zhuanlan.zhihu.com/p/56341917))
-    - [场景1: 通过跳板机的远程登录](#12-场景1:通过跳板机的远程登录)
-        - [需求介绍](#121-需求介绍)
-        - [配置[教程](https://blog.csdn.net/xuyuqingfeng953/article/details/96180642)](#122-配置[教程](https://blog.csdn.net/xuyuqingfeng953/article/details/96180642))
-    - [场景2: 本地浏览器访问远程端口](#13-场景2:本地浏览器访问远程端口)
-        - [需求介绍](#131-需求介绍)
-        - [配置[教程](http://m.blog.sina.com.cn/s/blog_e11ac5850102xurp.html)](#132-配置[教程](http://m.blog.sina.com.cn/s/blog_e11ac5850102xurp.html))
-- [更新CUDA版本](#2-更新CUDA版本)
-- [VSCode: 编辑远程文件](#3-VSCode:编辑远程文件)
-- [Anaconda3安装OpenCV](#4-Anaconda3安装OpenCV)
-- [Linux常用命令](#5-Linux常用命令)
-    - [执行`.sh`文件](#51-执行`.sh`文件)
-    - [tar: tape archive](#52-tar:tapearchive)
-        - [主要选项](#521-主要选项)
-        - [辅助选项](#522-辅助选项)
-        - [压缩选项 (not support compress directly)](#523-压缩选项(notsupportcompressdirectly))
-        - [附：（其它）压缩 / 解压](#524-附：（其它）压缩/解压)
-    - [统计目录下 文件/目录 个数](#53-统计目录下文件/目录个数)
-    - [实时监测命令的运行结果](#54-实时监测命令的运行结果)
-    - [kill进程](#55-kill进程)
-    - [修改环境变量](#56-修改环境变量)
-    - [查看系统版本](#57-查看系统版本)
-    - [系统管理](#58-系统管理)
-        - [sudo: superuser do](#581-sudo:superuserdo)
-        - [su: switch user](#582-su:switchuser)
-        - [用户与用户组](#583-用户与用户组)
-        - [ps: process status](#584-ps:processstatus)
-        - [nohup: no hang up](#585-nohup:nohangup)
-        - [screen](#586-screen)
-        - [reboot](#587-reboot)
-    - [文档编辑](#59-文档编辑)
-        - [grep: global regular expression print](#591-grep:globalregularexpressionprint)
-        - [wc: word count](#592-wc:wordcount)
-        - [[Vim](https://www.openvim.com/)编辑器](#593-[Vim](https://www.openvim.com/)编辑器)
-    - [文件管理](#510-文件管理)
-        - [chown: change owner](#5101-chown:changeowner)
-        - [chgrp: change group](#5102-chgrp:changegroup)
-        - [chmod: change mode](#5103-chmod:changemode)
-        - [cat: concatenate](#5104-cat:concatenate)
-        - [more / less](#5105-more/less)
-        - [ln: link](#5106-ln:link)
-        - [cp: copy](#5107-cp:copy)
-        - [rm: remove](#5108-rm:remove)
-        - [mv: move](#5109-mv:move)
-        - [scp: secure copy](#51010-scp:securecopy)
-        - [wget & curl](#51011-wget&curl)
-        - [locate](#51012-locate)
-        - [whereis](#51013-whereis)
-        - [which](#51014-which)
-        - [split](#51015-split)
-    - [磁盘管理](#511-磁盘管理)
-        - [cd: change directory](#5111-cd:changedirectory)
-        - [pwd: print work directory](#5112-pwd:printworkdirectory)
-        - [ls: list](#5113-ls:list)
-        - [df: disk free](#5114-df:diskfree)
-        - [du: disk usage](#5115-du:diskusage)
-        - [mkdir](#5116-mkdir)
-    - [网络通讯](#512-网络通讯)
-        - [netstat](#5121-netstat)
-        - [tcpdump](#5122-tcpdump)
-        - [ifconfig](#5123-ifconfig)
-    - [常用符号](#513-常用符号)
-    - [正则表达式](#514-正则表达式)
-        - [限定符](#5141-限定符)
-        - [定位符](#5142-定位符)
-        - [非打印字符](#5143-非打印字符)
-        - [其它特殊字符](#5144-其它特殊字符)
-        - [字符簇](#5145-字符簇)
+- [SSH神器：MobaXterm](#ssh%E7%A5%9E%E5%99%A8mobaxterm)
+    - [基本场景0: SSH](#%E5%9F%BA%E6%9C%AC%E5%9C%BA%E6%99%AF0-ssh)
+    - [场景1: 通过跳板机的远程登录](#%E5%9C%BA%E6%99%AF1-%E9%80%9A%E8%BF%87%E8%B7%B3%E6%9D%BF%E6%9C%BA%E7%9A%84%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%BD%95)
+        - [需求介绍](#%E9%9C%80%E6%B1%82%E4%BB%8B%E7%BB%8D)
+        - [配置教程](#%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B)
+    - [场景2: 本地浏览器访问远程端口](#%E5%9C%BA%E6%99%AF2-%E6%9C%AC%E5%9C%B0%E6%B5%8F%E8%A7%88%E5%99%A8%E8%AE%BF%E9%97%AE%E8%BF%9C%E7%A8%8B%E7%AB%AF%E5%8F%A3)
+        - [需求介绍](#%E9%9C%80%E6%B1%82%E4%BB%8B%E7%BB%8D)
+        - [配置教程](#%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B)
+- [更新CUDA版本](#%E6%9B%B4%E6%96%B0cuda%E7%89%88%E6%9C%AC)
+- [VSCode: 编辑远程文件](#vscode-%E7%BC%96%E8%BE%91%E8%BF%9C%E7%A8%8B%E6%96%87%E4%BB%B6)
+- [Anaconda3安装OpenCV](#anaconda3%E5%AE%89%E8%A3%85opencv)
+- [Linux常用命令](#linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4)
+    - [执行.sh文件](#%E6%89%A7%E8%A1%8Csh%E6%96%87%E4%BB%B6)
+    - [tar: tape archive](#tar-tape-archive)
+        - [主要选项](#%E4%B8%BB%E8%A6%81%E9%80%89%E9%A1%B9)
+        - [辅助选项](#%E8%BE%85%E5%8A%A9%E9%80%89%E9%A1%B9)
+        - [压缩选项 not support compress directly](#%E5%8E%8B%E7%BC%A9%E9%80%89%E9%A1%B9-not-support-compress-directly)
+        - [附：（其它）压缩 / 解压](#%E9%99%84%E5%85%B6%E5%AE%83%E5%8E%8B%E7%BC%A9--%E8%A7%A3%E5%8E%8B)
+    - [统计目录下 文件/目录 个数](#%E7%BB%9F%E8%AE%A1%E7%9B%AE%E5%BD%95%E4%B8%8B-%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95-%E4%B8%AA%E6%95%B0)
+    - [实时监测命令的运行结果](#%E5%AE%9E%E6%97%B6%E7%9B%91%E6%B5%8B%E5%91%BD%E4%BB%A4%E7%9A%84%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C)
+    - [kill进程](#kill%E8%BF%9B%E7%A8%8B)
+    - [修改环境变量](#%E4%BF%AE%E6%94%B9%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F)
+    - [查看系统版本](#%E6%9F%A5%E7%9C%8B%E7%B3%BB%E7%BB%9F%E7%89%88%E6%9C%AC)
+    - [系统管理](#%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86)
+        - [sudo: superuser do](#sudo-superuser-do)
+        - [su: switch user](#su-switch-user)
+        - [用户与用户组](#%E7%94%A8%E6%88%B7%E4%B8%8E%E7%94%A8%E6%88%B7%E7%BB%84)
+        - [ps: process status](#ps-process-status)
+        - [nohup: no hang up](#nohup-no-hang-up)
+        - [screen](#screen)
+        - [reboot](#reboot)
+    - [文档编辑](#%E6%96%87%E6%A1%A3%E7%BC%96%E8%BE%91)
+        - [grep: global regular expression print](#grep-global-regular-expression-print)
+        - [wc: word count](#wc-word-count)
+        - [Vim编辑器](#vim%E7%BC%96%E8%BE%91%E5%99%A8)
+    - [文件管理](#%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86)
+        - [chown: change owner](#chown-change-owner)
+        - [chgrp: change group](#chgrp-change-group)
+        - [chmod: change mode](#chmod-change-mode)
+        - [cat: concatenate](#cat-concatenate)
+        - [more / less](#more--less)
+        - [ln: link](#ln-link)
+        - [cp: copy](#cp-copy)
+        - [rm: remove](#rm-remove)
+        - [mv: move](#mv-move)
+        - [scp: secure copy](#scp-secure-copy)
+        - [wget & curl](#wget--curl)
+        - [locate](#locate)
+        - [whereis](#whereis)
+        - [which](#which)
+        - [split](#split)
+    - [磁盘管理](#%E7%A3%81%E7%9B%98%E7%AE%A1%E7%90%86)
+        - [cd: change directory](#cd-change-directory)
+        - [pwd: print work directory](#pwd-print-work-directory)
+        - [ls: list](#ls-list)
+        - [df: disk free](#df-disk-free)
+        - [du: disk usage](#du-disk-usage)
+        - [mkdir](#mkdir)
+    - [网络通讯](#%E7%BD%91%E7%BB%9C%E9%80%9A%E8%AE%AF)
+        - [netstat](#netstat)
+        - [tcpdump](#tcpdump)
+        - [ifconfig](#ifconfig)
+    - [常用符号](#%E5%B8%B8%E7%94%A8%E7%AC%A6%E5%8F%B7)
+    - [正则表达式](#%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F)
+        - [限定符](#%E9%99%90%E5%AE%9A%E7%AC%A6)
+        - [定位符](#%E5%AE%9A%E4%BD%8D%E7%AC%A6)
+        - [非打印字符](#%E9%9D%9E%E6%89%93%E5%8D%B0%E5%AD%97%E7%AC%A6)
+        - [其它特殊字符](#%E5%85%B6%E5%AE%83%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6)
+        - [字符簇](#%E5%AD%97%E7%AC%A6%E7%B0%87)
 
 <!-- /TOC -->
 </div>
@@ -89,15 +89,11 @@ image:
 
 <!--more-->
 
-<a id="toc_anchor" name="#1-SSH神器：MobaXterm"></a>
-
 # SSH神器：MobaXterm
 
 > Free X server for Windows with tabbed SSH terminal, telnet, RDP, VNC and X11-forwarding 
 >
 > MobaXterm是Windows下的一个远程连接客户端，功能十分强大，它不仅仅只支持ssh连接，它支持许多的远程连接方式，包括SSH，X11，RDP，VNC，FTP，MOSH
-
-<a id="toc_anchor" name="#11-基本场景0:[SSH](https://zhuanlan.zhihu.com/p/56341917)"></a>
 
 ## 基本场景0: [SSH](https://zhuanlan.zhihu.com/p/56341917)
 
@@ -107,11 +103,7 @@ image:
 >
 > 免费的绿色免安装版本就可以满足日常工作的需求  
 
-<a id="toc_anchor" name="#12-场景1:通过跳板机的远程登录"></a>
-
 ## 场景1: 通过跳板机的远程登录
-
-<a id="toc_anchor" name="#121-需求介绍"></a>
 
 ### 需求介绍
 
@@ -121,24 +113,16 @@ image:
 
 其中服务器B做过端口转发，可以通过校园网访问。但客户端访问服务器C则需要通过B来做跳板机。
 
-<a id="toc_anchor" name="#122-配置[教程](https://blog.csdn.net/xuyuqingfeng953/article/details/96180642)"></a>
-
 ### 配置[教程](https://blog.csdn.net/xuyuqingfeng953/article/details/96180642)
 
 ```
 Session：SSH：Network Setting：Connect through SSH gateway
 ```
 
-<a id="toc_anchor" name="#13-场景2:本地浏览器访问远程端口"></a>
-
 ## 场景2: 本地浏览器访问远程端口
-
-<a id="toc_anchor" name="#131-需求介绍"></a>
 
 ### 需求介绍
 远端服务器无浏览器界面，但希望使用jupyter notebook、tensorboard等。
-
-<a id="toc_anchor" name="#132-配置[教程](http://m.blog.sina.com.cn/s/blog_e11ac5850102xurp.html)"></a>
 
 ### 配置[教程](http://m.blog.sina.com.cn/s/blog_e11ac5850102xurp.html)
 
@@ -146,8 +130,6 @@ Session：SSH：Network Setting：Connect through SSH gateway
 Tools：Network：MobaSSHTunnel
 ```
 稍复杂一些，其后的详细参数配置可戳小标题里的链接。
-
-<a id="toc_anchor" name="#2-更新CUDA版本"></a>
 
 # 更新CUDA版本
 
@@ -174,8 +156,6 @@ $ ubuntu-drivers devices # 查看可安装的驱动版本
 $ sudo apt install nvidia-430 # install (430)
 ```
 
-<a id="toc_anchor" name="#3-VSCode:编辑远程文件"></a>
-
 # VSCode: 编辑远程文件
 
 - 安装Remote-SSH插件
@@ -198,8 +178,6 @@ $ sudo apt install nvidia-430 # install (430)
 
 - 关闭连接：File - Close Folder
 
-<a id="toc_anchor" name="#4-Anaconda3安装OpenCV"></a>
-
 # Anaconda3安装OpenCV
 
 1. 安装依赖项
@@ -219,11 +197,7 @@ $ sudo apt install nvidia-430 # install (430)
 
 3. conda命令执行`conda install opencv3-3.1.0-py36_0.tar.bz2`
 
-<a id="toc_anchor" name="#5-Linux常用命令"></a>
-
 # Linux常用命令
-
-<a id="toc_anchor" name="#51-执行`.sh`文件"></a>
 
 ## 执行`.sh`文件
 
@@ -231,11 +205,7 @@ $ sudo apt install nvidia-430 # install (430)
 
 然后在其所在目录下执行`sudo ./filename.sh`
 
-<a id="toc_anchor" name="#52-tar:tapearchive"></a>
-
 ## tar: tape archive
-
-<a id="toc_anchor" name="#521-主要选项"></a>
 
 ### 主要选项
 
@@ -255,8 +225,6 @@ $ sudo apt install nvidia-430 # install (430)
 >
 > -d, --diff 比较归档和文件系统的差异
 
-<a id="toc_anchor" name="#522-辅助选项"></a>
-
 ### 辅助选项
 
 > -v, --verbose 详细列出处理的文件
@@ -264,8 +232,6 @@ $ sudo apt install nvidia-430 # install (430)
 > -f, --file=`ARCHIVE`
 >
 > -C 解压到指定目录
-
-<a id="toc_anchor" name="#523-压缩选项(notsupportcompressdirectly)"></a>
 
 ### 压缩选项 (not support compress directly)
 
@@ -303,8 +269,6 @@ file1
 file3
 ```
 
-<a id="toc_anchor" name="#524-附：（其它）压缩/解压"></a>
-
 ### 附：（其它）压缩 / 解压
 
 * .gz
@@ -337,8 +301,6 @@ file3
 
   `rar x file_name.rar`
 
-<a id="toc_anchor" name="#53-统计目录下文件/目录个数"></a>
-
 ## 统计目录下 文件/目录 个数
 
 ```shell
@@ -347,8 +309,6 @@ $ ll -R dir_name|grep ^d|wc -l
 ```
 
 注：ll的输出信息中，目录以d开头，文件以-开头。若统计所有条目则无需中间一项。
-
-<a id="toc_anchor" name="#54-实时监测命令的运行结果"></a>
 
 ## 实时监测命令的运行结果
 
@@ -362,16 +322,12 @@ $ watch -n 1 -d nvidia-smi
 
 注：nvidia-smi为CUDA命令，用于查看GPU使用情况
 
-<a id="toc_anchor" name="#55-kill进程"></a>
-
 ## kill进程
 
 ```shell
 $ kill -u user # 杀死指定用户的所有进程
 $ ps -ef|grep string|grep -v grep|awk ‘{print $2}’|xargs kill -9 # 批量杀死包含某字符串（string）的进程：awk中的脚本打印文本每行的第二列，即进程号；xargs将之前获得的进程号作为kill -9的参数并执行
 ```
-
-<a id="toc_anchor" name="#56-修改环境变量"></a>
 
 ## 修改环境变量
 
@@ -383,27 +339,17 @@ export PATH="$PATH:/home/username/example"
 
 用`source ~/.bashrc`命令以生效
 
-<a id="toc_anchor" name="#57-查看系统版本"></a>
-
 ## 查看系统版本
 
 ```shell
 $ cat /etc/issue
 ```
 
-<a id="toc_anchor" name="#58-系统管理"></a>
-
 ## 系统管理
-
-<a id="toc_anchor" name="#581-sudo:superuserdo"></a>
 
 ### sudo: superuser do
 
-<a id="toc_anchor" name="#582-su:switchuser"></a>
-
 ### su: switch user
-
-<a id="toc_anchor" name="#583-用户与用户组"></a>
 
 ### 用户与用户组
 
@@ -423,8 +369,6 @@ $ cat /etc/issue
 
 - 删除用户 `userdel username`
 
-<a id="toc_anchor" name="#584-ps:processstatus"></a>
-
 ### ps: process status
 
 常用参数：-aux -ef
@@ -441,13 +385,9 @@ $ cat /etc/issue
 
 5. T: 停止 traced or stopped
 
-<a id="toc_anchor" name="#585-nohup:nohangup"></a>
-
 ### nohup: no hang up
 
 常和 & 符号配合，使程序在后台永久执行【用**screen**更优】
-
-<a id="toc_anchor" name="#586-screen"></a>
 
 ### screen
 
@@ -457,17 +397,11 @@ $ cat /etc/issue
 
 > screen -ls | grep Detached | cut -d. -f1 | awk '{print $1}' | xargs kill	# kill all screen
 
-<a id="toc_anchor" name="#587-reboot"></a>
-
 ### reboot
 
 重启（需root）
 
-<a id="toc_anchor" name="#59-文档编辑"></a>
-
 ## 文档编辑
-
-<a id="toc_anchor" name="#591-grep:globalregularexpressionprint"></a>
 
 ### grep: global regular expression print
 
@@ -477,13 +411,9 @@ $ cat /etc/issue
 
 `grep string *file` 查找后缀有file的文件中包含string字符串的文件
 
-<a id="toc_anchor" name="#592-wc:wordcount"></a>
-
 ### wc: word count
 
 计算文件字数，输出三个数字分别表示行数(-l)、单词数(-w)、字节数(-c, --chars)
-
-<a id="toc_anchor" name="#593-[Vim](https://www.openvim.com/)编辑器"></a>
 
 ### [Vim](https://www.openvim.com/)编辑器
 
@@ -534,11 +464,7 @@ Normal模式下：
 
 <figure><img src="http://michael.peopleofhonoronly.com/vim/vim_cheat_sheet_for_programmers_print.png" alt="img"  /></figure>
 
-<a id="toc_anchor" name="#510-文件管理"></a>
-
 ## 文件管理
-
-<a id="toc_anchor" name="#5101-chown:changeowner"></a>
 
 ### chown: change owner
 
@@ -548,13 +474,9 @@ Normal模式下：
 
 `chmod -R user[:group] *`（当前目录）
 
-<a id="toc_anchor" name="#5102-chgrp:changegroup"></a>
-
 ### chgrp: change group
 
 改变文件用户组
-
-<a id="toc_anchor" name="#5103-chmod:changemode"></a>
 
 ### chmod: change mode
 
@@ -562,15 +484,11 @@ Normal模式下：
 * 读r=4, 写w=2, 执行x=1【rwx : 7, rw- : 6, r-x : 5】
 * 三个数字分别对应User, Group, Other的权限	
 
-<a id="toc_anchor" name="#5104-cat:concatenate"></a>
-
 ### cat: concatenate
 
 连接文件并打印到标准输出设备上，-n由1开始对输出行编号（-b空白行不编）
 
 `cat file1 file2 > file3` （输入到file3中，若>>则为追加，不打印在控制台）
-
-<a id="toc_anchor" name="#5105-more/less"></a>
 
 ### more / less
 
@@ -578,41 +496,29 @@ Normal模式下：
 
 `history | less` 查看命令使用历史并通过less分页显示（Q退出）
 
-<a id="toc_anchor" name="#5106-ln:link"></a>
-
 ### ln: link
 
 为某文件在另一个位置建立同步链接。需要在不同目录用到同一文件时，不必重复占用磁盘空间。-s 创建软链接（可跨文件系统，类似于快捷方式）
 
 `ln -s file_name link_name`
 
-<a id="toc_anchor" name="#5107-cp:copy"></a>
-
 ### cp: copy
 
 复制目录时必须加**-r**
-
-<a id="toc_anchor" name="#5108-rm:remove"></a>
 
 ### rm: remove
 
 删除目录必须加-r，-f对只读文件也直接删除
 
-<a id="toc_anchor" name="#5109-mv:move"></a>
-
 ### mv: move
 
 `mv source dest`
-
-<a id="toc_anchor" name="#51010-scp:securecopy"></a>
 
 ### scp: secure copy
 
 linux系统下基于ssh登录进行安全的远程文件拷贝
 
 `scp local_file remote_username@remote_ip:remote:folder`
-
-<a id="toc_anchor" name="#51011-wget&curl"></a>
 
 ### wget & curl
 
@@ -650,45 +556,29 @@ $ wget --server-response http://www.linuxde.net/test.iso
 $ wget --mirror -p --convert-links -P /var/www/html http://man.linuxde.net/
 ```
 
-<a id="toc_anchor" name="#51012-locate"></a>
-
 ### locate
 
 用于查找符合条件的文档（文件或目录名中包含指定字符串）
-
-<a id="toc_anchor" name="#51013-whereis"></a>
 
 ### whereis
 
 只查找二进制文件、源代码文件或帮助文件。一般文件的定位用locate
 
-<a id="toc_anchor" name="#51014-which"></a>
-
 ### which
 
 在环境变量$PATH$设置的目录中查找文件
-
-<a id="toc_anchor" name="#51015-split"></a>
 
 ### split
 
 将大文件分割成较小的文件（默认间隔1000行，可用-<行数>指定）
 
-<a id="toc_anchor" name="#511-磁盘管理"></a>
-
 ## 磁盘管理
 
-<a id="toc_anchor" name="#5111-cd:changedirectory"></a>
-
 ### cd: change directory
-
-<a id="toc_anchor" name="#5112-pwd:printworkdirectory"></a>
 
 ### pwd: print work directory
 
 打印当前工作目录的绝对路径 
-
-<a id="toc_anchor" name="#5113-ls:list"></a>
 
 ### ls: list
 
@@ -700,27 +590,17 @@ $ wget --mirror -p --convert-links -P /var/www/html http://man.linuxde.net/
 
 -R 将目录下所有的子目录的文件都列出来（递归）
 
-<a id="toc_anchor" name="#5114-df:diskfree"></a>
-
 ### df: disk free
 
 显示文件系统的磁盘使用情况
-
-<a id="toc_anchor" name="#5115-du:diskusage"></a>
 
 ### du: disk usage
 
 显示指定文件所占的磁盘空间
 
-<a id="toc_anchor" name="#5116-mkdir"></a>
-
 ### mkdir
 
-<a id="toc_anchor" name="#512-网络通讯"></a>
-
 ## 网络通讯
-
-<a id="toc_anchor" name="#5121-netstat"></a>
 
 ### netstat
 
@@ -728,19 +608,13 @@ $ wget --mirror -p --convert-links -P /var/www/html http://man.linuxde.net/
 
 `netstat -l` 显示监听的套接字
 
-<a id="toc_anchor" name="#5122-tcpdump"></a>
-
 ### tcpdump
 
 显示TCP包信息
 
-<a id="toc_anchor" name="#5123-ifconfig"></a>
-
 ### ifconfig
 
 显示或设置网络设备
-
-<a id="toc_anchor" name="#513-常用符号"></a>
 
 ## 常用符号
 
@@ -759,11 +633,7 @@ $ wget --mirror -p --convert-links -P /var/www/html http://man.linuxde.net/
 ;	连续命令间的分隔
 ```
 
-<a id="toc_anchor" name="#514-正则表达式"></a>
-
 ## 正则表达式
-
-<a id="toc_anchor" name="#5141-限定符"></a>
 
 ### 限定符
 
@@ -776,8 +646,6 @@ $ wget --mirror -p --convert-links -P /var/www/html http://man.linuxde.net/
 {n, m}	匹配范围（m<=255）
 ```
 
-<a id="toc_anchor" name="#5142-定位符"></a>
-
 ### 定位符
 
 ```
@@ -786,8 +654,6 @@ $	文本的结尾
 \b	单词边界
 \B	非单词边界
 ```
-
-<a id="toc_anchor" name="#5143-非打印字符"></a>
 
 ### 非打印字符
 
@@ -801,8 +667,6 @@ $	文本的结尾
 	注意Unicode正则表达式会匹配全角空格字符。
 ```
 
-<a id="toc_anchor" name="#5144-其它特殊字符"></a>
-
 ### 其它特殊字符
 
 ```
@@ -811,8 +675,6 @@ $	文本的结尾
 |	两项之间的选择
 ( )	一个子表达式的开始和结束
 ```
-
-<a id="toc_anchor" name="#5145-字符簇"></a>
 
 ### 字符簇
 
