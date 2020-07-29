@@ -1,7 +1,7 @@
 ---
 layout: post
-title: MarchingCubes算法
-description: "MarchingCubes算法的理解、步骤与C++实现"
+title: MarchingCubes理解与实现
+description: "Marching Cubes（移动立方体）算法的理解、步骤与C++实现"
 modified: 2020-7-24
 tags: [Geometric, Code, Visualization]
 math: true

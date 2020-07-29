@@ -81,7 +81,7 @@ evaluating $$\widetilde\chi$$ at the sample positions and use the average of the
 
 <img src="{{ site.url }}/images/2020-07-27-PossionRecon/image-20200727112136417.png" alt="image-20200727112136417" style="zoom:50%;" />
 
-2.2 通过定义在八叉树上的Marching Cubes方法提取等值面
+2.2 通过定义在八叉树上的[Marching Cubes](https://e0hyl.github.io/BLOG-OF-E0/MarchingCube/)方法提取等值面
 
 ## 【附：相关数学知识】
 
