@@ -3,7 +3,7 @@ layout: post
 title: 泊松表面重建算法
 description: "Possion Reconstruction算法论文阅读（补充了涉及到的数学知识）"
 modified: 2020-7-27
-tags: [Geometric, Paper, Visualization]
+tags: [Geometric, Papers, Visualization]
 math: true
 image:
   feature: abstract-5.jpg

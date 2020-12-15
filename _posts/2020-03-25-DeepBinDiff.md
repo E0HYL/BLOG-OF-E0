@@ -3,7 +3,7 @@ layout: post
 title: NDSS-2020-DeepBinDiff
 description: "DeepBinDiff论文笔记：利用图表示学习实现二进制文件的差异比较"
 modified: 2020-3-25
-tags: [GNN, Papers]
+tags: [Embedding, Papers, Graph]
 math: true
 image:
   feature: abstract-10.jpg
