@@ -3,7 +3,7 @@ layout: post
 title: Pytorch实现GNNExplainer
 description: "GNNExplainer论文理解与代码实现"
 modified: 2020-6-22
-tags: [GNN, Papers, Code]
+tags: [GNN, Papers, Coding]
 math: true
 image:
   feature: abstract-3.jpg
@@ -13,12 +13,12 @@ image:
 <div markdown="1">
 <!-- TOC -->
 
-- [论文代码](#01-论文代码)
-    - [前向传播](#011-前向传播)
-    - [损失函数](#012-损失函数)
-- [PyG实现](#02-PyG实现)
-    - [节点分类解释](#021-节点分类解释)
-    - [图分类解释](#022-图分类解释)
+- [论文代码](#%E8%AE%BA%E6%96%87%E4%BB%A3%E7%A0%81)
+    - [前向传播](#%E5%89%8D%E5%90%91%E4%BC%A0%E6%92%AD)
+    - [损失函数](#%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0)
+- [PyG实现](#pyg%E5%AE%9E%E7%8E%B0)
+    - [节点分类解释](#%E8%8A%82%E7%82%B9%E5%88%86%E7%B1%BB%E8%A7%A3%E9%87%8A)
+    - [图分类解释](#%E5%9B%BE%E5%88%86%E7%B1%BB%E8%A7%A3%E9%87%8A)
 
 <!-- /TOC -->
 
