@@ -50,9 +50,9 @@ image:
 
 4. 将Metasploit APK中Meterpreter的smali代码复制到载荷APK的smali目录下
 
-5. 增加触发恶意代码的方法，即注入钩子（Hook）。例如，在入口点（即`AndroidManifest.xml`中包含intent-filter`<action android:name="android.intent.action.MAIN"/> `的activity）的smali代码中定位`onCreate()`方法，并在方法的起始位置添加一行代码：
+5. 增加触发恶意代码的方法，即注入钩子（Hook）。例如，在入口点（即`AndroidManifest.xml`中包含intent-filter`<action android:name="android.intent.action.MAIN"/> `的activity）的smali代码中定位`onCreate()`方法，并在方法的起始位置添加一行smali代码：
 
-   ```smali
+   ```
    invoke-static {p0}, Lcom/metasploit/stage/Payload;->start(Landroid/content/Context;)V
    ```
 
