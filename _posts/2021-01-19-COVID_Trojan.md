@@ -207,6 +207,8 @@ image:
 
 <figure><img src="{{ site.url }}/images/2020-01-19-COVID_Trojan/image-20210120112607552.png" alt="image-20210120112607552" style="zoom:50%;" /></figure>
 
+>Android 5.0（API 级别 21）及更高版本使用名为 ART 的运行时，它本身支持从 APK 文件加载多个 DEX 文件。因此，如果 `minSdkVersion` 为 21 或更高版本，系统会默认启用 MultiDex，并且不需要 MultiDex 库。
+
 参考文章
 
 1. [Embedding Meterpreter in Android APK](https://www.blackhillsinfosec.com/embedding-meterpreter-in-android-apk/)
