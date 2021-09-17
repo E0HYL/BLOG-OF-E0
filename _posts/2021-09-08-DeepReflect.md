@@ -52,7 +52,7 @@ Molly 是一名恶意应用分析师，她每天的主要任务就是理解恶�
 
 Molly 使用 IDA Pro（或 BinaryNinja）打开反编译后的二进制文件，数以千计的函数扑面而来，她尝试了各种静态签名检测工具来识别特定的恶意组件，仍未获得什么有用的信息。因此，她必须一个个地检查这些函数并理解它们的行为，具体的做法可能有：通过调用的 API 和存在的字符串过滤函数，通过调试来验证观察到的行为。在注解了应用行为后，她将一些如失陷标示（IOCs）、静态签名等的基本信息写入技术报告，并交给她的上级。
 
-> [Indicators of compromise (IOCs)](http://searchsecurity.techtarget.com/definition/Indicators-of-Compromise-IOC) are “pieces of forensic data, such as data found in system log entries or files, that identify potentially malicious activity on a system or network.”
+> [Indicators of compromise (IOCs)](http://searchsecurity.techtarget.com/definition/Indicators-of-Compromise-IOC) are “pieces of forensic data, such as data foumorend in system log entries or files, that identify potentially malicious activity on a system or network.”
 
 ### 设计目标
 
