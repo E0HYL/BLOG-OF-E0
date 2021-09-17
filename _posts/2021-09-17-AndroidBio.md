@@ -6,7 +6,7 @@ modified: 2021-09-17
 tags: [Android, Code]
 math: true
 image:
-  feature: abstract-9.jpg
+  feature: abstract-1.jpg
 ---
 
 <details open><!-- 可选open -->
@@ -28,7 +28,7 @@ image:
 
 ## [安卓生物识别架构](https://source.android.com/security/biometric)
 
-<figure><img src="{{ site.url }}/images/2021-01-19-COVID_Trojan/image-20210915222935702.png" alt="image-20210915222935702" style="zoom:80%;" /></figure>
+<figure><img src="https://e0hyl.github.io/BLOG-OF-E0/images/2021-01-19-COVID_Trojan/image-20210915222935702.png" alt="image-20210915222935702" style="zoom:80%;" /></figure>
 
 Android Q(10)  开始引入了 [`BiometricManager` 类](https://developer.android.com/reference/android/hardware/biometrics/BiometricManager)，本文基于这一架构，结合最新的 AOSP 源码介绍安卓的指纹识别架构，侧重与发起指纹认证相关的方法（非其它生物认证方式或录入流程）。
 
