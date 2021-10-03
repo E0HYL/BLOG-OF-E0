@@ -1,5 +1,5 @@
 ---
-layout: post-index
+layout: page-about
 modified: 2021-10-3
 comments: false
 ---
