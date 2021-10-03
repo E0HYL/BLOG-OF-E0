@@ -171,7 +171,7 @@ private final class AuthServiceImpl extends IAuthService.Stub { // 实现 .aidl 
 
 - 私有成员变量
 
-  - `mDaemon`：`IBiometricsFingerprint` 类型，用于请求厂商库（支持`authenticate`, `cacel`等方法）
+  - `mDaemon`：`IBiometricsFingerprint` 类型，用于请求厂商库（支持`authenticate`, `cancel`等方法）
 
   - `mDaemonCallback`：`IBiometricsFingerprintClientCallback` 类型
 
