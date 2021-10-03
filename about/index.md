@@ -1,32 +1,25 @@
 ---
 layout: page
-title: E0's BLOG
-image:
-  feature: abstract-5.jpg
-comments: false
-modified: 2020-3-1
----
-# The Blog
-
-© E0, From 2018. From small beginnings comes great things.
-
-## What to Record:
-
-* Papers [NDSS, CCS, Oakland S&P, etc.]
-
-* Skills [Coding, Tools, etc.]
-
-* Latest Information [AI, Android, Security, etc.]
-
+modified: 2021-10-3
 ---
 
-# About Me
 
-Yiling He. <br>
-Contact: heyilinge0@gmail.com
+## Yiling He
 
-* 2019-: School of Cyberspace and Technology, Zhejiang University.
+*Ph.D. Candidate*
 
-* 2015-2019: School of Cyberspace Security, Beijing University of Posts and Telecommunications.
+*Email: yilinghe@zju.edu.cn*
 
-Team: [more](https://icsr.zju.edu.cn/)
+[*School of Cyberspace and Technology, Zhejiang University.*](https://icsr.zju.edu.cn/)
+
+I am now a Ph.D. Candidate at Zhejiang University, under the supervision of [Prof. Kui Ren](https://scholar.google.com/citations?user=uuQA_rcAAAAJ). My current research interests include:
+
+- Malware detection
+- Vulnerability discovery
+- Interpretability in AI
+
+## Background
+
+* 2020~present, School of Cyberspace and Technology, Zhejiang University, Ph.D
+* 2019~2021, School of Cyberspace and Technology, Zhejiang University, M.Eng
+* 2015~2014, School of Cyberspace Security, Beijing University of Posts and Telecommunications, B.Eng
