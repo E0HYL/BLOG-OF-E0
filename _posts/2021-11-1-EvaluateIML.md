@@ -28,6 +28,7 @@ image:
 
 ## Evaluating Explanation Without Ground Truth in Interpretable Machine Learning
 arXiv'19, cite:24, PDF link: https://arxiv.org/pdf/1907.06831.pdf
+
 [F Yang](https://dblp.org/pid/29/3081-23.html), Texas A&M University(美国，得州农工大学)
 
 ### Interpretable Machine Learning (IML)
@@ -113,7 +114,9 @@ The overall evaluation results can be further derived through an ***ensemble way
 - Generalizability for local  explanations
 
   - Two challenges: local explanations (1) cannot be easily organized into valid prediction models; (2) simply contain the partial knowledge learned by the target IML system.
-  - Possible solutions: (1) build an **approximated local classifier** and then assess the generalizability by **specifying test instances** (适用于intrinsic，如固定local的attention值，指定近似的测试样本来看分类结果); (2) employ local explanations, together with human **simulated/augmented data, to train a separate classifier** (适用于posthoc，增加人为数据单独训练一个分类器，将原分类任务缩减为只包含local knowledge的分类).
+  - Possible solutions
+    - (1) build an **approximated local classifier** and then assess the generalizability by **specifying test instances** (适用于intrinsic，如固定local的attention值，指定近似的测试样本来看分类结果); 
+    - (2) employ local explanations, together with human **simulated/augmented data, to train a separate classifier** (适用于posthoc，增加人为数据单独训练一个分类器，将原分类任务缩减为只包含local knowledge的分类).
 
 - Fidelity for posthoc explanations
 
@@ -131,9 +134,11 @@ The overall evaluation results can be further derived through an ***ensemble way
 
     - use some simplified or proxy  tasks to simulate the original one -> non-trivial efforts on task abstraction
 
-      > Towards A Rigorous Science of Interpretable Machine Learning: 3.2 Human-grounded Metrics: Real humans, simplified tasks 
+      > Towards A Rigorous Science of Interpretable Machine Learning: 
       >
-      > -example (forward simulation/prediction task: common intrusion-detection test in topic models)-> ask the human to **find the difference between the model's true output and some corrupted output** as a way to determine whether the human has correctly understood what the model's true output is.  
-
+      > 3.2 Human-grounded Metrics: Real humans, simplified tasks -example (forward simulation/prediction task: common intrusion-detection test in topic models)-> 
+      >
+      > ask the human to **find the difference between the model's true output and some corrupted output** as a way to determine whether the human has correctly understood what the model's true output is.  
+    
     - simplify the explanations shown to users -> sacrifices the comprehensiveness
 
