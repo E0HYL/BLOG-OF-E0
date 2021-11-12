@@ -2,7 +2,7 @@
 layout: post
 title: Android指纹认证框架
 description: "结合安卓（Q+版本）源码解析指纹认证框架"
-modified: 2021-09-17
+modified: 2021-10-27
 tags: [Android, Code]
 math: true
 image:
@@ -188,7 +188,7 @@ private final class AuthServiceImpl extends IAuthService.Stub { // 实现 .aidl 
     };
     ```
 
-    收到认证结果时调用父类 `BiometricServiceBase` 中的方法 `handleAuthenticated` 或 `handleError`
+    ~~收到认证结果时调用父类 `BiometricServiceBase` 中的方法 `handleAuthenticated` 或 `handleError`~~
 
     ```java
     protected void handleAuthenticated(boolean authenticated,
@@ -214,6 +214,27 @@ private final class AuthServiceImpl extends IAuthService.Stub { // 实现 .aidl 
             ...
         }
     }
+    ```
+    
+    Android 12 更新: 计数器位于 [`PerformanceTracker` 类](https://cs.android.com/android/platform/superproject/+/master:frameworks/base/services/core/java/com/android/server/biometrics/sensors/PerformanceTracker.java)
+    
+    ```java
+        private static class Info {
+            int mAccept; // number of accepted biometrics
+            int mReject; // number of rejected biometrics
+            int mAcquire; // total number of acquisitions.
+    
+            int mAcceptCrypto;
+            int mRejectCrypto;
+            int mAcquireCrypto;
+    
+            int mTimedLockout; // total number of lockouts
+            int mPermanentLockout; // total number of permanent lockouts
+        }
+    
+        // Keyed by UserId
+        private final SparseArray<Info> mAllUsersInfo;
+        private int mHALDeathCount;
     ```
 
 - 私有方法 `getFingerprintDaemon` ：根据 HIDL 的定义，获得厂商库支持的认证服务，并用 `mDaemonCallback` 接收 HAL 的返回
