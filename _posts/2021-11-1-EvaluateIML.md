@@ -1,12 +1,12 @@
 ---
 layout: post
-title: 可解释机器学习的评估框架
-description: "IML的分类及三大属性评估方法的综述"
-modified: 2021-11-12
+title: 可解释机器学习在安全中的应用和评估
+description: "6种可解释方法在4个ML-based安全检测系统上的表现"
+modified: 2021-11-20
 tags: [IML, Papers]
 math: true
 image:
-  feature: abstract-2.jpg
+  feature: abstract-3.jpg
 ---
 
 <details open><!-- 可选open -->
