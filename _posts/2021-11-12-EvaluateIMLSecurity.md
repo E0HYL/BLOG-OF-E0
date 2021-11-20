@@ -213,7 +213,7 @@ relevance 值通常是实数，并且可以通过 heatmap 的形式覆盖在输�
 
 <figure><img src="https://e0hyl.github.io/BLOG-OF-E0/images/2021-11-12-EvaluateIMLSecurity/1_C5Y221qU6ccUgYevVyOHaw.png" style="zoom:50%;" /></figure>
 
-<figure><img src="https://e0hyl.github.io/BLOG-OF-E0/images/2021-11-12-EvaluateIMLSecurity/image-20211117100935600.png" alt="image-20211117100935600" style="zoom: 15%;" /><figure>
+<figure><img src="https://e0hyl.github.io/BLOG-OF-E0/images/2021-11-12-EvaluateIMLSecurity/image-20211117100935600.png" alt="image-20211117100935600" style="zoom: 15%;" /></figure>
 
 > [Tutorial: Implementing Layer-Wise Relevance Propagation](https://git.tu-berlin.de/gmontavon/lrp-tutorial)
 
