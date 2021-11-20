@@ -15,8 +15,8 @@ image:
 <!-- TOC -->
 
 - [Evaluating Explanation Methods for Deep Learning in Security](#evaluating-explanation-methods-for-deep-learning-in-security)
-    - [**Abstract**](#abstract)
-    - [**Introduction**](#introduction)
+    - [Abstract](#abstract)
+    - [Introduction](#introduction)
 - [Explanation Strategies](#explanation-strategies)
     - [Black-box Explanation](#black-box-explanation)
         - [LIME and SHAP](#lime-and-shap)
@@ -66,7 +66,7 @@ EuroS&P 2020
 
 <img src="https://e0hyl.github.io/BLOG-OF-E0/images/2021-11-12-EvaluateIMLSecurity/image-20211112155052060.png" alt="image-20211112155052060" style="zoom:60%;" />
 
-### **Abstract**
+### Abstract
 
 深度学习在安全中被越来越广泛地应用，但不幸的是，由于NN难以解释，其决策往往对于实践者来说是晦涩难懂的。
 
@@ -82,7 +82,7 @@ EuroS&P 2020
 
 <!--more-->
 
-### **Introduction**
+### Introduction
 
 > DL in Security: severe **drawback** -> lack of transparency
 >
@@ -129,6 +129,10 @@ Argue that explanation methods need to become an **integral part of learning-bas
 
 - first, for understanding the decision process of deep learning 
 - second, for eliminating artifacts in the training datasets.
+
+------
+
+------
 
 ## Explanation Strategies
 
