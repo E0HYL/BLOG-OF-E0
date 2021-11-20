@@ -64,7 +64,7 @@ EuroS&P 2020
 
 [Alexander Warnecke](https://www.tu-braunschweig.de/sec/team/alex), [Konrad Rieck](https://www.tu-braunschweig.de/sec/team/rieck)（德国布伦瑞克工业大学）
 
-<img src="../images/2021-11-12-EvaluateIMLSecurity/image-20211112155052060.png" alt="image-20211112155052060" style="zoom:60%;" />
+<img src="https://e0hyl.github.io/BLOG-OF-E0/images/2021-11-12-EvaluateIMLSecurity/image-20211112155052060.png" alt="image-20211112155052060" style="zoom:60%;" />
 
 ### **Abstract**
 
@@ -103,9 +103,9 @@ EuroS&P 2020
 
 - Analyze 6 explanation methods in 4 tasks
 
-<figure><img src="../images/2021-11-12-EvaluateIMLSecurity/image-20211114190105835.png" alt="image-20211114190105835" style="zoom:50%;" /></figure>
+<figure><img src="https://e0hyl.github.io/BLOG-OF-E0/images/2021-11-12-EvaluateIMLSecurity/image-20211114190105835.png" alt="image-20211114190105835" style="zoom:50%;" /></figure>
 
-<figure><img src="../images/2021-11-12-EvaluateIMLSecurity/image-20211114190136022.png" alt="image-20211114190136022" style="zoom:50%;" /></figure>
+<figure><img src="https://e0hyl.github.io/BLOG-OF-E0/images/2021-11-12-EvaluateIMLSecurity/image-20211114190136022.png" alt="image-20211114190136022" style="zoom:50%;" /></figure>
 
 ------
 
@@ -115,7 +115,7 @@ EuroS&P 2020
 - LEMNA: `unsharp explanation due to a lack of sparsity` 不稀疏，都正相关
 - LIME: `provides an explanation that even contradicts the first one` 在VAR2和VAR3上与LRP矛盾
 
-<figure><img src="../images/2021-11-12-EvaluateIMLSecurity/image-20211114190735676.png" alt="image-20211114190735676" style="zoom:50%;" /><figcaption>Blue: Positive Relevance, Orange: negative relevance</figcaption></figure>
+<figure><img src="https://e0hyl.github.io/BLOG-OF-E0/images/2021-11-12-EvaluateIMLSecurity/image-20211114190735676.png" alt="image-20211114190735676" style="zoom:50%;" /><figcaption>Blue: Positive Relevance, Orange: negative relevance</figcaption></figure>
 
 -> **highlights the need** for comparing explanation methods and determining the best fit for a given security task.
 
@@ -176,7 +176,7 @@ relevance 值通常是实数，并且可以通过 heatmap 的形式覆盖在输�
 
 - Fused Lasso:
 
-  <figure><img src="../images/2021-11-12-EvaluateIMLSecurity/image-20211119144136968.png" alt="image-20211119144136968" style="zoom:67%;" /></figure>
+  <figure><img src="https://e0hyl.github.io/BLOG-OF-E0/images/2021-11-12-EvaluateIMLSecurity/image-20211119144136968.png" alt="image-20211119144136968" style="zoom:67%;" /></figure>
 
 ### White-box Explanation
 
@@ -199,7 +199,7 @@ relevance 值通常是实数，并且可以通过 heatmap 的形式覆盖在输�
 
 - $$r_i=\int_0^1\frac{\partial f_N(x^\prime + \alpha(x- x^\prime))}{\partial x_i}d(\alpha(x- x^\prime))=(x-x^\prime)\int_0^1\frac{\partial f_N(x^\prime + \alpha(x- x^\prime))}{\partial x_i}d\alpha$$
 
-<img src="../images/2021-11-12-EvaluateIMLSecurity/image-20211119133640605.png" alt="image-20211119133640605" style="zoom:67%;" />
+<img src="https://e0hyl.github.io/BLOG-OF-E0/images/2021-11-12-EvaluateIMLSecurity/image-20211119133640605.png" alt="image-20211119133640605" style="zoom:67%;" />
 
 > [Keras Example: Model interpretability with Integrated Gradients](https://keras.io/examples/vision/integrated_gradients/)
 
@@ -211,9 +211,9 @@ relevance 值通常是实数，并且可以通过 heatmap 的形式覆盖在输�
 - $$\epsilon-LRP$$: $$R_j=\sum_k\frac{z_{jk}}{\sum_jz_{jk}}R_k=\sum_k \frac{a_jw_{jk}}{\epsilon+\sum_0^j a_jw_{jk}} R_k$$
   - 其中 $$a_j$$ 表示浅层神经元 $$j$$ 的输出，$$k$$ 为相邻深层的神经元，$$w$$ 表示连接相邻层神经元间的权重，从输出层开始，一直计算到input层，对应输入特征的相关性
 
-<figure><img src="../images/2021-11-12-EvaluateIMLSecurity/1_C5Y221qU6ccUgYevVyOHaw.png" style="zoom:50%;" /></figure>
+<figure><img src="https://e0hyl.github.io/BLOG-OF-E0/images/2021-11-12-EvaluateIMLSecurity/1_C5Y221qU6ccUgYevVyOHaw.png" style="zoom:50%;" /></figure>
 
-<figure><img src="../images/2021-11-12-EvaluateIMLSecurity/image-20211117100935600.png" alt="image-20211117100935600" style="zoom: 15%;" /><figure>
+<figure><img src="https://e0hyl.github.io/BLOG-OF-E0/images/2021-11-12-EvaluateIMLSecurity/image-20211117100935600.png" alt="image-20211117100935600" style="zoom: 15%;" /><figure>
 
 > [Tutorial: Implementing Layer-Wise Relevance Propagation](https://git.tu-berlin.de/gmontavon/lrp-tutorial)
 
@@ -228,7 +228,7 @@ Do the considered explanation methods provide different results?
 
 定义两个top-k特征集合的交集大小 (0~1之间)-> intersection size $$IS(i,j)=\frac{|T_i \bigcap T_j|}{k}$$
 
-<figure><img src="../images/2021-11-12-EvaluateIMLSecurity/image-20211118111331359.png" alt="image-20211118111331359" style="zoom:45%;" /><figcaption>除了DAMD算的是top-50，其他都是top-10</figcaption></figure>
+<figure><img src="https://e0hyl.github.io/BLOG-OF-E0/images/2021-11-12-EvaluateIMLSecurity/image-20211118111331359.png" alt="image-20211118111331359" style="zoom:45%;" /><figcaption>除了DAMD算的是top-50，其他都是top-10</figcaption></figure>
 
 > In light of the broad range of *available explanation methods*, the practitioner is in need of criteria for *selecting the best* methods for a security task at hand.
 
@@ -271,7 +271,7 @@ Robustness of explanations to attacks that disconnect the explanation from the u
 
 ## Evaluation
 
-<figure><img src="../images/2021-11-12-EvaluateIMLSecurity/image-20211119112026735.png" alt="image-20211119112026735" style="zoom: 67%;" /><figcaption>average the performance of all methods over the four datasets</figcaption></figure>
+<figure><img src="https://e0hyl.github.io/BLOG-OF-E0/images/2021-11-12-EvaluateIMLSecurity/image-20211119112026735.png" alt="image-20211119112026735" style="zoom: 67%;" /><figcaption>average the performance of all methods over the four datasets</figcaption></figure>
 
 解释方法的实现
 
@@ -280,7 +280,7 @@ Robustness of explanations to attacks that disconnect the explanation from the u
 
 ### Descriptive Accuracy & Sparsity
 
-<img src="../images/2021-11-12-EvaluateIMLSecurity/image-20211119152858148.png" alt="image-20211119152858148" style="zoom:50%;" /><img src="../images/2021-11-12-EvaluateIMLSecurity/image-20211119152926821.png" alt="image-20211119152926821" style="zoom:50%;" />
+<img src="https://e0hyl.github.io/BLOG-OF-E0/images/2021-11-12-EvaluateIMLSecurity/image-20211119152858148.png" alt="image-20211119152858148" style="zoom:50%;" /><img src="https://e0hyl.github.io/BLOG-OF-E0/images/2021-11-12-EvaluateIMLSecurity/image-20211119152926821.png" alt="image-20211119152926821" style="zoom:50%;" />
 
 #### accuracy实验
 
@@ -301,7 +301,7 @@ remove特征的方法：
 
 在黑盒方法制造扰动样本的过程中，需要有占比 $$p$$ 的样本被分为相反的类，下图展示了能满足不同 $$p$$ 条件的样本比例：
 
-<figure><img src="../images/2021-11-12-EvaluateIMLSecurity/image-20211119193330863.png" alt="image-20211119192538028" style="zoom:50%;" /><figcaption>左：负（benign）->正（malicious），右：正（malicious）->负（benign）</figcaption></figure>
+<figure><img src="https://e0hyl.github.io/BLOG-OF-E0/images/2021-11-12-EvaluateIMLSecurity/image-20211119193330863.png" alt="image-20211119192538028" style="zoom:50%;" /><figcaption>左：负（benign）->正（malicious），右：正（malicious）->负（benign）</figcaption></figure>
 
 - creating malicious perturbations from benign samples is a hard problem, especially for Drebin+ and DAMD: The problem of incomplete explanations is rooted in the imbalance of features characterizing malicious and benign data in the datasets.
 
@@ -311,7 +311,7 @@ remove特征的方法：
 
 ### Stability of Explanations 
 
-<figure><img src="../images/2021-11-12-EvaluateIMLSecurity/image-20211119194603282.png" alt="image-20211119194603282" style="zoom:50%;" /><figcaption>Average intersection size between top features for multiple runs. 数值越接近1说明stability越好.</figcaption></figure>
+<figure><img src="https://e0hyl.github.io/BLOG-OF-E0/images/2021-11-12-EvaluateIMLSecurity/image-20211119194603282.png" alt="image-20211119194603282" style="zoom:50%;" /><figcaption>Average intersection size between top features for multiple runs. 数值越接近1说明stability越好.</figcaption></figure>
 
 - use $$k=10$$ for all datasets except for DAMD where we use $$k=50$$ due to the larger input space.
 - Gradients, IG, and LRP: deterministic -> all 1.0
@@ -321,7 +321,7 @@ remove特征的方法：
 
 performed on a regular server system with an Intel Xeon E5 v3 CPU at 2.6 GHz.
 
-<figure><img src="../images/2021-11-12-EvaluateIMLSecurity/image-20211119204444254.png" alt="image-20211119204444254" style="zoom:50%;" /><figcaption>Gradients, IG and LRP can benefit from computations on a graphical processing unit (GPU)</figcaption></figure>
+<figure><img src="https://e0hyl.github.io/BLOG-OF-E0/images/2021-11-12-EvaluateIMLSecurity/image-20211119204444254.png" alt="image-20211119204444254" style="zoom:50%;" /><figcaption>Gradients, IG and LRP can benefit from computations on a graphical processing unit (GPU)</figcaption></figure>
 
 - Gradients and LRP achieve the highest throughput in general beating the other methods by orders of magnitude. This advantage arises from the fact that data can be processed *batch-wise* for methods like Gradients, IG, and LRP, that is, explanations can be calculated for a set of samples at the same time.
 - Computing these methods on a GPU results in additional speedups of a factor up to three.
@@ -334,13 +334,13 @@ performed on a regular server system with an Intel Xeon E5 v3 CPU at 2.6 GHz.
 
 The crafted input $$\widetilde{x}$$ is misclassified by the network but keeps an explanation very close to the one of $$x$$. 
 
-<img src="../images/2021-11-12-EvaluateIMLSecurity/image-20211119210857744.png" alt="image-20211119210857744" style="zoom:70%;" />
+<img src="https://e0hyl.github.io/BLOG-OF-E0/images/2021-11-12-EvaluateIMLSecurity/image-20211119210857744.png" alt="image-20211119210857744" style="zoom:70%;" />
 
 > NIPS'19: Explanations can be manipulated and geometry is to blame.
 
 Many white-box methods can be tricked to produce an arbitrary explanation $$e_t$$ without changing the classification.
 
-<img src="../images/2021-11-12-EvaluateIMLSecurity/image-20211119210830721.png" alt="image-20211119210830721" style="zoom:70%;" />
+<img src="https://e0hyl.github.io/BLOG-OF-E0/images/2021-11-12-EvaluateIMLSecurity/image-20211119210830721.png" alt="image-20211119210830721" style="zoom:70%;" />
 
 #### Attack Black-box
 
@@ -358,7 +358,7 @@ Many white-box methods can be tricked to produce an arbitrary explanation $$e_t$
 
 基于之前的实验结果，推荐使用白盒方法。但在无法获得模型参数的情况下，也可以使用模型窃取得到近似的替代模型后，再用白盒方法解释。
 
-<img src="../images/2021-11-12-EvaluateIMLSecurity/image-20211119214839308.png" alt="image-20211119214839308" style="zoom:50%;" />
+<img src="https://e0hyl.github.io/BLOG-OF-E0/images/2021-11-12-EvaluateIMLSecurity/image-20211119214839308.png" alt="image-20211119214839308" style="zoom:50%;" />
 
 ## Insights
 
@@ -369,7 +369,7 @@ Many white-box methods can be tricked to produce an arbitrary explanation $$e_t$
 
 ### VulDeePecker 
 
-<figure><img src="../images/2021-11-12-EvaluateIMLSecurity/image-20211120121928189.png" alt="image-20211120121928189" style="zoom:50%;" /></figure>
+<figure><img src="https://e0hyl.github.io/BLOG-OF-E0/images/2021-11-12-EvaluateIMLSecurity/image-20211120121928189.png" alt="image-20211120121928189" style="zoom:50%;" /></figure>
 
 still *difficult for a human analyst to benefit* from the highlighted tokens:
 
@@ -384,5 +384,5 @@ conclude that the *VulDeePecker system might benefit from*
 
 ### DAMD
 
-<figure><img src="../images/2021-11-12-EvaluateIMLSecurity/image-20211120113750695.png" alt="image-20211120113750695" style="zoom:50%;" /><figcaption>In this function, the malware intercepts incoming SMS and phone calls and stores the information in local files before sending them to an external server.</figcaption></figure>
+<figure><img src="https://e0hyl.github.io/BLOG-OF-E0/images/2021-11-12-EvaluateIMLSecurity/image-20211120113750695.png" alt="image-20211120113750695" style="zoom:50%;" /><figcaption>In this function, the malware intercepts incoming SMS and phone calls and stores the information in local files before sending them to an external server.</figcaption></figure>
 
