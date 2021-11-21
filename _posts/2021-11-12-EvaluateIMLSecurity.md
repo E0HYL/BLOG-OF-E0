@@ -230,7 +230,7 @@ relevance 值通常是实数，并且可以通过 heatmap 的形式覆盖在输�
 
 Do the considered explanation methods provide different results?
 
-定义两个top-k特征集合的交集大小 (0~1之间)-> intersection size $$IS(i,j)=\frac{|T_i \bigcap T_j|}{k}$$
+定义两个top-k特征集合的交集大小 (0~1之间)-> intersection size $$IS(i,j)=\frac{\vert T_i \bigcap T_j\vert }{k}$$
 
 <figure><img src="https://e0hyl.github.io/BLOG-OF-E0/images/2021-11-12-EvaluateIMLSecurity/image-20211118111331359.png" alt="image-20211118111331359" style="zoom:45%;" /><figcaption>除了DAMD算的是top-50，其他都是top-10</figcaption></figure>
 
@@ -240,7 +240,7 @@ Do the considered explanation methods provide different results?
 
 Follow an indirect strategy: measure how removing the most relevant features changes the prediction -> 实际是fidelity
 
-- 定义 Descriptive Accuracy (DA): 对样本 $$x$$，移除 $$k$$ 个最相关的特征后，模型在原预测类别上的概率 -> $$DA_k(x, f_N)=f_N(x|x_1=0,...,x_k=0)c$$
+- 定义 Descriptive Accuracy (DA): 对样本 $$x$$，移除 $$k$$ 个最相关的特征后，模型在原预测类别上的概率 -> $$DA_k(x, f_N)=f_N(x\vert x_1=0,...,x_k=0)c$$
 - 越小说明解释越准
 
 ### General Criteria: Descriptive Sparsity
@@ -356,13 +356,13 @@ Many white-box methods can be tricked to produce an arbitrary explanation $$e_t$
 
 - access to specific parts of the victim system: white->the model parameters, black->pass the classification process of the perturbations 
 
-- further extenions to work in discrete domains: while binary features, as in the Drebin+ dataset, *require larger changes with |δ|≥1*. Similarly, for VulDeePecker and DAMD,a direct application of existing attacks will likely result in *broken code or invalid behavior*. 
+- further extenions to work in discrete domains: while binary features, as in the Drebin+ dataset, *require larger changes with $$\vert δ \vert ≥1$$*. Similarly, for VulDeePecker and DAMD,a direct application of existing attacks will likely result in *broken code or invalid behavior*. 
 
 ### Model Stealing for White-Box Explanations
 
 基于之前的实验结果，推荐使用白盒方法。但在无法获得模型参数的情况下，也可以使用模型窃取得到近似的替代模型后，再用白盒方法解释。
 
-<img src="https://e0hyl.github.io/BLOG-OF-E0/images/2021-11-12-EvaluateIMLSecurity/image-20211119214839308.png" alt="image-20211119214839308" style="zoom:50%;" />
+<figure><img src="https://e0hyl.github.io/BLOG-OF-E0/images/2021-11-12-EvaluateIMLSecurity/image-20211119214839308.png" alt="image-20211119214839308" style="zoom:50%;" /></figure>
 
 ## Insights
 
