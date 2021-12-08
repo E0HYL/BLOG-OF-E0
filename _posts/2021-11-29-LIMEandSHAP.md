@@ -4,7 +4,7 @@ title: 可解释方法LIME和SHAP代码实战
 description: "Colab搬运与扩展：LIME和SHAP在Telco-customer-churn数据集上的应用"
 modified: 2021-12-08
 tags: [IML, Code]
-math_inline: true
+math: true
 image:
   feature: abstract-4.jpg
 ---
