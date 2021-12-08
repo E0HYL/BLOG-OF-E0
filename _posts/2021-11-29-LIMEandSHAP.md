@@ -17,15 +17,19 @@ image:
 - [前期准备](#%E5%89%8D%E6%9C%9F%E5%87%86%E5%A4%87)
     - [实验数据集（Kaggle: Telco Customer Churn）](#%E5%AE%9E%E9%AA%8C%E6%95%B0%E6%8D%AE%E9%9B%86kaggle-telco-customer-churn)
     - [训练模型（NB, LR, DT, RF, GBT, MLP）](#%E8%AE%AD%E7%BB%83%E6%A8%A1%E5%9E%8Bnb-lr-dt-rf-gbt-mlp)
-- [解释简单模型 Global+Intrinsic, White-box](#%E8%A7%A3%E9%87%8A%E7%AE%80%E5%8D%95%E6%A8%A1%E5%9E%8B-globalintrinsic-white-box)
+- [解释简单模型（Global+Intrinsic, White-box）](#%E8%A7%A3%E9%87%8A%E7%AE%80%E5%8D%95%E6%A8%A1%E5%9E%8Bglobalintrinsic-white-box)
     - [Logistic Regression Coefficients](#logistic-regression-coefficients)
     - [Feature Importance Scores Tree-based Models: DT, RF, GBT](#feature-importance-scores-tree-based-models-dt-rf-gbt)
-        - [以决策树为例，理解特征重要性](#%E4%BB%A5%E5%86%B3%E7%AD%96%E6%A0%91%E4%B8%BA%E4%BE%8B%E7%90%86%E8%A7%A3%E7%89%B9%E5%BE%81%E9%87%8D%E8%A6%81%E6%80%A7)
+        - [决策树特征重要性](#%E5%86%B3%E7%AD%96%E6%A0%91%E7%89%B9%E5%BE%81%E9%87%8D%E8%A6%81%E6%80%A7)
+        - [可视化解释树模型](#%E5%8F%AF%E8%A7%86%E5%8C%96%E8%A7%A3%E9%87%8A%E6%A0%91%E6%A8%A1%E5%9E%8B)
+- [解释任意模型 （Local+Posthoc, Black-box）](#%E8%A7%A3%E9%87%8A%E4%BB%BB%E6%84%8F%E6%A8%A1%E5%9E%8B-localposthoc-black-box)
+    - [Local Interpretable Model-agnostic Explanation（LIME）](#local-interpretable-model-agnostic-explanationlime)
+        - [原理](#%E5%8E%9F%E7%90%86)
         - [实现](#%E5%AE%9E%E7%8E%B0)
             - [LIME 库相关接口](#lime-%E5%BA%93%E7%9B%B8%E5%85%B3%E6%8E%A5%E5%8F%A3)
             - [调用接口实现模型解释](#%E8%B0%83%E7%94%A8%E6%8E%A5%E5%8F%A3%E5%AE%9E%E7%8E%B0%E6%A8%A1%E5%9E%8B%E8%A7%A3%E9%87%8A)
             - [可视化解释结果](#%E5%8F%AF%E8%A7%86%E5%8C%96%E8%A7%A3%E9%87%8A%E7%BB%93%E6%9E%9C)
-    - [**SH**apley **A**dditive ex**P**lanations SHAP](#shapley-additive-explanations-shap)
+    - [SHapley Additive exPlanations（SHAP）](#shapley-additive-explanationsshap)
         - [原理](#%E5%8E%9F%E7%90%86)
             - [与LIME的联系与区别](#%E4%B8%8Elime%E7%9A%84%E8%81%94%E7%B3%BB%E4%B8%8E%E5%8C%BA%E5%88%AB)
         - [实现](#%E5%AE%9E%E7%8E%B0)
@@ -101,7 +105,7 @@ for model in models:
 
 <img src="https://e0hyl.github.io/BLOG-OF-E0/images/2021-11-29-LIMEandSHAP/trainmodel.png" style="zoom:50%;" />
 
-## 解释简单模型 (Global+Intrinsic, White-box)
+## 解释简单模型（Global+Intrinsic, White-box）
 
 ```python
 """
@@ -137,13 +141,13 @@ lr_title = plt.suptitle("Logistic Regression. Top " + str(top_x) + " Coefficient
 
 ### Feature Importance Scores (Tree-based Models: DT, RF, GBT)
 
-#### 以决策树为例，理解特征重要性
+#### 决策树特征重要性
 
 > sklearn 中的决策树默认的属性划分使用 CART 算法，每个节点有对应的 gini index (值越小，误分错误率越低，纯度越高)。
 
 Feature Importance = 特征权重 * （当前节点的 Impurity - 子节点 Impurity 的加权和）
 
-$$N_t / N * (impurity - N_{t_R} / N_t * impurity_R - N_{t_L} / N_t * impurity_L)$$，
+即 $$N_t / N * (impurity - N_{t_R} / N_t * impurity_R - N_{t_L} / N_t * impurity_L)$$，
 
 其中 $N$ 是样本总数， $N_t$ 是当前节点样本数，$N_{t_R}$ 是右子节点的样本数， $N_{t_L}$ 是左子节点的样本数;
 
@@ -171,7 +175,7 @@ import os
 os.system("dot -Tpng tree.dot -o tree.png")
 ```
 
-<img src="https://e0hyl.github.io/BLOG-OF-E0/images/2021-11-29-LIMEandSHAP/tree.png" style="zoom:50%;" />
+<figure><img src="https://e0hyl.github.io/BLOG-OF-E0/images/2021-11-29-LIMEandSHAP/tree.png" style="zoom:50%;" /></figure>
 
 则特征 `x[0],x[1],x[2]` 的 feature importance 计算方法如下：
 
@@ -182,10 +186,14 @@ fi_2 = (4 / 4) * (0.375 - (3 / 4 * 0.444)) # 0.042
 # 要使所有特征重要性的和为1，则可以进行L1归一化
 from sklearn import preprocessing
 preprocessing.normalize([[fi_0,fi_1,fi_2]], norm='l1') # array([[0.66666667, 0.22133333, 0.112     ]])
-# 与 model.feature_importances_ 一致：[0.66666667 0.22222222 0.11111111]
 ```
 
+可以验证该结果与 `model.feature_importances_` 是一致的（`[0.66666667 0.22222222 0.11111111]`）。
+
+
 #### 可视化解释树模型
+
+回到用户流失预测的例子，可视化代码如下：
 
 ```python
 tree_models = []
@@ -222,11 +230,11 @@ for i in range(len(tree_models)):
 plt.suptitle("Feature Importance for Tree Models. Top " + str(top_x) + " Features.", fontsize=20, fontweight="normal")
 ```
 
-![](https://e0hyl.github.io/BLOG-OF-E0/images/2021-11-29-LIMEandSHAP/tree_gini.png)
+<figure><img src="https://e0hyl.github.io/BLOG-OF-E0/images/2021-11-29-LIMEandSHAP/tree_gini.png" style="zoom: 67%;" /></figure>
 
-## 解释任意模型 (Local+Posthoc, Black-box)
+## 解释任意模型 （Local+Posthoc, Black-box）
 
-### Local Interpretable Model-agnostic Explanation (LIME)
+### Local Interpretable Model-agnostic Explanation（LIME）
 
 #### 原理
 
@@ -380,7 +388,7 @@ plt.box(False)
 
 <img src="https://e0hyl.github.io/BLOG-OF-E0/images/2021-11-29-LIMEandSHAP/lime.png"  />
 
-###  **SH**apley **A**dditive ex**P**lanations (SHAP)
+### SHapley Additive exPlanations（SHAP）
 
 #### 原理
 
