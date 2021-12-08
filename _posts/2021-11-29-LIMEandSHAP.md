@@ -147,7 +147,7 @@ lr_title = plt.suptitle("Logistic Regression. Top " + str(top_x) + " Coefficient
 
 Feature Importance = 特征权重 * （当前节点的 Impurity - 子节点 Impurity 的加权和）
 
-即 $$N_t / N * (impurity - N_{t_R} / N_t * impurity_R - N_{t_L} / N_t * impurity_L)$$，
+即 $N_t / N * (impurity - N_{t_R} / N_t * impurity_R - N_{t_L} / N_t * impurity_L)$，
 
 其中 $N$ 是样本总数， $N_t$ 是当前节点样本数，$N_{t_R}$ 是右子节点的样本数， $N_{t_L}$ 是左子节点的样本数;
 
@@ -398,10 +398,10 @@ plt.box(False)
 
 这里介绍与模型无关的 [Kernel SHAP](https://christophm.github.io/interpretable-ml-book/shap.html#kernelshap)（Linear LIME + Shapley values），损失函数为 $L(f,g,\pi_{x^\prime}) = \sum_{z^{\prime}\in\mathcal Z} [f(h_x^{-1}(z^\prime))-g(z^\prime)]^2\pi_{x^\prime}(z^\prime)$
 
-- 将输出值归因到每一个特征的 shapely 值上，因此简化的**可解释模型 $g$** 表示为二元变量的线性函数 $$g(z^\prime)=\phi_0 + \sum_{j=1}^{M} \phi_jz_j^\prime$$，
+- 将输出值归因到每一个特征的 shapely 值上，因此简化的**可解释模型 $g$** 表示为二元变量的线性函数 $g(z^\prime)=\phi_0 + \sum_{j=1}^{M} \phi_jz_j^\prime$，
   - 其中 $\phi_i$ 是要求的 shapely 值，$\phi_0$ 代表（训练样本输出结果的）平均值。
 
-- **权重函数 $\pi$** 为 $$\pi_{x^\prime}(z^{\prime})=\frac{1}{C_M^{\vert z^{\prime} \vert} }\frac{M-1}{\vert z^{\prime} \vert (M - \vert z^{\prime} \vert)}$$，
+- **权重函数 $\pi$** 为 $\pi_{x^\prime}(z^{\prime})=\frac{1}{C_M^{\vert z^{\prime} \vert} }\frac{M-1}{\vert z^{\prime} \vert (M - \vert z^{\prime} \vert)}$，
   - 其中 $M$ 是 $x^\prime$ 的维数， $\vert z^{\prime} \vert$ 是 $z^\prime$ 中非零值的个数；
   - $\vert z^{\prime} \vert \in (0, M)$，共 $M-1$ 种取值（不包含边界值，否则权重为正无穷），因此右项的范围是 $(0,1]$；
   - 若有很多 1 或很多 0 则取较高的权重，若 0 和 1 数量相近则取较低的权重。
