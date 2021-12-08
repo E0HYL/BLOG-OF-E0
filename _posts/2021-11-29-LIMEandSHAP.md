@@ -430,6 +430,8 @@ SHAP中距离的计算根据**Simplified Features**中0的数量, 若有很多0�
 - 若只有一个是0, 我们可以计算出那个是0的特征的贡献.
 - 如果一半是0, 一半是1, 那么会有很多种组合, 就很难计算出每一个特征的贡献
 
+推荐参考：https://mathpretty.com/10699.html
+
 #### 实现
 
 SHAP Library: https://shap.readthedocs.io/en/latest
