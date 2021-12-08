@@ -173,9 +173,12 @@ relevance 值通常是实数，并且可以通过 heatmap 的形式覆盖在输�
 
 - uses the SHAP kernel as weighting function $$\pi_x$$ -> create Shapley Values when solving the regression
 
+> [下一篇blog](https://e0hyl.github.io/BLOG-OF-E0/LIMEandSHAP/)会详细介绍这两种方法（论文、实现）
+
 #### LEMNA
 
 - specifically designed for security applications
+
 - uses a mixture regression model for approximation -> a weighted sum of K linear models $$f(x)=\sum_{j=1}^K \pi_j(\beta_j \cdot x + \epsilon_j)$$
 
 - Fused Lasso:
@@ -379,7 +382,7 @@ still *difficult for a human analyst to benefit* from the highlighted tokens:
 
 - an analyst interprets the **source code rather than the extracted tokens** and thus maintains a different view on the data.
 - **truncates essential parts of the code**. In Figure 4, during the initialization of the destination buffer, for instance, only the size remains as part of the input.
-- the large amount of highlighted tokens like semicolons, brackets, and equality signs seems to indicate that\ VulDeePecker **overfits** to the training data at hand. 
+- the large amount of highlighted tokens like semicolons, brackets, and equality signs seems to indicate that VulDeePecker **overfits** to the training data at hand. 
 
 conclude that the *VulDeePecker system might benefit from* 
 
