@@ -4,7 +4,7 @@ title: 可解释方法LIME和SHAP代码实战
 description: "Colab搬运与扩展：LIME和SHAP在Telco-customer-churn数据集上的应用"
 modified: 2021-12-08
 tags: [IML, Code]
-math: true
+math_inline: true
 image:
   feature: abstract-4.jpg
 ---
@@ -412,13 +412,13 @@ plt.box(False)
 
 ##### 与LIME的联系与区别
 
-|                       |             SHAP              |                LIME                |
-| :-------------------: | :---------------------------: | :--------------------------------: |
-| $x^\prime$ 含义的表述 |      simplified features      |    interpretable representation    |
-| $x^\prime$ 维度的记法 |              $M$              |             $d^\prime$             |
-|  线性模型 $g^\prime$  | $x^\prime$ 特征的沙普利值加和 |     关于 $x^\prime$ 特征的函数     |
-|    权重函数 $\pi$     | 扰动对估算特征边际贡献的作用  | 扰动样本 $z$ 与原样本 $x$ 的相似性 |
-|                       |                               |                                    |
+|                       |               SHAP               |                LIME                |
+| :-------------------: | :------------------------------: | :--------------------------------: |
+| $x^\prime$ 含义的表述 |       simplified features        |    interpretable representation    |
+| $x^\prime$ 维度的记法 |               $M$                |             $d^\prime$             |
+|  线性模型 $g^\prime$  | 非齐次，含义是特征的沙普利值加和 |          齐次（无常数项）          |
+|    权重函数 $\pi$     |   扰动对估算特征边际贡献的作用   | 扰动样本 $z$ 与原样本 $x$ 的相似性 |
+|                       |                                  |                                    |
 
 <figure><img src="https://e0hyl.github.io/BLOG-OF-E0/images/2021-11-29-LIMEandSHAP/image-20211202100214219.png" alt="image-20211202100214219" style="zoom: 67%;" /><figcaption>https://www.cnblogs.com/ifzh/p/12720710.html</figcaption></figure>
 
