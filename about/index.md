@@ -23,4 +23,4 @@ I am now a Ph.D. Candidate at Zhejiang University, under the supervision of [Pro
 
 * 2021~present, School of Cyberspace and Technology, Zhejiang University, Ph.D
 * 2019~2021, School of Cyberspace and Technology, Zhejiang University, M.Eng
-* 2015~2014, School of Cyberspace Security, Beijing University of Posts and Telecommunications, B.Eng
+* 2015~2019, School of Cyberspace Security, Beijing University of Posts and Telecommunications, B.Eng
