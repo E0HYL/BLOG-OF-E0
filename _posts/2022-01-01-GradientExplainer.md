@@ -45,27 +45,21 @@ image:
 
 核心思想是“removing noise by adding noise”，来源于“给图片加微小扰动会造成梯度解释不稳定”的发现，解决方法是“将$n$张扰动图片的梯度平均”。
 
+<!--more-->
+
 若将原始的显著图表示 $M(x) = \partial y / \partial x$，则 **SmoothGrad** 提出的锐化（shapen gradient-based saliency map）方法记作
 
 $$\hat M(x) = \frac{1}{n}\sum_{1}^{n}M(x+\mathcal N(0,\sigma^2))$$
 
 实验表明扰动样本越多（$n$越大），显著图越稳定。
 
-<!--more-->
-
 ## SHAP源码 - [GradientExplainer 类](https://github.com/slundberg/shap/blob/46b3800b31df04745416da27c71b216f91d61775/shap/explainers/_gradient.py#L11)
 
 ```python
 class Gradient(Explainer):
     """ Explains a model using expected gradients (an extension of integrated gradients).
-    Expected gradients an extension of the integrated gradients method (Sundararajan et al. 2017), a
-    feature attribution method designed for differentiable models based on an extension of Shapley
-    values to infinite player games (Aumann-Shapley values). Integrated gradients values are a bit
-    different from SHAP values, and require a single reference value to integrate from. As an adaptation
-    to make them approximate SHAP values, expected gradients reformulates the integral as an expectation
-    and combines that expectation with sampling reference values from the background dataset. This leads
-    to a single combined expectation of gradients that converges to attributions that sum to the
-    difference between the expected model output and the current output.
+    Expected gradients an extension of the integrated gradients method (Sundararajan et al. 2017), a feature attribution method designed for differentiable models based on an extension of Shapley values to infinite player games (Aumann-Shapley values). Integrated gradients values are a bit different from SHAP values, and require a single reference value to integrate from. 
+    As an adaptation to make them approximate SHAP values, expected gradients reformulates the integral as an expectation and combines that expectation with sampling reference values from the background dataset. This leads to a single combined expectation of gradients that converges to attributions that sum to the difference between the expected model output and the current output.
     """
 ```
 
@@ -131,11 +125,11 @@ for j in range(X[0].shape[0]):
     output_phis.append(phis[0] if not self.multi_input else phis)
 ```
 
-通过 pdb 调试源码可以更快的理解：
+通过 [pdb](https://docs.python.org/zh-cn/3/library/pdb.html) 调试源码可以更快的理解：
 
 
 ```python
-import tensoeflow as tf
+import tensorflow as tf
 import numpy as np
 from shap import GradientExplainer
 
@@ -150,8 +144,12 @@ pdb.run('tf_explainer.shap_values(dummy_input)')
 ```
 
 ```shell
-(Pdb) unt 302 # 运行到“断点在源码中的行号”为止，可以用`l`来查看附近位置的源码
-> xxx/anaconda3/envs/tf/lib/python3.6/site-packages/shap/explainers/_gradient.py(302)shap_values()
+(Pdb) s # 运行当前行，在第一个可以停止的位置（在被调用的函数内部或在当前函数的下一行）停下。
+--Call--
+> xxx/site-packages/shap/explainers/_gradient.py(199)shap_values()
+-> def shap_values(self, X, nsamples=200, ranked_outputs=None, output_rank_order="max", rseed=None, return_variances=False):
+(Pdb) unt 302 # 运行到“行号”为止，可以用`l`来查看附近位置的源码
+> xxx/site-packages/shap/explainers/_gradient.py(302)shap_values()
 -> output_phi_vars.append(phi_vars[0] if not self.multi_input else phi_vars)
 (Pdb) len(samples_delta)
 1
