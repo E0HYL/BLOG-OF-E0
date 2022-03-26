@@ -43,7 +43,7 @@ image:
 
 ### SmoothGrad
 
-核心思想是“removing noise by adding noise”，来源于“给图片加微小扰动会造成梯度解释不稳定”的发现，解决方法是“将$n$张扰动图片的梯度平均”。
+核心思想是“removing noise by adding noise”，来源于“给图片加微小扰动会造成梯度解释不稳定”的发现，解决方法是“将 n 张扰动图片的梯度平均”。
 
 <!--more-->
 
