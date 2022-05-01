@@ -79,6 +79,8 @@ The following two types of masker is used during [benchmarking](#Run Benchmarks)
 - *cmasker*: `Composite` merges several maskers for different inputs together into a single composite masker.
 - `Fixed` leaves the input unchanged during masking, and is used for things like scoring labels.
 
+<!--more-->
+
 ### shap.explainers
 
 ```python
@@ -125,8 +127,6 @@ The `explainers` list is made up of 6 explainers of 4 types (5 classes):
   - *"Exact"*: `Exact` computes SHAP values via an optimized exact enumeration.
 - baseline
   - *"Random"*: `Random` simply returns random (normally distributed) feature attributions.
-
-<!--more-->
 
 ## Run Benchmarks
 
@@ -206,7 +206,7 @@ shap.plots.benchmark(sum(results.values(), []))
 shap.plots.benchmark(filter(lambda x: x.method != 'Random', sum(results.values(), [])))
 ```
 
-<img src="https://e0hyl.github.io/BLOG-OF-E0/images/2022-04-30-SHAP_benchmark/benchmark_shap.png" alt="benchmark_shap" style="zoom:80%;" />
+<img src="https://e0hyl.github.io/BLOG-OF-E0/images/2022-04-30-SHAP_benchmark/benchmark_shap.png" alt="benchmark_shap" style="zoom: 67%;" />
 
 #### Show detail plots of each metric type
 
