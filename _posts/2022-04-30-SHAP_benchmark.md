@@ -212,9 +212,6 @@ shap.plots.benchmark(filter(lambda x: x.method != 'Random', sum(results.values()
 
 If we plot scores for one metric at a time then we can see a much more detailed comparison of the methods. 
 
-- Some methods just have a score (explanation error and compute time). 
-- Other methods have entire performance curves, and the score is the area under (or over) these curves.
-
 ```python
 import matplotlib.pyplot as plt
 num_plot_rows = len(results) // 2 + len(results) % 2
@@ -229,4 +226,14 @@ plt.tight_layout()
 plt.show()
 ```
 
-<img src="https://e0hyl.github.io/BLOG-OF-E0/images/2022-04-30-SHAP_benchmark/benchmark_shap_detail.png"  />
+- Some methods just have a score (explanation error and compute time). 
+
+<img src="https://e0hyl.github.io/BLOG-OF-E0/images/2022-04-30-SHAP_benchmark/benchmark_shap_detail_score.png"  />
+
+- Other methods have entire performance curves, and the score is the area under (or over) these curves.
+
+<img src="https://e0hyl.github.io/BLOG-OF-E0/images/2022-04-30-SHAP_benchmark/benchmark_shap_detail_curve.png"  />
+
+- Postive: important features; Negative: unimportant features
+- For the first two lines of curves, the output is the original output of XGBoost
+- For the last line of curve, the output is `(y - model.predict(X))**2`
