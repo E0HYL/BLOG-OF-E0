@@ -74,7 +74,7 @@ The two types of masker used during building the explainers:
 - *pmasker*: `Partition` Unlike Independent, Partition respects a hierarchial structure of the data. 
   - param `clustering`：**string** (distance metric to use for creating the clustering of the features) or **numpy.ndarray** (the clustering of the features).
 
-The following two types of masker is used during [benchmarking](#Run Benchmarks):
+The following two types of masker are used during [benchmarking](#Run Benchmarks):
 
 - *cmasker*: `Composite` merges several maskers for different inputs together into a single composite masker.
 - `Fixed` leaves the input unchanged during masking, and is used for things like scoring labels.
@@ -132,7 +132,7 @@ The `explainers` list is made up of 6 explainers of 4 types (5 classes):
 
 ```python
 # explain with all the explainers
-attributions = [(name, exp(X_eval)) for name, exp in explainers]
+attributions = [(name, exp(X_eval)) for name, exp in explainers] # (str, shap._explanation.Explanation)
 
 results = {} # metric name: shap.benchmark._result.BenchmarkResult
 ```
@@ -235,5 +235,5 @@ plt.show()
 <img src="https://e0hyl.github.io/BLOG-OF-E0/images/2022-04-30-SHAP_benchmark/benchmark_shap_detail_curve.png"  />
 
 - Postive: important features; Negative: unimportant features
-- For the first two lines of curves, the output is the original output of XGBoost
-- For the last line of curve, the output is `(y - model.predict(X))**2`
+- For the first two rows, the y-axis of the curves is the original output of XGBoost
+- For the last row, the output is `(y - model.predict(X))**2`
