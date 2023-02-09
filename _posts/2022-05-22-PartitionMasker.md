@@ -12,13 +12,13 @@ image:
 
 Explainers在`explain_row`函数中，依据`self.masker`的`clustering`属性生成单个样本的masks，该属性可以是固定的np.ndarray，也可以是callable的（每个样本有不同的簇划分方式）。
 
-<figure><img src="../images/2022-05-22-PartitionMasker/image-20220523095238502.png" alt="image-20220523095238502" style="zoom:67%;" /><figcaption>shap/explainers/_permutation.py: explain_row </figcaption></figure>
+<figure><img src="https://e0hyl.github.io/BLOG-OF-E0/images/2022-05-22-PartitionMasker/image-20220523095238502.png" alt="image-20220523095238502" style="zoom:67%;" /><figcaption>shap/explainers/_permutation.py: explain_row </figcaption></figure>
 
 - Partition explainer 使用 `make_mask(self._clustering)` 生成 `self._mask_matrix`，传入`owen`函数
 
-  <img src="../images/2022-05-22-PartitionMasker/image-20220523104820760.png" alt="image-20220523104820760" style="zoom: 67%;" />
+  <img src="https://e0hyl.github.io/BLOG-OF-E0/images/2022-05-22-PartitionMasker/image-20220523104820760.png" alt="image-20220523104820760" style="zoom: 67%;" />
 
-  <img src="../images/2022-05-22-PartitionMasker/image-20220523104920233.png" alt="image-20220523104920233" style="zoom:67%;" />
+  <img src="https://e0hyl.github.io/BLOG-OF-E0/images/2022-05-22-PartitionMasker/image-20220523104920233.png" alt="image-20220523104920233" style="zoom:67%;" />
 
 - Permutation explainer 使用`partition_tree_shuffle(inds, inds_mask, row_clustering)` 来生成随机排列的`masks`组合；对于一个permutation而言，`masks`是一个大小为$2*M+1$的batch，对应于每个mask的非零值数量由$0 \sim M \sim 0$变化，其中$M$表示特征总数。
 
