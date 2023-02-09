@@ -31,6 +31,8 @@ Explainers在`explain_row`函数中，依据`self.masker`的`clustering`属性�
 - the third column: the distance between clusters $Z[i, 0]$ and $Z[i, 1]$
 - the fourth column: the number of observations in the newly formed cluster.
 
+<!--more-->
+
 以 Text masker 为例
 
 ```python
