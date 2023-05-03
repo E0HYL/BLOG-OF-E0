@@ -20,6 +20,8 @@ Explainers在`explain_row`函数中，依据`self.masker`的`clustering`属性�
 
   <img src="https://e0hyl.github.io/BLOG-OF-E0/images/2022-05-22-PartitionMasker/image-20220523104920233.png" alt="image-20220523104920233" style="zoom:67%;" />
 
+  <!--more-->
+
 - Permutation explainer 使用`partition_tree_shuffle(inds, inds_mask, row_clustering)` 来生成随机排列的`masks`组合；对于一个permutation而言，`masks`是一个大小为$2*M+1$的batch，对应于每个mask的非零值数量由$0 \sim M \sim 0$变化，其中$M$表示特征总数。
 
 `clustering`是一个由 scipy.cluster.hierarchy 定义的 [linkage matrix](https://docs.scipy.org/doc/scipy/reference/generated/scipy.cluster.hierarchy.linkage.html#scipy.cluster.hierarchy.linkage) (记作 $Z$，行向量标记为 $Z[i]$)。它是一个$(n-1)$行$4$列的二维数组，其中$n$表示原始样本的个数
@@ -30,8 +32,6 @@ Explainers在`explain_row`函数中，依据`self.masker`的`clustering`属性�
   - $Z[i, 0]$ and $Z[i, 1]$ are from $[0, i+n-1]$
 - the third column: the distance between clusters $Z[i, 0]$ and $Z[i, 1]$
 - the fourth column: the number of observations in the newly formed cluster.
-
-<!--more-->
 
 以 Text masker 为例
 
