@@ -1,6 +1,6 @@
 ---
 layout: page-about
-modified: 2021-10-3
+modified: 2023-5-11
 comments: false
 ---
 
@@ -20,6 +20,10 @@ I am now a Ph.D. Candidate at Zhejiang University, under the supervision of [Pro
 
 ### Publications
 
+- **FINER: Enhancing State-of-the-art Classifiers with Feature Attribution to Facilitate Security Analysis** <br/>
+**Yiling He**, Jian Lou, Zhan Qin, Kui Ren <br/>
+*The ACM Conference on Computer and Communications Security (CCS) 2023*
+
 - **DeUEDroid: Detecting Underground Economy Apps Based on UTG Similarity** <br/>
 Zhuo Chen, Jie Liu, Yubo Hu, Lei Wu, Yajin Zhou, **Yiling He**, Xianhao Liao, Ke Wang, Jink Li, Zhan Qin <br/>
 *The ACM SIGSOFT International Symposium on Software Testing and Analysis (ISSTA) 2023*
@@ -29,10 +33,10 @@ Zhuo Chen, Jie Liu, Yubo Hu, Lei Wu, Yajin Zhou, **Yiling He**, Xianhao Liao, Ke
 *IEEE Transactions on Dependable and Secure Computing (TDSC) 2022*
 
 
-#### News 
+<!-- #### News 
 
 - A minor revision for CCS 2023. <br/>
-**Yiling He**, Jian Lou, Zhan Qin, Kui Ren
+**Yiling He**, Jian Lou, Zhan Qin, Kui Ren -->
 
 ### Background
 
