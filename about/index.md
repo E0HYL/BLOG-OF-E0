@@ -33,11 +33,6 @@ Zhuo Chen, Jie Liu, Yubo Hu, Lei Wu, Yajin Zhou, **Yiling He**, Xianhao Liao, Ke
 *IEEE Transactions on Dependable and Secure Computing (TDSC) 2022*
 
 
-<!-- #### News 
-
-- A minor revision for CCS 2023. <br/>
-**Yiling He**, Jian Lou, Zhan Qin, Kui Ren -->
-
 ### Background
 
 #### Education
