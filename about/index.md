@@ -30,7 +30,8 @@ Zhuo Chen, Jie Liu, Yubo Hu, Lei Wu, Yajin Zhou, **Yiling He**, Xianhao Liao, Ke
 
 - **MsDroid: Identifying Malicious Snippets for Android Malware Detection** <br/>
 **Yiling He**, Yiping Liu, Lei Wu, Ziqi Yang, Kui Ren, Zhan Qin <br/>
-*IEEE Transactions on Dependable and Secure Computing (TDSC) 2022*
+*IEEE Transactions on Dependable and Secure Computing (TDSC) 2022* <br/>
+[PDF](https://ieeexplore.ieee.org/document/9762803), [Code](https://github.com/E0HYL/MsDroid)
 
 
 ### Background
@@ -43,4 +44,6 @@ Zhuo Chen, Jie Liu, Yubo Hu, Lei Wu, Yajin Zhou, **Yiling He**, Xianhao Liao, Ke
 
 #### Internship
 
-* 2021.3~2021.8: Tencent Security Xuanwu Lab, Beijing, China
+* 2021.3~2021.8: Tencent Security Xuanwu Lab, Beijing, China <br/>
+  **BrutePrint: Expose Smartphone Fingerprint Authentication to Brute-force Attack** <br/>
+  [PDF](https://arxiv.org/pdf/2305.10791.pdf), [Related Issues](https://github.com/E0HYL/BrutePrint)
