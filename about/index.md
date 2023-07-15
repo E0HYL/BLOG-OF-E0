@@ -27,6 +27,7 @@ I am now a Ph.D. Candidate at Zhejiang University, under the supervision of [Pro
 - **DeUEDroid: Detecting Underground Economy Apps Based on UTG Similarity** <br/>
 Zhuo Chen, Jie Liu, Yubo Hu, Lei Wu, Yajin Zhou, **Yiling He**, Xianhao Liao, Ke Wang, Jink Li, Zhan Qin <br/>
 *The ACM SIGSOFT International Symposium on Software Testing and Analysis (ISSTA) 2023*
+[PDF](https://dl.acm.org/doi/pdf/10.1145/3597926.3598051), [Code](https://github.com/HypoopyH/DeUEDroid)
 
 - **MsDroid: Identifying Malicious Snippets for Android Malware Detection** <br/>
 **Yiling He**, Yiping Liu, Lei Wu, Ziqi Yang, Kui Ren, Zhan Qin <br/>
