@@ -1,6 +1,6 @@
 ---
 layout: page-about
-modified: 2021-8-16
+modified: 2025-8-8
 comments: false
 ---
 
@@ -9,6 +9,6 @@ comments: false
 
 *Email: yilinghe@zju.edu.cn*
 
-I received my Ph.D. degree at Zhejiang University.
+I received my Ph.D. from Zhejiang University. This website contains blog posts written during that period.
 
-
+For my latest homepage, please visit: https://e0hyl.github.io
