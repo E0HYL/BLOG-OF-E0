@@ -9,6 +9,8 @@ comments: false
 
 *Email: yilinghe@zju.edu.cn*
 
-I received my Ph.D. from Zhejiang University. This website contains blog posts written during that period.
+I received my Ph.D. from Zhejiang University. 
 
-For my latest homepage, please visit: https://e0hyl.github.io
+This website archives blog posts written during that period.
+
+For my latest homepage, please visit: <a href="https://e0hyl.github.io/BLOG-OF-E0">https://e0hyl.github.io</a>
