@@ -13,4 +13,4 @@ I received my Ph.D. from Zhejiang University.
 
 This website archives blog posts written during that period.
 
-For my latest homepage, please visit: <a href="https://e0hyl.github.io/BLOG-OF-E0">https://e0hyl.github.io</a>
+For my latest homepage, please visit: <a href="https://e0hyl.github.io">https://e0hyl.github.io</a>
